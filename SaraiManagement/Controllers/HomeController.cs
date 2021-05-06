@@ -15,7 +15,7 @@ namespace SaraiManagement.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
-            _logger = logger;
+            _logger = logger; //Att
         }
 
         public IActionResult Index()

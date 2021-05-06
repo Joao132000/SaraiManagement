@@ -8,11 +8,25 @@
     "net5.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\elian\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\davi-\\.nuget\\packages\\": {}
+>>>>>>> origin/Develop
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "projectName": "SaraiManagement",
+      "projectPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
       "projectUniqueName": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
       "projectPath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
@@ -21,6 +35,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin/Develop
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

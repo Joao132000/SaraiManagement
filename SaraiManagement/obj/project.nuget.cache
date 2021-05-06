@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "uj1T1iQnN2fifCHfa4gSW1oaLXC76LS4wHPhu5zRtwQnVGtuvDJnAsjTHEjFs4ckxXLgK2K0+poKZsgOVhfAjA==",
+  "dgSpecHash": "15XwNurQNj5imNinsPhXHAGiqsoLktO17RR5iu+6A978nTykWuqQSF5M2Sd2iPhY2wvERSOhxjvFhUEOXQlxOA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-=======
-  "dgSpecHash": "xZRFIvLvwgZ9mh2517MMayfMe4y0yNz5IOal0Q8FY3Rq53GAS0+vwJYvDgF22r6ZMHqDlrdQFp6xsyv30YoHjw==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
->>>>>>> origin/Develop
+  "projectFilePath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

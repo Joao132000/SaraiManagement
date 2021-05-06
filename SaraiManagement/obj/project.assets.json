@@ -8,34 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\elian\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\davi-\\.nuget\\packages\\": {}
->>>>>>> origin/Develop
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
-      "projectPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "projectName": "SaraiManagement",
-      "projectPath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
       "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
+      "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/Develop
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -81,5 +66,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

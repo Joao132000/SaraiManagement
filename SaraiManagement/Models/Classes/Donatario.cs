@@ -12,5 +12,9 @@ namespace SaraiManagement.Models
         public string Endereco { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+        
+        public virtual ICollection<Doacao> Doacao { get; set; }
+
+        public Aluno? Aluno { get; set; }
     }
 }

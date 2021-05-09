@@ -18,5 +18,8 @@ namespace SaraiManagement.Models
         public int DonatarioID { get; set; }
         public string Período { get; set; }
         public DateTime Admissao { get; set; }
+
+        //1 Aluno para 0..1 Donatario
+        public Donatario? Donatario { get; set; }
     }
 }

@@ -11,5 +11,7 @@ namespace SaraiManagement.Models
         public string Nome { get; set; }
         public Enum Categoria { get; set; }
         public int Quantidade { get; set; }
+
+        public Doacao Doacao { get; set; }
     }
 }

@@ -9,5 +9,7 @@ namespace SaraiManagement.Models
     {
         public int CaixaID { get; set; }
         public double Saldo { get; set; }
+
+        public virtual ICollection<Movimentacao>? Movimentacao { get; set; }
     }
 }

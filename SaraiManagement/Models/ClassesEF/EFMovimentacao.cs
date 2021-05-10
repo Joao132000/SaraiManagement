@@ -5,9 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models
+namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFMovimentacao
+    public class EFMovimentacao : IMovimentacaoRepositorio
     {
+        private ApplicationDbContext context;
+
+        public EFMovimentacao(ApplicationDbContext ctx)
+        {
+            context = ctx;
+        }
     }
 }

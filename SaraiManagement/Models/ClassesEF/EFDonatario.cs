@@ -5,9 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models
+namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFDonatario
+    public class EFDonatario : IDonatarioRepositorio
     {
+        private ApplicationDbContext context;
+
+        public EFDonatario(ApplicationDbContext ctx)
+        {
+            context = ctx;
+        }
     }
 }

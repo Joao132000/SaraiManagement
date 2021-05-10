@@ -1,0 +1,8 @@
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csprojAssemblyReference.cache
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.AssemblyInfoInputs.cache
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.AssemblyInfo.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csproj.CoreCompileInputs.cache
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cache
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cs

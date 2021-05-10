@@ -12,5 +12,8 @@ namespace SaraiManagement.Models
         public Enum TipoMovimentacao { get; set; }
         public DateTime DiaMovimentacao { get; set; }
         public string Descricao { get; set; }
+
+        public Usuario Usuario { get; set; }
+        public Caixa Caixa { get; set; }
     }
 }

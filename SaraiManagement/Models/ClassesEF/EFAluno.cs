@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models.CassesEF
+namespace SaraiManagement.Models.ClassesEF
 {
     public class EFAluno : IAlunoRepositorio
     {

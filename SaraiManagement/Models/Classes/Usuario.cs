@@ -12,5 +12,7 @@ namespace SaraiManagement.Models
         public string Senha { get; set; }
         public Enum Tipo { get; set; }
 
+        public virtual ICollection<Doacao>? Doacao { get; set; }
+        public virtual ICollection<Movimentacao>? Movimentacao { get; set; }
     }
 }

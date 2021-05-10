@@ -10,5 +10,10 @@ namespace SaraiManagement.Models
         public int DonatarioID { get; set; }
         public int DoacaoID { get; set; }
         public int ItemID { get; set; }
+
+        public Donatario Donatario { get; set; }
+        public Usuario Usuario { get; set; }
+        public virtual ICollection<ItemDoado> ItemDoado { get; set; }
+
     }
 }

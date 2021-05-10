@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   "dgSpecHash": "uj1T1iQnN2fifCHfa4gSW1oaLXC76LS4wHPhu5zRtwQnVGtuvDJnAsjTHEjFs4ckxXLgK2K0+poKZsgOVhfAjA==",
   "success": true,
@@ -9,6 +10,11 @@
   "success": true,
   "projectFilePath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
 >>>>>>> origin/Develop
+=======
+  "dgSpecHash": "YdGf5LJpRFn0xTDwDLy0ht1D1M3gDDeK8yRBiSJR/3GKDn2L0mdiHZ0rMMs7Z093XAHb/HTtK/GXzBtBRaS+hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

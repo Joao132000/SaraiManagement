@@ -1,39 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-    "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
-=======
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
->>>>>>> Stashed changes
+    "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
+    "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
-=======
-    "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
-        "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\JGL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\obj\\",
->>>>>>> 7d6d4008ec8b0c90d1517f0ff6c5d9188a0240cb
+        "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
+        "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JGL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

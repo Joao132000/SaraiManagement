@@ -2,36 +2,38 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< Updated upstream
+<<<<<<< HEAD
     "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
 =======
-    "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
+    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
+>>>>>>> Stashed changes
   },
   "projects": {
-    "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
+    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davi-\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
+        "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
+=======
+    "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
+        "projectName": "SaraiManagement",
+        "projectPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
+        "packagesPath": "C:\\Users\\JGL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\obj\\",
+>>>>>>> 7d6d4008ec8b0c90d1517f0ff6c5d9188a0240cb
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> origin/Develop
+          "C:\\Users\\JGL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,6 +58,26 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -74,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

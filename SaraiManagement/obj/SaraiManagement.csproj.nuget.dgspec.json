@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
+    "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
+    "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
+        "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
+        "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Eliano
+          "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

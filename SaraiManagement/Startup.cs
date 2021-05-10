@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SaraiManagement.Models.CassesEF;
 using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
@@ -22,15 +23,15 @@ namespace SaraiManagement
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement:ConnectionString"]));
-            //services.AddTransient<IAlunoRepositorio, EFAlunoRepositorio>();
-            //services.AddTransient<IDoacaoRepositorio, EFDoacaoRepositorio>();
-            //services.AddTransient<IDonatarioRepositorio, EFDonatarioRepositorio>();
-            //services.AddTransient<IDoadorRepositorio, EFDoadorRepositorio>();
-            //services.AddTransient<ICaixaRepositorio, EFCaixaRepositorio>();
-            //services.AddTransient<IMovimentacaoRepositorio, EFMovimentacaoRepositorio>();
-            //services.AddTransient<IUsuarioRepositorio, EFUsuarioRepositorio>();
-            //services.AddTransient<IItemDoadoRepositorio, EFItemDoadoRepositorio>();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement:ConnectionString"]));
+            services.AddTransient<IAlunoRepositorio, EFAluno>();
+            services.AddTransient<IDoacaoRepositorio, EFDoacao>();
+            services.AddTransient<IDonatarioRepositorio, EFDonatario>();
+            services.AddTransient<IDoadorRepositorio, EFDoador>();
+            services.AddTransient<ICaixaRepositorio, EFCaixa>();
+            services.AddTransient<IMovimentacaoRepositorio, EFMovimentacao>();
+            services.AddTransient<IUsuarioRepositorio, EFUsuario>();
+            services.AddTransient<IItemDoadoRepositorio, EFItemDoado>();
             services.AddMvc();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

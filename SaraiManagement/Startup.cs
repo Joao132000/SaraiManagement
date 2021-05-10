@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models;
+using SaraiManagement.Models.ClassesEF;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -23,7 +24,7 @@ namespace SaraiManagement
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement:ConnectionString"]));
-            //services.AddTransient<IAlunoRepositorio, EFAluno>();
+            services.AddTransient<IAlunoRepositorio, EFAluno>();
             //services.AddTransient<IDoacaoRepositorio, EFDoacaoRepositorio>();
             //services.AddTransient<IDonatarioRepositorio, EFDonatarioRepositorio>();
             //services.AddTransient<IDoadorRepositorio, EFDoadorRepositorio>();

@@ -7114,14 +7114,19 @@
   },
   "packageFolders": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\elian\\.nuget\\packages\\": {}
 =======
     "C:\\Users\\mfmat\\.nuget\\packages\\": {}
 >>>>>>> af5c5b13e4c52120f0a48859d21068bcc7513a31
+=======
+    "C:\\Users\\davi-\\.nuget\\packages\\": {}
+>>>>>>> Davi
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
 <<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
 =======
@@ -7138,6 +7143,16 @@
 =======
         "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> af5c5b13e4c52120f0a48859d21068bcc7513a31
+=======
+      "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "projectName": "SaraiManagement",
+      "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Davi
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7210,10 +7225,14 @@
       "level": "Warning",
       "warningLevel": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
       "message": "Problema ao ler o arquivo de cache C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
 =======
       "message": "Problema ao ler o arquivo de cache D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
 >>>>>>> af5c5b13e4c52120f0a48859d21068bcc7513a31
+=======
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> Davi
     }
   ]
 }

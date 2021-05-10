@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
+    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
+    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elian\\Source\\Repos\\SaraiManagement\\SaraiManagement\\obj\\",
+        "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

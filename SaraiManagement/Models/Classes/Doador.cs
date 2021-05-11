@@ -17,11 +17,7 @@ namespace SaraiManagement.Models
 
 
         [ScaffoldColumn(false)]
-        public string Endereço { get; set; }
-
-
-        [Required] //CAMPO 'Bairro' OBRIGATÓRIO
-        public string Bairro { get; set; }
+        public string Endereco { get; set; }
 
 
         [Required] //CAMPO 'Cidade' OBRIGATÓRIO

@@ -25,7 +25,7 @@ namespace SaraiManagement.Models
         [Required] //CAMPO 'TIPO' OBRIGATÓRIO
         public Enum Tipo { get; set; }
 
-        public virtual ICollection<Doacao>? Doacao { get; set; }
-        public virtual ICollection<Movimentacao>? Movimentacao { get; set; }
+        public virtual ICollection<Doacao> Doacao { get; set; }
+        public virtual ICollection<Movimentacao> Movimentacao { get; set; }
     }
 }

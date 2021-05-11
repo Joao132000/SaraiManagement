@@ -31,7 +31,7 @@ namespace SaraiManagement.Models
 
 
         [Required] //CAMPO 'Bairro' OBRIGATÓRIO
-        public string Bairro { get; set; }
+        public string Endereco { get; set; }
 
 
         [Required] //CAMPO 'Cidade' OBRIGATÓRIO
@@ -44,7 +44,7 @@ namespace SaraiManagement.Models
 
 
 
-        public int DonatarioID { get; set; }
+        public int? DonatarioID { get; set; }
 
 
 
@@ -61,6 +61,6 @@ namespace SaraiManagement.Models
 
 
         //1 Aluno para 0..1 Donatario
-        public Donatario? Donatario { get; set; }
+        public Donatario Donatario { get; set; }
     }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SaraiManagement.Models.Interfaces
+namespace SaraiManagement.Models
 {
-    interface IOutrosRepositorio
+    public interface IOutrosRepositorio
     {
-        IQueryable<Dinheiro> Dinheiros { get; }
+        IQueryable<Outros> Outros { get; }
     }
 }

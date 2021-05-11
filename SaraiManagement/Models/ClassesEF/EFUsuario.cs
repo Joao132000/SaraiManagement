@@ -15,5 +15,6 @@ namespace SaraiManagement.Models.ClassesEF
         {
             context = ctx;
         }
+        public IQueryable<Usuario> Usuarios => context.Usuarios;
     }
 }

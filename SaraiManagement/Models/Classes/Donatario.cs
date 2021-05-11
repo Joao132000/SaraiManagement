@@ -30,6 +30,10 @@ namespace SaraiManagement.Models
         
         public virtual ICollection<Doacao> Doacao { get; set; }
 
+        [Required]
+
+        public int? AlunoID { get; set; }
+
         public Aluno? Aluno { get; set; }
     }
 }

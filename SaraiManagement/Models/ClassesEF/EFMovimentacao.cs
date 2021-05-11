@@ -15,6 +15,7 @@ namespace SaraiManagement.Models.ClassesEF
         {
             context = ctx;
         }
-        
+        public IQueryable<Movimentacao> Movimentacoes => context.Movimentacaos;
+
     }
 }

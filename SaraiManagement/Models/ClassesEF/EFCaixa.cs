@@ -15,5 +15,7 @@ namespace SaraiManagement.Models.ClassesEF
         {
             context = ctx;
         }
+
+        public IQueryable<Caixa> Caixas => context.Caixas;
     }
 }

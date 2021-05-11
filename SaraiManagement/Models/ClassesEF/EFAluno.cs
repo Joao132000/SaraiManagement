@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models.ClassesEF
+namespace SaraiManagement.Models
 {
     public class EFAluno : IAlunoRepositorio
     {
@@ -15,5 +15,7 @@ namespace SaraiManagement.Models.ClassesEF
         {
             context = ctx;
         }
+        public IQueryable <Aluno> Alunos => context.Alunos;
+
     }
 }

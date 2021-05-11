@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SaraiManagement.Models.Interfaces
+namespace SaraiManagement.Models
 {
-    interface IDinheiroRepositorio
+    public interface IDinheiroRepositorio
     {
         IQueryable<Dinheiro> Dinheiros { get; }
     }

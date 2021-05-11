@@ -5,9 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models
+namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFCaixa
+    public class EFCaixa : ICaixaRepositorio
     {
+        private ApplicationDbContext context;
+
+        public EFCaixa(ApplicationDbContext ctx)
+        {
+            context = ctx;
+        }
+
+        public IQueryable<Caixa> Caixas => context.Caixas;
     }
 }

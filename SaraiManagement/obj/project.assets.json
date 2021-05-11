@@ -7113,25 +7113,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\davi-\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\elian\\.nuget\\packages\\": {}
->>>>>>> Eliano
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "projectName": "SaraiManagement",
-      "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
       "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
@@ -7140,7 +7126,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Eliano
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7206,17 +7191,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> Eliano
-    }
-  ]
+  }
 }

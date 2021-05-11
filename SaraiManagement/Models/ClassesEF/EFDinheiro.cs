@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFDonatario : IDonatarioRepositorio
+    public class EFDinheiro:IDinheiroRepositorio
     {
         private ApplicationDbContext context;
 
-        public EFDonatario(ApplicationDbContext ctx)
+        public EFDinheiro(ApplicationDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<Donatario> Donatarios => context.Donatarios;
+        public IQueryable<Dinheiro> Dinheiros => context.Dinheiros;
     }
 }

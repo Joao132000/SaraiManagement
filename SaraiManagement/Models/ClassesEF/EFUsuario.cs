@@ -5,9 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace SaraiManagement.Models
+namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFUsuario
+    public class EFUsuario : IUsuarioRepositorio
     {
+        private ApplicationDbContext context;
+
+        public EFUsuario(ApplicationDbContext ctx)
+        {
+            context = ctx;
+        }
+        public IQueryable<Usuario> Usuarios => context.Usuarios;
     }
 }

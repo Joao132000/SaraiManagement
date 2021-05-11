@@ -7113,34 +7113,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\JGL\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\mfmat\\.nuget\\packages\\": {}
->>>>>>> f6bbc624c0e66343d6a53b82a90ada1549ad29e3
+    "C:\\Users\\davi-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
+      "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
-      "projectPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\JGL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\obj\\",
+      "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+      "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JGL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "projectName": "SaraiManagement",
-      "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
-      "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> f6bbc624c0e66343d6a53b82a90ada1549ad29e3
+        "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7203,7 +7188,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -7212,11 +7197,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-=======
-      "message": "Problema ao ler o arquivo de cache D:\\Faculdade\\5º periodo\\Integradoras V\\projectSaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
->>>>>>> f6bbc624c0e66343d6a53b82a90ada1549ad29e3
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

@@ -10,6 +10,8 @@ namespace SaraiManagement.Models
     {
         public int DonatarioID { get; set; }
 
+        public int? AlunoID { get; set; }
+
 
         [Required]
         [StringLength(60, MinimumLength = 4, ErrorMessage = "Digite um texto com 4 a 60 caracteres")]
@@ -30,6 +32,6 @@ namespace SaraiManagement.Models
         
         public virtual ICollection<Doacao> Doacao { get; set; }
 
-        public Aluno? Aluno { get; set; }
+        public Aluno Aluno { get; set; }
     }
 }

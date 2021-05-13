@@ -9,9 +9,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using SaraiManagement.Models;
 using SaraiManagement.Models.Classes;
+<<<<<<< HEAD
 using SaraiManagement.Models.ClassesEF;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+=======
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Design;
+>>>>>>> 265343e9c68689610706a538e718077a9be023c4
 
 namespace SaraiManagement
 {
@@ -56,6 +61,11 @@ namespace SaraiManagement
                 defaults: new { controller = "Index", Action = "Index" });
             });
             SeedData.EnsurePopulated(app);
+<<<<<<< HEAD
+=======
+
+           //Davi
+>>>>>>> 265343e9c68689610706a538e718077a9be023c4
         }
     }
 }

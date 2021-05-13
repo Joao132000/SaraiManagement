@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SaraiManagement.Models
 {
-    interface IDoacaoRepositorio
+    public interface IDoacaoRepositorio
     {
         IQueryable<Doacao> Doacoes { get; }
     }

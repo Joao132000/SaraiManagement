@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SaraiManagement.Models
 {
-    interface IUsuarioRepositorio
+    public interface IUsuarioRepositorio
     {
         IQueryable<Usuario> Usuarios { get; }
     }

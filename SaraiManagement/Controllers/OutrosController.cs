@@ -12,10 +12,11 @@ namespace SaraiManagement.Controllers
     public class OutrosController : Controller
     {
         private IOutrosRepositorio repositorio;
-
-        public OutrosController(IOutrosRepositorio repo)
+        private ApplicationDbContext context;
+        public OutrosController(IOutrosRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

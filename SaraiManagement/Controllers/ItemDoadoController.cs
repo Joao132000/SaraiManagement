@@ -12,10 +12,12 @@ namespace SaraiManagement.Controllers
     public class ItemDoadoController : Controller
     {
         private IItemDoadoRepositorio repositorio;
+        private ApplicationDbContext context;
 
-        public ItemDoadoController(IItemDoadoRepositorio repo)
+        public ItemDoadoController(IItemDoadoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

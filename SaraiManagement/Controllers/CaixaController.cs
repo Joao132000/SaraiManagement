@@ -17,7 +17,11 @@ namespace SaraiManagement.Controllers
         private ICaixaRepositorio repositorio;
         private ApplicationDbContext context;
 
+<<<<<<< HEAD
         public CaixaController (ICaixaRepositorio repo, ApplicationDbContext ctx)
+=======
+        public CaixaController(ICaixaRepositorio repo, ApplicationDbContext ctx)
+>>>>>>> 265343e9c68689610706a538e718077a9be023c4
         {
             repositorio = repo;
             context = ctx;

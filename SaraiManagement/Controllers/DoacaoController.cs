@@ -12,10 +12,11 @@ namespace SaraiManagement.Controllers
     public class DoacaoController : Controller
     {
         private IDoacaoRepositorio repositorio;
-
-        public DoacaoController(IDoacaoRepositorio repo)
+        private ApplicationDbContext context;
+        public DoacaoController(IDoacaoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

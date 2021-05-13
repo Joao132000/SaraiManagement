@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include ="wwwroot\"/>
+    </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
@@ -12,7 +15,11 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+<<<<<<< HEAD
     <DotNetCliToolReference Include="Microsoft.EntityFrameWorkCore.Tools.DotNet" Version="2.0.0" />
+=======
+    <DotNetCliToolReference Include="Microsoft.EntityFrameWorkCore.Tools.DotNet" Version="2.0.3" />
+>>>>>>> 265343e9c68689610706a538e718077a9be023c4
   </ItemGroup>
 
 </Project>

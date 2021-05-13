@@ -12,10 +12,12 @@ namespace SaraiManagement.Controllers
     public class AlunoController : Controller
     {
         private IAlunoRepositorio repositorio;
+        private ApplicationDbContext context;
 
-        public AlunoController(IAlunoRepositorio repo)
+        public AlunoController(IAlunoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+;            context = ctx;
         }
 
         public IActionResult Index()

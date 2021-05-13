@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SaraiManagement.Models
 {
-    interface ICaixaRepositorio
+    public interface ICaixaRepositorio
     {
         IQueryable<Caixa> Caixas { get; }
     }

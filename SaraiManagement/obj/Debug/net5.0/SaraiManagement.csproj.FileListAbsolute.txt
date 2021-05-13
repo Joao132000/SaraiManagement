@@ -6,3 +6,11 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cache
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cs
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csprojAssemblyReference.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.AssemblyInfo.cs
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorAssemblyInfo.cs

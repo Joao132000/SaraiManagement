@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.ClassesEF;
 using SaraiManagement.Models;
+using SaraiManagement.Models.Classes;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -23,7 +24,7 @@ namespace SaraiManagement
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement:ConnectionString"]));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement2021:ConnectionString"]));
             services.AddTransient<IAlunoRepositorio, EFAluno>();
             services.AddTransient<IDoacaoRepositorio, EFDoacao>();
             services.AddTransient<IDonatarioRepositorio, EFDonatario>();
@@ -56,7 +57,7 @@ namespace SaraiManagement
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Index", action = "Index" });
             });
-            //SeedData.EnsurePopulated(app);
+            SeedData.EnsurePopulated(app);
 
            //Davi
         }

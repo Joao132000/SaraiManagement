@@ -12,10 +12,11 @@ namespace SaraiManagement.Controllers
     public class UsuarioController : Controller
     {
         private IUsuarioRepositorio repositorio;
-
-        public UsuarioController(IUsuarioRepositorio repo)
+        private ApplicationDbContext context;
+        public UsuarioController(IUsuarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

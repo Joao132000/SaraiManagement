@@ -12,10 +12,12 @@ namespace SaraiManagement.Controllers
     public class MovimentacaoController : Controller
     {
         private IMovimentacaoRepositorio repositorio;
+        private ApplicationDbContext context;
 
-        public MovimentacaoController(IMovimentacaoRepositorio repo)
+        public MovimentacaoController(IMovimentacaoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

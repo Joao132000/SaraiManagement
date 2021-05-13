@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SaraiManagement.Models
 {
-    interface IMovimentacaoRepositorio
+    public interface IMovimentacaoRepositorio
     {
         IQueryable<Movimentacao> Movimentacoes { get; }
     }

@@ -12,10 +12,11 @@ namespace SaraiManagement.Controllers
     public class DonatarioController : Controller
     {
         private IDonatarioRepositorio repositorio;
-
-        public DonatarioController(IDonatarioRepositorio repo)
+        private ApplicationDbContext context;
+        public DonatarioController(IDonatarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations; //
+using System.ComponentModel.DataAnnotations; 
 
 namespace SaraiManagement.Models
 {
@@ -32,14 +32,6 @@ namespace SaraiManagement.Models
         
         public virtual ICollection<Doacao> Doacao { get; set; }
 
-<<<<<<< HEAD
-        [Required]
-
-        public int? AlunoID { get; set; }
-
-        public Aluno? Aluno { get; set; }
-=======
         public Aluno Aluno { get; set; }
->>>>>>> Develop
     }
 }

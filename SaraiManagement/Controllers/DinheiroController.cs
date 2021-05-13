@@ -12,10 +12,11 @@ namespace SaraiManagement.Controllers
     public class DinheiroController : Controller
     {
         private IDinheiroRepositorio repositorio;
-
-        public DinheiroController(IDinheiroRepositorio repo)
+        private ApplicationDbContext context;
+        public DinheiroController(IDinheiroRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
+            context = ctx;
         }
 
         public IActionResult Index()

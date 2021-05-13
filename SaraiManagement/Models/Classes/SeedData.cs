@@ -55,6 +55,7 @@ namespace SaraiManagement.Models.Classes
 
                     new Alimento
                     {
+                        ItemDoadoID=1,
                         Nome = "Arroz",
                         Categoria = Categoria.Alimento,
                         dataValidade = Convert.ToDateTime("10-05-2021"),
@@ -150,7 +151,7 @@ namespace SaraiManagement.Models.Classes
                 context.Outros.AddRange(
                   new Outros
                   {
-                      ItemID = 1,
+                      ItemDoadoID = 1,
                       Nome = "Camiseta",
                       Descricao = "Feminina TAM P",
                       Categoria = Categoria.Outros,
@@ -168,7 +169,18 @@ namespace SaraiManagement.Models.Classes
                       Tipo = TipoUsuario.User
                   });
             }
-                context.SaveChanges();
+            if (!context.ItemDoados.Any())
+            {
+                context.ItemDoados.AddRange(
+                  new ItemDoado
+                  {
+                      ItemDoadoID = 1,
+                      Nome="T-Shirt",
+                      Quantidade=1,
+                      Categoria=Categoria.Outros
+                  }) ;
+            }
+            context.SaveChanges();
         }
     }
 }

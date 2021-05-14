@@ -12,7 +12,6 @@ namespace SaraiManagement.Models
         [Required]
         public int ItemDoadoID { get; set; }
 
-
         [Required]
         [StringLength(60, MinimumLength = 3, ErrorMessage = "Digite um texto com 3 a 60 caracteres")]
         public string Nome { get; set; }

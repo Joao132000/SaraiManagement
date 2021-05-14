@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations; //
 
-
 namespace SaraiManagement.Models
 {
-    public class Outros: ItemDoado
+    public class Estoque
     {
-        [Required] //CAMPO 'Descrição' OBRIGATÓRIO
+        public int EstoqueID { get; set; }
         public string Descricao { get; set; }
+        public double Quantidade { get; set; }
+        public ItemDoado ItemDoado { get; set; }
+
     }
 }

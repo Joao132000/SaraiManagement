@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFAlimento : IAlimentoRepositorio
+    public class EFEstoque : IEstoqueRepositorio
     {
         private ApplicationDbContext context;
 
-        public EFAlimento(ApplicationDbContext ctx)
+        public EFEstoque(ApplicationDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<Alimento> Alimentos => context.Alimentos;
+        public IQueryable<Estoque> Estoques => context.Estoques;
     }
 }

@@ -12,17 +12,16 @@ namespace SaraiManagement.Models
         [Required]
         public int ItemDoadoID { get; set; }
 
-        [Required]
-        [StringLength(60, MinimumLength = 3, ErrorMessage = "Digite um texto com 3 a 60 caracteres")]
-        public string Nome { get; set; }
-
+       
+        public int DoacaoID { get; set; }
 
          //CAMPO 'Categoria' OBRIGATÓRIO
-        public Categoria Categoria { get; set; }
-
+        public int EstoqueID { get; set; }
 
 
         public int Quantidade { get; set; }
+
+        public Estoque Estoque { get; set; }
 
         public Doacao Doacao { get; set; }
     }

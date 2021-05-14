@@ -43,12 +43,6 @@ namespace SaraiManagement.Models
         [StringLength(60, MinimumLength = 4, ErrorMessage = "Digite um texto com 4 a 60 caracteres")]
         public string NomeResponsavel { get; set; }
 
-
-
-        
-
-
-
         [Required] //CAMPO 'Periodo' OBRIGATÓRIO
         public string Período { get; set; }
 
@@ -61,7 +55,6 @@ namespace SaraiManagement.Models
 
         public int DonatarioID { get; set; }
 
-        //1 Aluno para 0..1 Donatario
         public Donatario Donatario { get; set; }
     }
 }

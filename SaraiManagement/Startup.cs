@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.ClassesEF;
 using SaraiManagement.Models;
-using SaraiManagement.Models.Classes;
+//using SaraiManagement.Models.Classes;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -57,7 +57,7 @@ namespace SaraiManagement
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Index", action = "Index" });
             });
-            SeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
 
            //Davi
         }

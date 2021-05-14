@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
 
-namespace SaraiManagement.Models
-{
-    public interface IOutrosRepositorio
-    {
-        IQueryable<Outros> Outros { get; }
-    }
-}
+//namespace SaraiManagement.Models
+//{
+//    public interface IOutrosRepositorio
+//    {
+//        IQueryable<Outros> Outros { get; }
+//    }
+//}

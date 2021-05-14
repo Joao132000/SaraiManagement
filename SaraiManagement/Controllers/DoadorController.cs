@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SaraiManagement.Models.Classes;
+//using SaraiManagement.Models.Classes;
 using SaraiManagement.Models;
 using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;

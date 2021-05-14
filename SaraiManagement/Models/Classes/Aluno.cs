@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations; //
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Models
 {
@@ -27,7 +28,7 @@ namespace SaraiManagement.Models
 
 
         [Required] //CAMPO 'Ano' OBRIGATÓRIO
-        public Enum Ano { get; set; }
+        public Ano Ano { get; set; }
 
 
         [Required] //CAMPO 'Bairro' OBRIGATÓRIO

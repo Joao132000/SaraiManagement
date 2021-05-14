@@ -8,7 +8,8 @@ namespace SaraiManagement.Models
 {
     public class ItemDoado
     {
-        public int ItemID { get; set; }
+        [Required]
+        public int ItemDoadoID { get; set; }
 
 
         [Required]
@@ -16,7 +17,7 @@ namespace SaraiManagement.Models
         public string Nome { get; set; }
 
 
-        [Required] //CAMPO 'Categoria' OBRIGATÓRIO
+         //CAMPO 'Categoria' OBRIGATÓRIO
         public Enum Categoria { get; set; }
 
 

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations; //
+using System.ComponentModel.DataAnnotations; 
 
 namespace SaraiManagement.Models
 {
     public class Donatario
     {
         public int DonatarioID { get; set; }
+
+        public int AlunoID { get; set; }
 
 
         [Required]
@@ -30,6 +32,6 @@ namespace SaraiManagement.Models
         
         public virtual ICollection<Doacao> Doacao { get; set; }
 
-        public Aluno? Aluno { get; set; }
+        public Aluno Aluno { get; set; }
     }
 }

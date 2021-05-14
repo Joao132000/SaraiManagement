@@ -8,7 +8,16 @@ namespace SaraiManagement.Models
 {
     public class Movimentacao
     {
+        [Required] //CAMPO 'Valor' OBRIGATÓRIO
         public int MovimentacaoID { get; set; }
+
+
+        [Required] //CAMPO 'Valor' OBRIGATÓRIO
+        public int UsuarioID { get; set; }
+
+
+        [Required] //CAMPO 'Valor' OBRIGATÓRIO
+        public int CaixaID { get; set; }
 
 
 
@@ -28,8 +37,6 @@ namespace SaraiManagement.Models
 
         [Required] //CAMPO 'Descricao' OBRIGATÓRIO
         public string Descricao { get; set; }
-
-
 
         public Usuario Usuario { get; set; }
         public Caixa Caixa { get; set; }

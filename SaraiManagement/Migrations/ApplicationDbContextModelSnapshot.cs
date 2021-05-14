@@ -231,6 +231,9 @@ namespace SaraiManagement.Migrations
                     b.Property<DateTime>("DiaMovimentacao")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("DoacaoID")
+                        .HasColumnType("int");
+
                     b.Property<int>("TipoMovimentacao")
                         .HasColumnType("int");
 
@@ -240,6 +243,9 @@ namespace SaraiManagement.Migrations
                     b.HasKey("MovimentacaoID");
 
                     b.HasIndex("CaixaID");
+
+                    b.HasIndex("DoacaoID")
+                        .IsUnique();
 
                     b.ToTable("Movimentacaos");
                 });
@@ -316,7 +322,20 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
+                        .WithOne("Movimentacao")
+                        .HasForeignKey("SaraiManagement.Models.Movimentacao", "DoacaoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Caixa");
+
+                    b.Navigation("Doacao");
+                });
+
+            modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
+                {
+                    b.Navigation("Movimentacao");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>

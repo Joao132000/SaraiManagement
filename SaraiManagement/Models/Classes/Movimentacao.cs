@@ -34,6 +34,9 @@ namespace SaraiManagement.Models
         [Required] //CAMPO 'Descricao' OBRIGATÓRIO
         public string Descricao { get; set; }
 
+        public int DoacaoID { get; set; }
+        public Doacao Doacao { get; set; }
+
         public Caixa Caixa { get; set; }
     }
 }

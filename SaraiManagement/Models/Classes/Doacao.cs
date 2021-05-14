@@ -13,7 +13,7 @@ namespace SaraiManagement.Models
 
         public double valorDoacao { get; set; }
 
-
+        public Movimentacao Movimentacao { get; set; }
         public Donatario Donatario { get; set; }
 
     }

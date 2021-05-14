@@ -85,29 +85,6 @@ namespace SaraiManagement.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Movimentacaos",
-                columns: table => new
-                {
-                    MovimentacaoID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CaixaID = table.Column<int>(type: "int", nullable: false),
-                    Valor = table.Column<double>(type: "float", nullable: false),
-                    TipoMovimentacao = table.Column<int>(type: "int", nullable: false),
-                    DiaMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Movimentacaos", x => x.MovimentacaoID);
-                    table.ForeignKey(
-                        name: "FK_Movimentacaos_Caixas_CaixaID",
-                        column: x => x.CaixaID,
-                        principalTable: "Caixas",
-                        principalColumn: "CaixaID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Alunos",
                 columns: table => new
                 {
@@ -183,6 +160,36 @@ namespace SaraiManagement.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Movimentacaos",
+                columns: table => new
+                {
+                    MovimentacaoID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CaixaID = table.Column<int>(type: "int", nullable: false),
+                    Valor = table.Column<double>(type: "float", nullable: false),
+                    TipoMovimentacao = table.Column<int>(type: "int", nullable: false),
+                    DiaMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DoacaoID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Movimentacaos", x => x.MovimentacaoID);
+                    table.ForeignKey(
+                        name: "FK_Movimentacaos_Caixas_CaixaID",
+                        column: x => x.CaixaID,
+                        principalTable: "Caixas",
+                        principalColumn: "CaixaID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Movimentacaos_Doacaos_DoacaoID",
+                        column: x => x.DoacaoID,
+                        principalTable: "Doacaos",
+                        principalColumn: "DoacaoID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Alunos_DonatarioID",
                 table: "Alunos",
@@ -207,6 +214,12 @@ namespace SaraiManagement.Migrations
                 name: "IX_Movimentacaos_CaixaID",
                 table: "Movimentacaos",
                 column: "CaixaID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Movimentacaos_DoacaoID",
+                table: "Movimentacaos",
+                column: "DoacaoID",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -227,13 +240,13 @@ namespace SaraiManagement.Migrations
                 name: "Usuarios");
 
             migrationBuilder.DropTable(
-                name: "Doacaos");
-
-            migrationBuilder.DropTable(
                 name: "Estoques");
 
             migrationBuilder.DropTable(
                 name: "Caixas");
+
+            migrationBuilder.DropTable(
+                name: "Doacaos");
 
             migrationBuilder.DropTable(
                 name: "Donatarios");

@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210514180828_Initial")]
+    [Migration("20210514215705_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -233,6 +233,9 @@ namespace SaraiManagement.Migrations
                     b.Property<DateTime>("DiaMovimentacao")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("DoacaoID")
+                        .HasColumnType("int");
+
                     b.Property<int>("TipoMovimentacao")
                         .HasColumnType("int");
 
@@ -242,6 +245,9 @@ namespace SaraiManagement.Migrations
                     b.HasKey("MovimentacaoID");
 
                     b.HasIndex("CaixaID");
+
+                    b.HasIndex("DoacaoID")
+                        .IsUnique();
 
                     b.ToTable("Movimentacaos");
                 });
@@ -318,7 +324,20 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
+                        .WithOne("Movimentacao")
+                        .HasForeignKey("SaraiManagement.Models.Movimentacao", "DoacaoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Caixa");
+
+                    b.Navigation("Doacao");
+                });
+
+            modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
+                {
+                    b.Navigation("Movimentacao");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>

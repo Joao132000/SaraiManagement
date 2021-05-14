@@ -52,6 +52,7 @@ namespace SaraiManagement.Models.Classes
                 context.Donatarios.AddRange(
                   new Donatario
                   {
+                      DonatarioID=30,
                       Email = "teste@gmail.com",
                       Endereco = "Rua da Prainha,27 - Jd Alvorada",
                       Telefone = "(35) 99888-1355",
@@ -66,7 +67,7 @@ namespace SaraiManagement.Models.Classes
                 context.Doacaos.AddRange(
                   new Doacao
                   {
-                      DonatarioID = 1,
+                      DonatarioID = 30,
                       dataDoacao = Convert.ToDateTime("10-05-2021"),
                       valorDoacao = 200
 

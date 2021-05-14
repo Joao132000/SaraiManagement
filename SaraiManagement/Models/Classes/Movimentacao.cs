@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations; //
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Models
 {
@@ -26,7 +27,7 @@ namespace SaraiManagement.Models
 
 
         [Required] //CAMPO 'TipoMovimentacao' OBRIGATÓRIO
-        public Enum TipoMovimentacao { get; set; }
+        public tipoMovimentacao TipoMovimentacao { get; set; }
 
 
         [Display(Name = "Data da movimentação")]

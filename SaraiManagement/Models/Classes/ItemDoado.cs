@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations; //
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Models
 {
@@ -18,7 +19,7 @@ namespace SaraiManagement.Models
 
 
          //CAMPO 'Categoria' OBRIGATÓRIO
-        public Enum Categoria { get; set; }
+        public Categoria Categoria { get; set; }
 
 
 

@@ -5,45 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Models.Classes
 {
     public class SeedData
     {
-        enum Categoria ///////////////
-        {
-            Alimento,
-            Dinheiro,
-            Outros
-        }
-        enum Ano ///////////////
-        {
-            Primeiro,
-            Segundo,
-            Terceiro,
-            Quarto,
-            Quinto,
-            Sexto,
-            Setimo,
-            Oitavo,
-            Nono,
-        }
-        enum RegularidadeDoador ///////////////
-        {
-            Unico,
-            Mensalista,
-            IR,
-        }
-        enum TipoMovimentacao ///////////////
-        {
-            Deposito,
-            Saque,
-        }
-        enum TipoUsuario ///////////////
-        {
-            Adm,
-            User,
-        }
 
         public static void EnsurePopulated(IApplicationBuilder app)
         {
@@ -70,7 +37,7 @@ namespace SaraiManagement.Models.Classes
                         Nome = "Davi da Silva Nascimento",
                         DataNascimento = Convert.ToDateTime("15-06-1998"),
                         Escola = "E.E. Padre José Grimminck",
-                        Ano = Ano.Nono,
+                        Ano = Ano.Quinto,
                         Endereco = "Rua Barroso 244 Recreio Vale do Sol ",
                         Cidade = "Alfenas.MG",
                         NomeResponsavel = "Eliano Cordeiro",
@@ -116,7 +83,7 @@ namespace SaraiManagement.Models.Classes
                      Nome = "João Paulo Carvalho",
                      Endereco = "AV São José 2080 Centro",
                      Cidade = "Alfenas.MG",
-                     regularidadeDoador = RegularidadeDoador.Unico,
+                     regularidadeDoador = Regularidade.Unico,
                      inicioDaDoacao = Convert.ToDateTime("10-05-2021")
                   });
             }
@@ -140,7 +107,7 @@ namespace SaraiManagement.Models.Classes
                       MovimentacaoID = 1,
                       Descricao = "Arrumar parede da Classe",
                       DiaMovimentacao = Convert.ToDateTime("15-06-2021"),
-                      TipoMovimentacao = TipoMovimentacao.Deposito,
+                      TipoMovimentacao = tipoMovimentacao.Deposito,
                       Valor = 1000.50,
                       UsuarioID = 1,
                       CaixaID = 1
@@ -166,7 +133,7 @@ namespace SaraiManagement.Models.Classes
                       UsuarioID = 1,
                       Nome = "Davi Nascimento",
                       Senha = "123",
-                      Tipo = TipoUsuario.User
+                      Tipo = tipoUsuario.User
                   });
             }
             if (!context.ItemDoados.Any())

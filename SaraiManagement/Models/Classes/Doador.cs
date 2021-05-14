@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations; //
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Models
 {
@@ -24,7 +25,7 @@ namespace SaraiManagement.Models
         public string Cidade { get; set; }
 
         [Required] //CAMPO 'Regularidade' OBRIGATÓRIO
-        public Enum regularidadeDoador { get; set; }
+        public Regularidade regularidadeDoador { get; set; }
 
 
         [Display(Name = "Data de Inicio da doacao")]

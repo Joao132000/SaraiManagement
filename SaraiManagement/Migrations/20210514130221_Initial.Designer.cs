@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210514014630_Initial")]
+    [Migration("20210514130221_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,6 +67,9 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("AlunoID");
+
+                    b.HasIndex("DonatarioID")
+                        .IsUnique();
 
                     b.ToTable("Alunos");
                 });
@@ -148,12 +151,6 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AlunoID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AlunoID1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
@@ -169,8 +166,6 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DonatarioID");
-
-                    b.HasIndex("AlunoID1");
 
                     b.ToTable("Donatarios");
                 });
@@ -298,6 +293,17 @@ namespace SaraiManagement.Migrations
                     b.HasDiscriminator().HasValue("Outros");
                 });
 
+            modelBuilder.Entity("SaraiManagement.Models.Aluno", b =>
+                {
+                    b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
+                        .WithOne("Aluno")
+                        .HasForeignKey("SaraiManagement.Models.Aluno", "DonatarioID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Donatario");
+                });
+
             modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
                 {
                     b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
@@ -313,15 +319,6 @@ namespace SaraiManagement.Migrations
                     b.Navigation("Donatario");
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>
-                {
-                    b.HasOne("SaraiManagement.Models.Aluno", "Aluno")
-                        .WithMany()
-                        .HasForeignKey("AlunoID1");
-
-                    b.Navigation("Aluno");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
@@ -364,6 +361,8 @@ namespace SaraiManagement.Migrations
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>
                 {
+                    b.Navigation("Aluno");
+
                     b.Navigation("Doacao");
                 });
 

@@ -45,7 +45,7 @@ namespace SaraiManagement.Models
 
 
 
-        public int DonatarioID { get; set; }
+        
 
 
 
@@ -59,7 +59,7 @@ namespace SaraiManagement.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Admissao { get; set; }
 
-
+        public int DonatarioID { get; set; }
 
         //1 Aluno para 0..1 Donatario
         public Donatario Donatario { get; set; }

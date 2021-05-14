@@ -70,7 +70,7 @@ namespace SaraiManagement.Models.Classes
                       
                       dataDoacao = Convert.ToDateTime("10-05-2021"),
                       valorDoacao = 200,
-                      DonatarioID = 1
+                      DonatarioID = 4
 
                   });
                 context.SaveChanges();

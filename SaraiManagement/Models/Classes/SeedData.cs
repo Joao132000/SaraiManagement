@@ -121,7 +121,7 @@ namespace SaraiManagement.Models.Classes
                       ItemDoadoID = 1,
                       Nome = "Camiseta",
                       Descricao = "Feminina TAM P",
-                      Categoria = Categoria.Outros,
+                      Categoria = Categoria.Alimento,
                       Quantidade = 2
                   });
             }

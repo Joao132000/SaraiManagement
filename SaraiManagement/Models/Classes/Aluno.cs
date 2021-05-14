@@ -62,6 +62,6 @@ namespace SaraiManagement.Models
 
 
         //1 Aluno para 0..1 Donatario
-        //public Donatario Donatario { get; set; }
+        public Donatario Donatario { get; set; }
     }
 }

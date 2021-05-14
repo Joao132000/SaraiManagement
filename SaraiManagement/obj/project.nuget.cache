@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "cisNx8Z33ZFTDNqo+1rZHoj7uCroj6az7xiu+ubn0wnrDWtFmIcvH2E2nafAy97hmBskHbahHvceO8w/n6zbGg==",
+=======
+  "dgSpecHash": "Awn2vHuT7nBbVUF7hpqtFnvnNkXaDOHi2fmIXoIgYRcVvXAQOtMX5XzXIvFPEz7fCpHJBpzNp+9bFbaegMw9tw==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
   "expectedPackageFiles": [
@@ -128,5 +132,12 @@
     "C:\\Users\\davi-\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\davi-\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

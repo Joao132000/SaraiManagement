@@ -124,7 +124,7 @@ namespace SaraiManagement.Models.Classes
                   {
                       EstoqueID = 1,
                       DoacaoID = 1,
-                      Quantidade = 1,
+                      Quantidade = 9,
 
                   });
             }

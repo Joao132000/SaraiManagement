@@ -29,6 +29,5 @@ namespace SaraiManagement.Models
         
         public virtual ICollection<Doacao> Doacao { get; set; }
 
-        public Aluno Aluno { get; set; }
     }
 }

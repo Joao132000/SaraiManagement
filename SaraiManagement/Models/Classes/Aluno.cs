@@ -10,6 +10,8 @@ namespace SaraiManagement.Models
     public class Aluno
     {
         public int AlunoID { get; set; }
+        public int DonatarioID { get; set; }
+
 
 
         [Required] //CAMPO 'Nome' OBRIGATÓRIO
@@ -53,7 +55,6 @@ namespace SaraiManagement.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Admissao { get; set; }
 
-        public int DonatarioID { get; set; }
 
         public Donatario Donatario { get; set; }
     }

@@ -124,7 +124,9 @@ namespace SaraiManagement.Models.Classes
                   {
                       EstoqueID=1,
                       Descricao="aaa",
-                      Quantidade=1
+                      Quantidade=1,
+                      Categoria=Categoria.Alimento
+                      
 
                   });
             }

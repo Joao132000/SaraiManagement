@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations; //
+using System.ComponentModel.DataAnnotations;
+using SaraiManagement.Models.Enuns;
+
 
 namespace SaraiManagement.Models
 {
@@ -11,7 +13,7 @@ namespace SaraiManagement.Models
         public int EstoqueID { get; set; }
         public string Descricao { get; set; }
         public double Quantidade { get; set; }
-        public ItemDoado ItemDoado { get; set; }
+        public Categoria Categoria { get; set; }
 
     }
 }

@@ -27,8 +27,9 @@ namespace SaraiManagement.Models.Classes
                       Descricao = "aaa"
 
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
 
             if (!context.Doadors.Any())
@@ -42,8 +43,9 @@ namespace SaraiManagement.Models.Classes
                       regularidadeDoador = Regularidade.Unico,
                       inicioDaDoacao = Convert.ToDateTime("10-05-2021")
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Donatarios.Any())
             {
@@ -55,8 +57,9 @@ namespace SaraiManagement.Models.Classes
                       Telefone = "(35) 99888-1355",
                       Nome = "Eliano Cordeiro"
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Doacaos.Any())
             {
@@ -68,8 +71,9 @@ namespace SaraiManagement.Models.Classes
                       valorDoacao = 200
 
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Alunos.Any())
             {
@@ -86,9 +90,10 @@ namespace SaraiManagement.Models.Classes
                         Período = "Noturno",
                         Admissao = Convert.ToDateTime("10-05-2021"),
                         DonatarioID = 1
-                    }); ;
+                    });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Movimentacaos.Any())
             {
@@ -101,8 +106,9 @@ namespace SaraiManagement.Models.Classes
                       Valor = 1000.50,
                       CaixaID = 1
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Usuarios.Any())
             {
@@ -113,8 +119,9 @@ namespace SaraiManagement.Models.Classes
                       Senha = "123",
                       Tipo = tipoUsuario.User
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.Estoques.Any())
             {
@@ -127,8 +134,9 @@ namespace SaraiManagement.Models.Classes
                       
 
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
 
             if (!context.ItemDoados.Any())
             {
@@ -140,8 +148,9 @@ namespace SaraiManagement.Models.Classes
                       Quantidade = 9,
 
                   });
+                context.SaveChanges();
+
             }
-            context.SaveChanges();
         }
     }
 }

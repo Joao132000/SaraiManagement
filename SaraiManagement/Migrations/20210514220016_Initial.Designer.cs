@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210514215705_Initial")]
+    [Migration("20210514220016_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

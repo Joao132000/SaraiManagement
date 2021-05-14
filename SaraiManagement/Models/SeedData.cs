@@ -106,7 +106,9 @@ namespace SaraiManagement.Models.Classes
                       DiaMovimentacao = Convert.ToDateTime("15-06-2021"),
                       TipoMovimentacao = tipoMovimentacao.Debito,
                       Valor = 1000.50,
-                      CaixaID = 1
+                      CaixaID = 1,
+                      DoacaoID=1
+                      
                   });
                 context.SaveChanges();
 

@@ -17,23 +17,7 @@ namespace SaraiManagement.Models.Classes
             ApplicationDbContext context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
 
-            if (!context.Alunos.Any())
-            {
-                context.Alunos.AddRange(
-                    new Aluno
-                    {
-                        Nome = "Davi da Silva Nascimento",
-                        DataNascimento = Convert.ToDateTime("15-06-1998"),
-                        Escola = "E.E. Padre José Grimminck",
-                        Ano = Ano.Quinto,
-                        Endereco = "Rua Barroso 244 Recreio Vale do Sol ",
-                        Cidade = "Alfenas.MG",
-                        NomeResponsavel = "Eliano Cordeiro",
-                        Período = "Noturno",
-                        Admissao = Convert.ToDateTime("10-05-2021"),
-                        DonatarioID = 1
-                    }); ;
-            }
+            
             if (!context.Caixas.Any())
             {
                 context.Caixas.AddRange(
@@ -45,17 +29,7 @@ namespace SaraiManagement.Models.Classes
                   });
             }
 
-            if (!context.Doacaos.Any())
-            {
-                context.Doacaos.AddRange(
-                  new Doacao
-                  {
-                      DonatarioID = 1,
-                      dataDoacao= Convert.ToDateTime("10-05-2021"),
-                      valorDoacao=200
-
-                  });
-            }
+           
             if (!context.Doadors.Any())
             {
                 context.Doadors.AddRange(
@@ -78,6 +52,34 @@ namespace SaraiManagement.Models.Classes
                       Telefone = "(35) 99888-1355",
                       Nome = "Eliano Cordeiro"
                   });
+            }
+            if (!context.Doacaos.Any())
+            {
+                context.Doacaos.AddRange(
+                  new Doacao
+                  {
+                      DonatarioID = 1,
+                      dataDoacao = Convert.ToDateTime("10-05-2021"),
+                      valorDoacao = 200
+
+                  });
+            }
+            if (!context.Alunos.Any())
+            {
+                context.Alunos.AddRange(
+                    new Aluno
+                    {
+                        Nome = "Davi da Silva Nascimento",
+                        DataNascimento = Convert.ToDateTime("15-06-1998"),
+                        Escola = "E.E. Padre José Grimminck",
+                        Ano = Ano.Quinto,
+                        Endereco = "Rua Barroso 244 Recreio Vale do Sol ",
+                        Cidade = "Alfenas.MG",
+                        NomeResponsavel = "Eliano Cordeiro",
+                        Período = "Noturno",
+                        Admissao = Convert.ToDateTime("10-05-2021"),
+                        DonatarioID = 1
+                    }); ;
             }
             if (!context.Movimentacaos.Any())
             {
@@ -102,17 +104,7 @@ namespace SaraiManagement.Models.Classes
                       Tipo = tipoUsuario.User
                   });
             }
-            if (!context.ItemDoados.Any())
-            {
-                context.ItemDoados.AddRange(
-                  new ItemDoado
-                  {
-                      EstoqueID =1,
-                      DoacaoID =1,
-                      Quantidade = 1,
-                      
-                  });
-            }
+            
             if (!context.Estoques.Any())
             {
                 context.Estoques.AddRange(
@@ -122,6 +114,17 @@ namespace SaraiManagement.Models.Classes
                       Quantidade=1,
                       Categoria=Categoria.Alimento
                       
+
+                  });
+            }
+            if (!context.ItemDoados.Any())
+            {
+                context.ItemDoados.AddRange(
+                  new ItemDoado
+                  {
+                      EstoqueID = 1,
+                      DoacaoID = 1,
+                      Quantidade = 1,
 
                   });
             }

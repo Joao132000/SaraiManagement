@@ -28,8 +28,9 @@ namespace SaraiManagement.Models.Classes
 
                   });
             }
+            context.SaveChanges();
 
-           
+
             if (!context.Doadors.Any())
             {
                 context.Doadors.AddRange(
@@ -42,6 +43,8 @@ namespace SaraiManagement.Models.Classes
                       inicioDaDoacao = Convert.ToDateTime("10-05-2021")
                   });
             }
+            context.SaveChanges();
+
             if (!context.Donatarios.Any())
             {
                 context.Donatarios.AddRange(
@@ -53,6 +56,8 @@ namespace SaraiManagement.Models.Classes
                       Nome = "Eliano Cordeiro"
                   });
             }
+            context.SaveChanges();
+
             if (!context.Doacaos.Any())
             {
                 context.Doacaos.AddRange(
@@ -64,6 +69,8 @@ namespace SaraiManagement.Models.Classes
 
                   });
             }
+            context.SaveChanges();
+
             if (!context.Alunos.Any())
             {
                 context.Alunos.AddRange(
@@ -81,6 +88,8 @@ namespace SaraiManagement.Models.Classes
                         DonatarioID = 1
                     }); ;
             }
+            context.SaveChanges();
+
             if (!context.Movimentacaos.Any())
             {
                 context.Movimentacaos.AddRange(
@@ -93,7 +102,8 @@ namespace SaraiManagement.Models.Classes
                       CaixaID = 1
                   });
             }
-            
+            context.SaveChanges();
+
             if (!context.Usuarios.Any())
             {
                 context.Usuarios.AddRange(
@@ -104,7 +114,8 @@ namespace SaraiManagement.Models.Classes
                       Tipo = tipoUsuario.User
                   });
             }
-            
+            context.SaveChanges();
+
             if (!context.Estoques.Any())
             {
                 context.Estoques.AddRange(
@@ -117,6 +128,8 @@ namespace SaraiManagement.Models.Classes
 
                   });
             }
+            context.SaveChanges();
+
             if (!context.ItemDoados.Any())
             {
                 context.ItemDoados.AddRange(

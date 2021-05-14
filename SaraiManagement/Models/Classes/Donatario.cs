@@ -10,8 +10,6 @@ namespace SaraiManagement.Models
     {
         public int DonatarioID { get; set; }
 
-
-
         [Required]
         [StringLength(60, MinimumLength = 4, ErrorMessage = "Digite um texto com 4 a 60 caracteres")]
         public string Nome { get; set; }

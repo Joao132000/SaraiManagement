@@ -30,8 +30,9 @@ namespace SaraiManagement.Models.Classes
                         Cidade = "Alfenas.MG",
                         NomeResponsavel = "Eliano Cordeiro",
                         Período = "Noturno",
-                        Admissao = Convert.ToDateTime("10-05-2021")
-                    });
+                        Admissao = Convert.ToDateTime("10-05-2021"),
+                        DonatarioID = 1
+                    }); ;
             }
             if (!context.Caixas.Any())
             {

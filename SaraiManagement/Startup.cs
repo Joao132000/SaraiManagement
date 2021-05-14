@@ -8,10 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using SaraiManagement.Models.ClassesEF;
 using SaraiManagement.Models;
 using SaraiManagement.Models.Classes;
+using SaraiManagement.Models.ClassesEF;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -55,7 +55,7 @@ namespace SaraiManagement
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Index", action = "Index" });
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Home", action = "Index" });
             });
             SeedData.EnsurePopulated(app);
 

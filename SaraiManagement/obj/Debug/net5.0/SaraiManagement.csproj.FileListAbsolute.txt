@@ -294,7 +294,6 @@ C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiM
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 =======
-<<<<<<< HEAD
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\libman.json
@@ -442,7 +441,6 @@ C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref\SaraiManagement.dll
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
-=======
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\appsettings.json
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\libman.json

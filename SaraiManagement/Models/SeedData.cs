@@ -39,7 +39,6 @@ namespace SaraiManagement.Models.Classes
                 context.Caixas.AddRange(
                   new Caixa
                   {
-                      CaixaID = 1,
                       Saldo = 10000,
                       Descricao = "aaa"
 
@@ -52,7 +51,8 @@ namespace SaraiManagement.Models.Classes
                   new Doacao
                   {
                       DonatarioID = 1,
-                      DoacaoID = 1,
+                      dataDoacao= Convert.ToDateTime("10-05-2021"),
+                      valorDoacao=200
 
                   });
             }
@@ -73,7 +73,6 @@ namespace SaraiManagement.Models.Classes
                 context.Donatarios.AddRange(
                   new Donatario
                   {
-                      DonatarioID = 1,
                       Email = "teste@gmail.com",
                       Endereco = "Rua da Prainha,27 - Jd Alvorada",
                       Telefone = "(35) 99888-1355",
@@ -85,7 +84,6 @@ namespace SaraiManagement.Models.Classes
                 context.Movimentacaos.AddRange(
                   new Movimentacao
                   {
-                      MovimentacaoID = 1,
                       Descricao = "Arrumar parede da Classe",
                       DiaMovimentacao = Convert.ToDateTime("15-06-2021"),
                       TipoMovimentacao = tipoMovimentacao.Debito,
@@ -99,7 +97,6 @@ namespace SaraiManagement.Models.Classes
                 context.Usuarios.AddRange(
                   new Usuario
                   {
-                      UsuarioID = 1,
                       Nome = "Davi Nascimento",
                       Senha = "123",
                       Tipo = tipoUsuario.User
@@ -110,7 +107,6 @@ namespace SaraiManagement.Models.Classes
                 context.ItemDoados.AddRange(
                   new ItemDoado
                   {
-                      ItemDoadoID = 1,
                       EstoqueID =1,
                       DoacaoID =1,
                       Quantidade = 1,
@@ -122,7 +118,6 @@ namespace SaraiManagement.Models.Classes
                 context.Estoques.AddRange(
                   new Estoque
                   {
-                      EstoqueID=1,
                       Descricao="aaa",
                       Quantidade=1,
                       Categoria=Categoria.Alimento

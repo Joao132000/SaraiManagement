@@ -13,7 +13,7 @@ namespace SaraiManagement.Models
         public int UsuarioID { get; set; }
         public Usuario Usuario { get; set; }
 
-        public Movimentacao Movimentacao { get; set; }
+        //public Movimentacao Movimentacao { get; set; }
         public Donatario Donatario { get; set; }
 
     }

@@ -249,9 +249,6 @@ namespace SaraiManagement.Migrations
 
                     b.HasIndex("CaixaID");
 
-                    b.HasIndex("DoacaoID")
-                        .IsUnique();
-
                     b.HasIndex("UsuarioID");
 
                     b.ToTable("Movimentacaos");
@@ -337,12 +334,6 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
-                        .WithOne("Movimentacao")
-                        .HasForeignKey("SaraiManagement.Models.Movimentacao", "DoacaoID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioID")
@@ -351,14 +342,7 @@ namespace SaraiManagement.Migrations
 
                     b.Navigation("Caixa");
 
-                    b.Navigation("Doacao");
-
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
-                {
-                    b.Navigation("Movimentacao");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>

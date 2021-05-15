@@ -140,33 +140,6 @@ namespace SaraiManagement.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ItemDoados",
-                columns: table => new
-                {
-                    ItemDoadoID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DoacaoID = table.Column<int>(type: "int", nullable: false),
-                    EstoqueID = table.Column<int>(type: "int", nullable: false),
-                    Quantidade = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ItemDoados", x => x.ItemDoadoID);
-                    table.ForeignKey(
-                        name: "FK_ItemDoados_Doacaos_DoacaoID",
-                        column: x => x.DoacaoID,
-                        principalTable: "Doacaos",
-                        principalColumn: "DoacaoID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ItemDoados_Estoques_EstoqueID",
-                        column: x => x.EstoqueID,
-                        principalTable: "Estoques",
-                        principalColumn: "EstoqueID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Movimentacaos",
                 columns: table => new
                 {
@@ -190,16 +163,37 @@ namespace SaraiManagement.Migrations
                         principalColumn: "CaixaID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Movimentacaos_Doacaos_DoacaoID",
+                        name: "FK_Movimentacaos_Usuarios_UsuarioID",
+                        column: x => x.UsuarioID,
+                        principalTable: "Usuarios",
+                        principalColumn: "UsuarioID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ItemDoados",
+                columns: table => new
+                {
+                    ItemDoadoID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DoacaoID = table.Column<int>(type: "int", nullable: false),
+                    EstoqueID = table.Column<int>(type: "int", nullable: false),
+                    Quantidade = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ItemDoados", x => x.ItemDoadoID);
+                    table.ForeignKey(
+                        name: "FK_ItemDoados_Doacaos_DoacaoID",
                         column: x => x.DoacaoID,
                         principalTable: "Doacaos",
                         principalColumn: "DoacaoID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Movimentacaos_Usuarios_UsuarioID",
-                        column: x => x.UsuarioID,
-                        principalTable: "Usuarios",
-                        principalColumn: "UsuarioID",
+                        name: "FK_ItemDoados_Estoques_EstoqueID",
+                        column: x => x.EstoqueID,
+                        principalTable: "Estoques",
+                        principalColumn: "EstoqueID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -234,12 +228,6 @@ namespace SaraiManagement.Migrations
                 column: "CaixaID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Movimentacaos_DoacaoID",
-                table: "Movimentacaos",
-                column: "DoacaoID",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Movimentacaos_UsuarioID",
                 table: "Movimentacaos",
                 column: "UsuarioID");
@@ -260,13 +248,13 @@ namespace SaraiManagement.Migrations
                 name: "Movimentacaos");
 
             migrationBuilder.DropTable(
+                name: "Doacaos");
+
+            migrationBuilder.DropTable(
                 name: "Estoques");
 
             migrationBuilder.DropTable(
                 name: "Caixas");
-
-            migrationBuilder.DropTable(
-                name: "Doacaos");
 
             migrationBuilder.DropTable(
                 name: "Donatarios");

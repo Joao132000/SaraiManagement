@@ -594,3 +594,4 @@ C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiM
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Create.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Details.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Edit.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Delete.cshtml.g.cs

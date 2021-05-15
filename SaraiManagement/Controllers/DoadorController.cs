@@ -16,7 +16,6 @@ namespace SaraiManagement.Controllers
     {
         private IDoadorRepositorio repositorio;
         private ApplicationDbContext context;
-        Regularidade r;
         public DoadorController(IDoadorRepositorio repo,ApplicationDbContext ctx)
         {
             repositorio = repo;

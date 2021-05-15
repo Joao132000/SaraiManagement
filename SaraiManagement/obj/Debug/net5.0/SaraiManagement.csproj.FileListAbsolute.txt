@@ -590,3 +590,6 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\S
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 >>>>>>> 083a265e86bc39b1af432ba48744f95925dcc615
 >>>>>>> Master
+D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Create.cshtml.g.cs
+D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Details.cshtml.g.cs
+D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Edit.cshtml.g.cs

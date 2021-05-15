@@ -16,5 +16,25 @@ namespace SaraiManagement.Models.ClassesEF
             context = ctx;
         }
         public IQueryable<Usuario> Usuarios => context.Usuarios;
+        public void Create(Usuario usuario)
+        {
+            context.Add(usuario);
+            context.SaveChanges();
+        }
+        public Usuario Consultar(int id)
+        {
+            var usuario = context.Usuarios.FirstOrDefault(p => p.UsuarioID == id);
+            return usuario;
+        }
+        public void Edit(Usuario usuario)
+        {
+            context.Entry(usuario).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+        public void Delete(Usuario usuario)
+        {
+            context.Remove(usuario);
+            context.SaveChanges();
+        }
     }
 }

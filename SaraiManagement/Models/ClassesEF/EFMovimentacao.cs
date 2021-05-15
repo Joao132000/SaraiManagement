@@ -9,13 +9,44 @@ namespace SaraiManagement.Models.ClassesEF
 {
     public class EFMovimentacao : IMovimentacaoRepositorio
     {
-        private ApplicationDbContext context;
+        public ApplicationDbContext context;
 
         public EFMovimentacao(ApplicationDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<Movimentacao> Movimentacoes => context.Movimentacaos;
+        public IQueryable<Movimentacao> Movimentacoes => context.Movimentacaos
+                .Include(c => c.Caixa)
+                .Include(d => d.Doador)
+                .Include(u => u.Usuario);
 
+        public void Create(Movimentacao movimentacao)
+        {
+            movimentacao.CaixaID = 1;
+            context.Add(movimentacao);
+            context.SaveChanges();
+        }
+
+        public Movimentacao PesquisarMovimentacao(int id)
+        {
+            var movi = context.Movimentacaos
+                .Include(c => c.Caixa)
+                .Include(d => d.Doador)
+                .Include(u => u.Usuario)
+                .FirstOrDefault(m => m.MovimentacaoID == id);
+            return movi;
+        }
+
+        public void Edit(Movimentacao movimentacao)
+        {
+            context.Entry(movimentacao).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+
+        public void Delete(Movimentacao movimentacao)
+        {
+            context.Remove(movimentacao);
+            context.SaveChanges();
+        }
     }
 }

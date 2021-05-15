@@ -24,5 +24,52 @@ namespace SaraiManagement.Controllers
         {
             return View();
         }
+
+        [HttpGet]  //Serve para gerar a View
+        public IActionResult Create()//ViewBag + .Nome // ordenados pelo Nome
+        {
+            return View();
+        }
+
+        [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
+        public IActionResult Create(ItemDoado itemDoado)
+        {
+            repositorio.Create(itemDoado);
+            return View("HomeController");
+        }
+
+        public IActionResult Details(int id)
+        {
+            var item = repositorio.PesquisarItemDoado(id);
+            return View(item);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var item = context.ItemDoados.Find(id);
+            return View(item);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(ItemDoado itemDoado)
+        {
+            repositorio.Edit(itemDoado);
+            return View("HomeController");
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var item = repositorio.PesquisarItemDoado(id);
+            return View(item);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(ItemDoado itemDoado)
+        {
+            repositorio.Delete(itemDoado);
+            return View("HomeController");
+        }
     }
 }

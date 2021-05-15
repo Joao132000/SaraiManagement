@@ -592,3 +592,4 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\S
 >>>>>>> Master
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Create.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Edit.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Delete.cshtml.g.cs

@@ -29,7 +29,6 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.regularidadeDoador = r; 
             return View();
         }
 

@@ -15,7 +15,7 @@ namespace SaraiManagement.Controllers
     {
         private IDonatarioRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 10;
+        public int pageSize = 1;
         public DonatarioController(IDonatarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;

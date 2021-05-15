@@ -90,7 +90,7 @@ namespace SaraiManagement.Migrations
                 {
                     AlunoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    DonatarioID = table.Column<int>(type: "int", nullable: false),
+                    DonatarioID = table.Column<int>(type: "int", nullable: true),
                     Nome = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
                     DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Escola = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -109,7 +109,7 @@ namespace SaraiManagement.Migrations
                         column: x => x.DonatarioID,
                         principalTable: "Donatarios",
                         principalColumn: "DonatarioID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -121,8 +121,8 @@ namespace SaraiManagement.Migrations
                     DonatarioID = table.Column<int>(type: "int", nullable: false),
                     dataDoacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UsuarioID = table.Column<int>(type: "int", nullable: false),
-                    Valor = table.Column<double>(type: "float", nullable: false),
-                    CaixaID = table.Column<int>(type: "int", nullable: false)
+                    Valor = table.Column<double>(type: "float", nullable: true),
+                    CaixaID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -132,7 +132,7 @@ namespace SaraiManagement.Migrations
                         column: x => x.CaixaID,
                         principalTable: "Caixas",
                         principalColumn: "CaixaID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Doacaos_Donatarios_DonatarioID",
                         column: x => x.DonatarioID,

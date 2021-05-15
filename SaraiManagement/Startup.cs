@@ -8,10 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using SaraiManagement.Models.ClassesEF;
 using SaraiManagement.Models;
 using SaraiManagement.Models.Classes;
+using SaraiManagement.Models.ClassesEF;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 

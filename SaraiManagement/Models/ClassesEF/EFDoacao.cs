@@ -10,22 +10,31 @@ namespace SaraiManagement.Models.ClassesEF
 {
     public class EFDoacao :IDoacaoRepositorio
     {
-        private ApplicationDbContext context;
+        public ApplicationDbContext context;
 
         public EFDoacao(ApplicationDbContext ctx)
         {
             context = ctx;
         }
-        public IQueryable<Doacao> Doacoes => context.Doacaos;
+
+        public IQueryable<Doacao> Doacoes => context.Doacaos
+            .Include(c => c.Caixa)
+            .Include(u => u.Usuario)
+            .Include(d => d.Donatario);
 
         public void Create(Doacao doacao)
         {
+            doacao.CaixaID = 1;
             context.Add(doacao);
             context.SaveChanges();
         }
         public Doacao Consultar(int id)
         {
-            var doacao = context.Doacaos.FirstOrDefault(p => p.DoacaoID == id);
+            var doacao = context.Doacaos
+                .Include(c => c.Caixa)
+                .Include(u => u.Usuario)
+                .Include(d => d.Donatario)
+                .FirstOrDefault(p => p.DoacaoID == id);
             return doacao;
         }
         public void Edit(Doacao doacao)

@@ -33,6 +33,7 @@ namespace SaraiManagement
             services.AddTransient<IMovimentacaoRepositorio, EFMovimentacao>();
             services.AddTransient<IUsuarioRepositorio, EFUsuario>();
             services.AddTransient<IItemDoadoRepositorio, EFItemDoado>();
+            services.AddTransient<IEstoqueRepositorio, EFEstoque>();
             services.AddMvc();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

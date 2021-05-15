@@ -1,17 +1,11 @@
 ﻿@model SaraiManagement.Models.Donatario
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create</title>
-</head>
-<body>
+<h1>Create</h1>
 
 <h4>Donatario</h4>
 <hr />
@@ -25,6 +19,11 @@
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input asp-for="Endereco" class="form-control" />
+                <span asp-validation-for="Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Telefone" class="control-label"></label>
                 <input asp-for="Telefone" class="form-control" />
                 <span asp-validation-for="Telefone" class="text-danger"></span>
@@ -35,16 +34,9 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="form-group">
-                    <label asp-for="Endereco" class="control-label"></label>
-                    <input asp-for="Endereco" class="form-control" />
-                    <span asp-validation-for="Endereco" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                </div>
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
-</form>
+        </form>
     </div>
 </div>
 
@@ -52,5 +44,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-</body>
-</html>

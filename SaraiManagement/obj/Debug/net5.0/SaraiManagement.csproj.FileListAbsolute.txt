@@ -130,10 +130,6 @@ C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiM
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.TagHelpers.input.cache
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.TagHelpers.output.cache
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorCoreGenerate.cache
-C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Create.cshtml.g.cs
-C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Delete.cshtml.g.cs
-C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Details.cshtml.g.cs
-C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Edit.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\List.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
@@ -150,3 +146,11 @@ C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiM
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\ref\SaraiManagement.dll
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Create.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\List.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Details.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Edit.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Delete.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Create.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Details.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Donatario\Edit.cshtml.g.cs

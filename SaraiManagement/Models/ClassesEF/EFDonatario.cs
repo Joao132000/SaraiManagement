@@ -9,7 +9,7 @@ namespace SaraiManagement.Models.ClassesEF
 {
     public class EFDonatario : IDonatarioRepositorio
     {
-        private ApplicationDbContext context;
+        public ApplicationDbContext context;
 
         public EFDonatario(ApplicationDbContext ctx)
         {

@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210515004054_Initial")]
+    [Migration("20210515004310_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -101,9 +101,17 @@ namespace SaraiManagement.Migrations
                     b.Property<int>("DonatarioID")
                         .HasColumnType("int");
 
+                    b.Property<int>("UsuarioID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("dataDoacao")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("DoacaoID");
 
                     b.HasIndex("DonatarioID");
+
+                    b.HasIndex("UsuarioID");
 
                     b.ToTable("Doacaos");
                 });
@@ -201,19 +209,11 @@ namespace SaraiManagement.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
 
-                    b.Property<int>("UsuarioID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dataDoacao")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("ItemDoadoID");
 
                     b.HasIndex("DoacaoID");
 
                     b.HasIndex("EstoqueID");
-
-                    b.HasIndex("UsuarioID");
 
                     b.ToTable("ItemDoados");
                 });
@@ -301,7 +301,15 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Donatario");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
@@ -318,17 +326,9 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Doacao");
 
                     b.Navigation("Estoque");
-
-                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Movimentacao", b =>

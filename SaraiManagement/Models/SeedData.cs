@@ -81,6 +81,7 @@ namespace SaraiManagement.Models.Classes
                       
                       DonatarioID = 1,
                       dataDoacao = Convert.ToDateTime("10-05-2021"),
+                      UsuarioID = 1,
 
                   });
                 context.SaveChanges();
@@ -148,7 +149,6 @@ namespace SaraiManagement.Models.Classes
                   {
                       EstoqueID = 1,
                       DoacaoID = 1,
-                      UsuarioID = 1,
                       Quantidade = 9
 
                   });

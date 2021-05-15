@@ -24,5 +24,7 @@ namespace SaraiManagement.Controllers
         {
             return View();
         }
+
+
     }
 }

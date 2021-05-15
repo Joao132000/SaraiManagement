@@ -12,8 +12,8 @@ namespace SaraiManagement.Models
         public DateTime dataDoacao { get; set; }
         public int UsuarioID { get; set; }
         public Usuario Usuario { get; set; }
-        public double Valor { get; set; }
-        public int CaixaID { get; set; }
+        public double? Valor { get; set; }
+        public int? CaixaID { get; set; }
         public Caixa Caixa { get; set; }
         public Donatario Donatario { get; set; }
 

@@ -157,6 +157,7 @@ namespace SaraiManagement.Migrations
                     TipoMovimentacao = table.Column<int>(type: "int", nullable: false),
                     DataMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DoadorID = table.Column<int>(type: "int", nullable: true),
                     UsuarioID = table.Column<int>(type: "int", nullable: false),
                     CaixaID = table.Column<int>(type: "int", nullable: false)
                 },
@@ -169,6 +170,12 @@ namespace SaraiManagement.Migrations
                         principalTable: "Caixas",
                         principalColumn: "CaixaID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Movimentacaos_Doadors_DoadorID",
+                        column: x => x.DoadorID,
+                        principalTable: "Doadors",
+                        principalColumn: "DoadorID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Movimentacaos_Usuarios_UsuarioID",
                         column: x => x.UsuarioID,
@@ -240,6 +247,11 @@ namespace SaraiManagement.Migrations
                 column: "CaixaID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Movimentacaos_DoadorID",
+                table: "Movimentacaos",
+                column: "DoadorID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Movimentacaos_UsuarioID",
                 table: "Movimentacaos",
                 column: "UsuarioID");
@@ -249,9 +261,6 @@ namespace SaraiManagement.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Alunos");
-
-            migrationBuilder.DropTable(
-                name: "Doadors");
 
             migrationBuilder.DropTable(
                 name: "ItemDoados");
@@ -264,6 +273,9 @@ namespace SaraiManagement.Migrations
 
             migrationBuilder.DropTable(
                 name: "Estoques");
+
+            migrationBuilder.DropTable(
+                name: "Doadors");
 
             migrationBuilder.DropTable(
                 name: "Caixas");

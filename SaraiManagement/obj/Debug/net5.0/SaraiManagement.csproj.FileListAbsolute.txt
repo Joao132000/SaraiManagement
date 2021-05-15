@@ -131,7 +131,6 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.TagHelpers.output.cache
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorCoreGenerate.cache
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Consultar.cshtml.g.cs
-C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Create.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Delete.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Edit.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
@@ -157,3 +156,4 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Raz
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Consultar.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Edit.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Delete.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\Create.cshtml.g.cs

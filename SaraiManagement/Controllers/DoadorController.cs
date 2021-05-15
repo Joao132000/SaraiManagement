@@ -9,6 +9,7 @@ using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
+using System.Data;
 
 namespace SaraiManagement.Controllers
 {
@@ -35,6 +36,7 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Doador doador)
         {
+            ViewBag.AppRoleList = new SelectList(Ano.GetValues​​(typeof(string)));
             repositorio.Create(doador);
             return View();
         }

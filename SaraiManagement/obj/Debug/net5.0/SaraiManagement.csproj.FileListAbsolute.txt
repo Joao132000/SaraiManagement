@@ -156,3 +156,4 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Raz
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Create.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Consultar.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Edit.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Delete.cshtml.g.cs

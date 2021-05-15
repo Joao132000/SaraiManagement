@@ -47,7 +47,7 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var usuario = context.Doadors.Find(id);
+            var usuario = context.Usuarios.Find(id);
             return View(usuario);
         }
         [HttpPost]

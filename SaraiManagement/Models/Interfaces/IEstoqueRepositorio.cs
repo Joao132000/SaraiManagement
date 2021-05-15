@@ -8,5 +8,9 @@ namespace SaraiManagement.Models
     public interface IEstoqueRepositorio
     {
         IQueryable<Estoque> Estoques { get; }
+        public void Create(Estoque estoque);
+        public Estoque Consulta(int id);
+        public void Edit(Estoque estoque);
+        public void Delete(Estoque estoque);
     }
 }

@@ -10,7 +10,7 @@ namespace SaraiManagement.Models
     public class Aluno
     {
         public int AlunoID { get; set; }
-        public int DonatarioID { get; set; }
+        public int? DonatarioID { get; set; }
 
 
 

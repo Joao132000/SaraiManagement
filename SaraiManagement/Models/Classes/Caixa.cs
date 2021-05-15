@@ -15,6 +15,6 @@ namespace SaraiManagement.Models
         [Required] //CAMPO 'Saldo' OBRIGATÓRIO
         public double Saldo { get; set; }
 
-        public virtual ICollection<Movimentacao> Movimentacao { get; set; }
+        public string Descricao { get; set; }
     }
 }

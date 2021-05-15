@@ -7,7 +7,7 @@ namespace SaraiManagement.Models.Enuns
 {
     public enum tipoMovimentacao
     {
-        Deposito,
-        Saque
+        Credito,
+        Debito
     }
 }

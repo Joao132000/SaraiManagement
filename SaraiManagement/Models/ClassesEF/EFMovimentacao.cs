@@ -17,5 +17,32 @@ namespace SaraiManagement.Models.ClassesEF
         }
         public IQueryable<Movimentacao> Movimentacoes => context.Movimentacaos;
 
+        public void Create(Movimentacao movimentacao)
+        {
+            context.Add(movimentacao);
+            context.SaveChanges();
+        }
+
+        public Movimentacao PesquisarMovimentacao(int id)
+        {
+            var movi = context.Movimentacaos
+                .Include(c => c.Caixa)
+                .Include(d => d.Doador)
+                .Include(u => u.Usuario)
+                .FirstOrDefault(m => m.MovimentacaoID == id);
+            return movi;
+        }
+
+        public void Edit(Movimentacao movimentacao)
+        {
+            context.Entry(movimentacao).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+
+        public void Delete(Movimentacao movimentacao)
+        {
+            context.Remove(movimentacao);
+            context.SaveChanges();
+        }
     }
 }

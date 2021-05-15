@@ -15,7 +15,6 @@ namespace SaraiManagement.Models
         public string Nome { get; set; }
 
 
-        [ScaffoldColumn(false)]
         public string Endereco { get; set; }
 
 

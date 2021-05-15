@@ -11,7 +11,6 @@ namespace SaraiManagement.Models.Classes
 {
     public class SeedData
     {
-
         public static void EnsurePopulated(IApplicationBuilder app)
         {
             ApplicationDbContext context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();

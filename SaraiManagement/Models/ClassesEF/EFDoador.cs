@@ -24,7 +24,7 @@ namespace SaraiManagement.Models.ClassesEF
         }
         public Doador Consultar(int id)
         {
-            var doador = context.Doadors.Include(p => p.DoadorID == id).First(); ;
+            var doador = context.Doadors.FirstOrDefault(p => p.DoadorID == id);
             return doador;
         }
         public void Edit(Doador doador)

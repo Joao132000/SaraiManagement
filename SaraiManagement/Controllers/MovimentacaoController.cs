@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.ViewModels;
+using SaraiManagement.Models.Enuns;
 
 namespace SaraiManagement.Controllers
 {
@@ -50,6 +51,44 @@ namespace SaraiManagement.Controllers
         {
             repositorio.Create(movimentacao);
             return View("HomeController");
+        }
+
+
+        public IActionResult PesquisarMovimentacao(int id)
+        {
+            var consulta = repositorio.PesquisarMovimentacao(id);
+            return View(consulta);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var consulta = context.Movimentacaos.Find(id);
+            ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
+            ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
+            return View(consulta);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Movimentacao movimentacao)
+        {
+            repositorio.Edit(movimentacao);
+            return RedirectToAction("List");
+        }
+
+        [HttpGet]
+
+        public IActionResult Delete(int id)
+        {
+            var consulta = repositorio.PesquisarMovimentacao(id);
+            return View(consulta);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Movimentacao movimentacao)
+        {
+            repositorio.Delete(movimentacao);
+            return RedirectToAction("HomeController");
         }
 
         public IActionResult Index()

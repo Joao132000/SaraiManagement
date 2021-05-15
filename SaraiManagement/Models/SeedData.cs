@@ -79,8 +79,9 @@ namespace SaraiManagement.Models.Classes
                   new Doacao
                   {
                       
-                      DonatarioID = 1
-
+                      DonatarioID = 1,
+                      UsuarioID=1
+                      
                   });
                 context.SaveChanges();
 

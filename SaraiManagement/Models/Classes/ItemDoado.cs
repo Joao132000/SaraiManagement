@@ -18,6 +18,7 @@ namespace SaraiManagement.Models
          //CAMPO 'Categoria' OBRIGATÓRIO
         public int EstoqueID { get; set; }
 
+        public DateTime dataDoacao { get; set; }
 
         public int Quantidade { get; set; }
 

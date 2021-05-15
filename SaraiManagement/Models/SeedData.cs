@@ -30,7 +30,18 @@ namespace SaraiManagement.Models.Classes
                 context.SaveChanges();
 
             }
+            if (!context.Usuarios.Any())
+            {
+                context.Usuarios.AddRange(
+                  new Usuario
+                  {
+                      Nome = "Davi Nascimento",
+                      Senha = "123",
+                      Tipo = tipoUsuario.User
+                  });
+                context.SaveChanges();
 
+            }
 
             if (!context.Doadors.Any())
             {
@@ -68,7 +79,6 @@ namespace SaraiManagement.Models.Classes
                   new Doacao
                   {
                       
-                      dataDoacao = Convert.ToDateTime("10-05-2021"),
                       DonatarioID = 1
 
                   });
@@ -95,18 +105,7 @@ namespace SaraiManagement.Models.Classes
                 context.SaveChanges();
 
             }
-            if (!context.Usuarios.Any())
-            {
-                context.Usuarios.AddRange(
-                  new Usuario
-                  {
-                      Nome = "Davi Nascimento",
-                      Senha = "123",
-                      Tipo = tipoUsuario.User
-                  });
-                context.SaveChanges();
-
-            }
+            
             if (!context.Movimentacaos.Any())
             {
                 context.Movimentacaos.AddRange(
@@ -148,7 +147,8 @@ namespace SaraiManagement.Models.Classes
                   {
                       EstoqueID = 1,
                       DoacaoID = 1,
-                      Quantidade = 9,
+                      dataDoacao = Convert.ToDateTime("10-05-2021"),
+                      Quantidade = 9
 
                   });
                 context.SaveChanges();

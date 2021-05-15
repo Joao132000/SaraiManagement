@@ -82,6 +82,8 @@ namespace SaraiManagement.Models.Classes
                       DonatarioID = 1,
                       dataDoacao = Convert.ToDateTime("10-05-2021"),
                       UsuarioID = 1,
+                      CaixaID=1,
+                      Valor=2
 
                   });
                 context.SaveChanges();
@@ -118,7 +120,6 @@ namespace SaraiManagement.Models.Classes
                       TipoMovimentacao = tipoMovimentacao.Debito,
                       Valor = 1000.50,
                       CaixaID = 1,
-                      DoacaoID=1,
                       UsuarioID=1
                   });
                 context.SaveChanges();

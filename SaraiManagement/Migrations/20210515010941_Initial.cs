@@ -120,11 +120,19 @@ namespace SaraiManagement.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DonatarioID = table.Column<int>(type: "int", nullable: false),
                     dataDoacao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UsuarioID = table.Column<int>(type: "int", nullable: false)
+                    UsuarioID = table.Column<int>(type: "int", nullable: false),
+                    Valor = table.Column<double>(type: "float", nullable: false),
+                    CaixaID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Doacaos", x => x.DoacaoID);
+                    table.ForeignKey(
+                        name: "FK_Doacaos_Caixas_CaixaID",
+                        column: x => x.CaixaID,
+                        principalTable: "Caixas",
+                        principalColumn: "CaixaID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Doacaos_Donatarios_DonatarioID",
                         column: x => x.DonatarioID,
@@ -149,7 +157,6 @@ namespace SaraiManagement.Migrations
                     TipoMovimentacao = table.Column<int>(type: "int", nullable: false),
                     DataMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoacaoID = table.Column<int>(type: "int", nullable: false),
                     UsuarioID = table.Column<int>(type: "int", nullable: false),
                     CaixaID = table.Column<int>(type: "int", nullable: false)
                 },
@@ -201,6 +208,11 @@ namespace SaraiManagement.Migrations
                 name: "IX_Alunos_DonatarioID",
                 table: "Alunos",
                 column: "DonatarioID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Doacaos_CaixaID",
+                table: "Doacaos",
+                column: "CaixaID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Doacaos_DonatarioID",

@@ -10,11 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-<<<<<<< HEAD:SaraiManagement/Migrations/20210515164535_Initial.Designer.cs
-    [Migration("20210515164535_Initial")]
-=======
-    [Migration("20210515161834_Initial")]
->>>>>>> Davi:SaraiManagement/Migrations/20210515161834_Initial.Designer.cs
+
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

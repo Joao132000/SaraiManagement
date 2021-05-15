@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210515010941_Initial")]
+    [Migration("20210515143602_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -243,6 +243,9 @@ namespace SaraiManagement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DoadorID")
+                        .HasColumnType("int");
+
                     b.Property<int>("TipoMovimentacao")
                         .HasColumnType("int");
 
@@ -255,6 +258,8 @@ namespace SaraiManagement.Migrations
                     b.HasKey("MovimentacaoID");
 
                     b.HasIndex("CaixaID");
+
+                    b.HasIndex("DoadorID");
 
                     b.HasIndex("UsuarioID");
 
@@ -349,6 +354,10 @@ namespace SaraiManagement.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("SaraiManagement.Models.Doador", "Doador")
+                        .WithMany()
+                        .HasForeignKey("DoadorID");
+
                     b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
                         .WithMany()
                         .HasForeignKey("UsuarioID")
@@ -356,6 +365,8 @@ namespace SaraiManagement.Migrations
                         .IsRequired();
 
                     b.Navigation("Caixa");
+
+                    b.Navigation("Doador");
 
                     b.Navigation("Usuario");
                 });

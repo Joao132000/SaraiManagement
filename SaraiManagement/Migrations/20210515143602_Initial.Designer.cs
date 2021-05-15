@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210514011723_Initial")]
+    [Migration("20210515143602_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -68,6 +68,8 @@ namespace SaraiManagement.Migrations
 
                     b.HasKey("AlunoID");
 
+                    b.HasIndex("DonatarioID");
+
                     b.ToTable("Alunos");
                 });
 
@@ -77,6 +79,9 @@ namespace SaraiManagement.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Saldo")
                         .HasColumnType("float");
@@ -93,16 +98,24 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CaixaID")
+                        .HasColumnType("int");
+
                     b.Property<int>("DonatarioID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ItemID")
+                    b.Property<int>("UsuarioID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UsuarioID")
-                        .HasColumnType("int");
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("dataDoacao")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("DoacaoID");
+
+                    b.HasIndex("CaixaID");
 
                     b.HasIndex("DonatarioID");
 
@@ -148,12 +161,6 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AlunoID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AlunoID1")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
@@ -170,9 +177,28 @@ namespace SaraiManagement.Migrations
 
                     b.HasKey("DonatarioID");
 
-                    b.HasIndex("AlunoID1");
-
                     b.ToTable("Donatarios");
+                });
+
+            modelBuilder.Entity("SaraiManagement.Models.Estoque", b =>
+                {
+                    b.Property<int>("EstoqueID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Categoria")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Quantidade")
+                        .HasColumnType("float");
+
+                    b.HasKey("EstoqueID");
+
+                    b.ToTable("Estoques");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
@@ -182,20 +208,11 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Categoria")
+                    b.Property<int>("DoacaoID")
                         .HasColumnType("int");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("DoacaoID")
+                    b.Property<int>("EstoqueID")
                         .HasColumnType("int");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(60)
-                        .HasColumnType("nvarchar(60)");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
@@ -204,9 +221,9 @@ namespace SaraiManagement.Migrations
 
                     b.HasIndex("DoacaoID");
 
-                    b.ToTable("ItemDoados");
+                    b.HasIndex("EstoqueID");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("ItemDoado");
+                    b.ToTable("ItemDoados");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Movimentacao", b =>
@@ -219,12 +236,15 @@ namespace SaraiManagement.Migrations
                     b.Property<int>("CaixaID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DataMovimentacao")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DiaMovimentacao")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("DoadorID")
+                        .HasColumnType("int");
 
                     b.Property<int>("TipoMovimentacao")
                         .HasColumnType("int");
@@ -238,6 +258,8 @@ namespace SaraiManagement.Migrations
                     b.HasKey("MovimentacaoID");
 
                     b.HasIndex("CaixaID");
+
+                    b.HasIndex("DoadorID");
 
                     b.HasIndex("UsuarioID");
 
@@ -267,39 +289,25 @@ namespace SaraiManagement.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("SaraiManagement.Models.Alimento", b =>
+            modelBuilder.Entity("SaraiManagement.Models.Aluno", b =>
                 {
-                    b.HasBaseType("SaraiManagement.Models.ItemDoado");
+                    b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
+                        .WithMany()
+                        .HasForeignKey("DonatarioID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<DateTime>("dataValidade")
-                        .HasColumnType("datetime2");
-
-                    b.HasDiscriminator().HasValue("Alimento");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Dinheiro", b =>
-                {
-                    b.HasBaseType("SaraiManagement.Models.ItemDoado");
-
-                    b.Property<double>("Valor")
-                        .HasColumnType("float");
-
-                    b.HasDiscriminator().HasValue("Dinheiro");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Outros", b =>
-                {
-                    b.HasBaseType("SaraiManagement.Models.ItemDoado");
-
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasDiscriminator().HasValue("Outros");
+                    b.Navigation("Donatario");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
                 {
+                    b.HasOne("SaraiManagement.Models.Caixa", "Caixa")
+                        .WithMany()
+                        .HasForeignKey("CaixaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
                         .WithMany("Doacao")
                         .HasForeignKey("DonatarioID")
@@ -307,71 +315,65 @@ namespace SaraiManagement.Migrations
                         .IsRequired();
 
                     b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
-                        .WithMany("Doacao")
-                        .HasForeignKey("UsuarioID");
-
-                    b.Navigation("Donatario");
-
-                    b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>
-                {
-                    b.HasOne("SaraiManagement.Models.Aluno", "Aluno")
                         .WithMany()
-                        .HasForeignKey("AlunoID1");
-
-                    b.Navigation("Aluno");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
-                {
-                    b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
-                        .WithMany("ItemDoado")
-                        .HasForeignKey("DoacaoID");
-
-                    b.Navigation("Doacao");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Movimentacao", b =>
-                {
-                    b.HasOne("SaraiManagement.Models.Caixa", "Caixa")
-                        .WithMany("Movimentacao")
-                        .HasForeignKey("CaixaID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
-                        .WithMany("Movimentacao")
                         .HasForeignKey("UsuarioID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Caixa");
 
+                    b.Navigation("Donatario");
+
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("SaraiManagement.Models.Caixa", b =>
+            modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
                 {
-                    b.Navigation("Movimentacao");
+                    b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
+                        .WithMany()
+                        .HasForeignKey("DoacaoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SaraiManagement.Models.Estoque", "Estoque")
+                        .WithMany()
+                        .HasForeignKey("EstoqueID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doacao");
+
+                    b.Navigation("Estoque");
                 });
 
-            modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
+            modelBuilder.Entity("SaraiManagement.Models.Movimentacao", b =>
                 {
-                    b.Navigation("ItemDoado");
+                    b.HasOne("SaraiManagement.Models.Caixa", "Caixa")
+                        .WithMany()
+                        .HasForeignKey("CaixaID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SaraiManagement.Models.Doador", "Doador")
+                        .WithMany()
+                        .HasForeignKey("DoadorID");
+
+                    b.HasOne("SaraiManagement.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Caixa");
+
+                    b.Navigation("Doador");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>
                 {
                     b.Navigation("Doacao");
-                });
-
-            modelBuilder.Entity("SaraiManagement.Models.Usuario", b =>
-                {
-                    b.Navigation("Doacao");
-
-                    b.Navigation("Movimentacao");
                 });
 #pragma warning restore 612, 618
         }

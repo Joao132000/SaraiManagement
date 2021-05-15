@@ -8,7 +8,8 @@ namespace SaraiManagement.Models.Enuns
     public enum Categoria
     {
         Alimento,
-        Dinheiro,
+        Roupa,
+        Movel,
         Outros
     }
 }

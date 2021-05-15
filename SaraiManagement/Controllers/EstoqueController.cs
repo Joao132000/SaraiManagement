@@ -11,11 +11,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SaraiManagement.Controllers
 {
-    public class AlimentoController : Controller
+    public class EstoqueController : Controller
     {
-        private IAlimentoRepositorio repositorio;
+        private IEstoqueRepositorio repositorio;
         private ApplicationDbContext context;
-        public AlimentoController(IAlimentoRepositorio repo, ApplicationDbContext ctx)
+        public EstoqueController(IEstoqueRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
             context = ctx;

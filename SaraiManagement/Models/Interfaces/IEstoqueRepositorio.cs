@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace SaraiManagement.Models
 {
-    public interface IAlimentoRepositorio
+    public interface IEstoqueRepositorio
     {
-        IQueryable<Alimento> Alimentos { get; }
+        IQueryable<Estoque> Estoques { get; }
     }
 }

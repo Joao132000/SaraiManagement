@@ -119,8 +119,7 @@ namespace SaraiManagement.Migrations
                     DoacaoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DonatarioID = table.Column<int>(type: "int", nullable: false),
-                    dataDoacao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    valorDoacao = table.Column<double>(type: "float", nullable: false)
+                    dataDoacao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -166,12 +165,13 @@ namespace SaraiManagement.Migrations
                 {
                     MovimentacaoID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CaixaID = table.Column<int>(type: "int", nullable: false),
                     Valor = table.Column<double>(type: "float", nullable: false),
                     TipoMovimentacao = table.Column<int>(type: "int", nullable: false),
-                    DiaMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DataMovimentacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoacaoID = table.Column<int>(type: "int", nullable: false)
+                    DoacaoID = table.Column<int>(type: "int", nullable: false),
+                    UsuarioID = table.Column<int>(type: "int", nullable: false),
+                    CaixaID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -187,6 +187,12 @@ namespace SaraiManagement.Migrations
                         column: x => x.DoacaoID,
                         principalTable: "Doacaos",
                         principalColumn: "DoacaoID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Movimentacaos_Usuarios_UsuarioID",
+                        column: x => x.UsuarioID,
+                        principalTable: "Usuarios",
+                        principalColumn: "UsuarioID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -220,6 +226,11 @@ namespace SaraiManagement.Migrations
                 table: "Movimentacaos",
                 column: "DoacaoID",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Movimentacaos_UsuarioID",
+                table: "Movimentacaos",
+                column: "UsuarioID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -237,9 +248,6 @@ namespace SaraiManagement.Migrations
                 name: "Movimentacaos");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
-
-            migrationBuilder.DropTable(
                 name: "Estoques");
 
             migrationBuilder.DropTable(
@@ -247,6 +255,9 @@ namespace SaraiManagement.Migrations
 
             migrationBuilder.DropTable(
                 name: "Doacaos");
+
+            migrationBuilder.DropTable(
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Donatarios");

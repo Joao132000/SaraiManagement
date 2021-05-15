@@ -69,7 +69,6 @@ namespace SaraiManagement.Models.Classes
                   {
                       
                       dataDoacao = Convert.ToDateTime("10-05-2021"),
-                      valorDoacao = 200,
                       DonatarioID = 1
 
                   });
@@ -103,12 +102,12 @@ namespace SaraiManagement.Models.Classes
                   new Movimentacao
                   {
                       Descricao = "Arrumar parede da Classe",
-                      DiaMovimentacao = Convert.ToDateTime("15-06-2021"),
+                      DataMovimentacao = Convert.ToDateTime("15-06-2021"),
                       TipoMovimentacao = tipoMovimentacao.Debito,
                       Valor = 1000.50,
                       CaixaID = 1,
-                      DoacaoID=1
-                      
+                      DoacaoID=1,
+                      UsuarioID=1
                   });
                 context.SaveChanges();
 

@@ -13,11 +13,6 @@ namespace SaraiManagement.Models
         public int MovimentacaoID { get; set; }
 
         [Required] //CAMPO 'Valor' OBRIGATÓRIO
-        public int CaixaID { get; set; }
-
-
-
-        [Required] //CAMPO 'Valor' OBRIGATÓRIO
         public double Valor { get; set; }
 
 
@@ -28,7 +23,7 @@ namespace SaraiManagement.Models
         [Display(Name = "Data da movimentação")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime DiaMovimentacao { get; set; }
+        public DateTime DataMovimentacao { get; set; }
 
 
         [Required] //CAMPO 'Descricao' OBRIGATÓRIO
@@ -36,7 +31,9 @@ namespace SaraiManagement.Models
 
         public int DoacaoID { get; set; }
         public Doacao Doacao { get; set; }
-
+        public int UsuarioID { get; set; }
+        public Usuario Usuario { get; set; }
+        public int CaixaID { get; set; }
         public Caixa Caixa { get; set; }
     }
 }

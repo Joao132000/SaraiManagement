@@ -10,9 +10,7 @@ namespace SaraiManagement.Models
         public int DoacaoID { get; set; }
         public int DonatarioID { get; set; }
         public DateTime dataDoacao { get; set; }
-
-        public double valorDoacao { get; set; }
-
+       
         public Movimentacao Movimentacao { get; set; }
         public Donatario Donatario { get; set; }
 

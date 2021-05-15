@@ -10,7 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210515143602_Initial")]
+    [Migration("20210515164535_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,7 @@ namespace SaraiManagement.Migrations
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DonatarioID")
+                    b.Property<int?>("DonatarioID")
                         .HasColumnType("int");
 
                     b.Property<string>("Endereco")
@@ -98,7 +98,7 @@ namespace SaraiManagement.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CaixaID")
+                    b.Property<int?>("CaixaID")
                         .HasColumnType("int");
 
                     b.Property<int>("DonatarioID")
@@ -107,7 +107,7 @@ namespace SaraiManagement.Migrations
                     b.Property<int>("UsuarioID")
                         .HasColumnType("int");
 
-                    b.Property<double>("Valor")
+                    b.Property<double?>("Valor")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("dataDoacao")
@@ -293,9 +293,7 @@ namespace SaraiManagement.Migrations
                 {
                     b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
                         .WithMany()
-                        .HasForeignKey("DonatarioID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("DonatarioID");
 
                     b.Navigation("Donatario");
                 });
@@ -304,9 +302,7 @@ namespace SaraiManagement.Migrations
                 {
                     b.HasOne("SaraiManagement.Models.Caixa", "Caixa")
                         .WithMany()
-                        .HasForeignKey("CaixaID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CaixaID");
 
                     b.HasOne("SaraiManagement.Models.Donatario", "Donatario")
                         .WithMany("Doacao")

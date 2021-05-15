@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SaraiManagement.Models.ClassesEF;
 
 
 namespace SaraiManagement.Models.ClassesEF
 {
-    public class EFDoacao : IDoacaoRepositorio
+    public class EFDoacao :IDoacaoRepositorio
     {
         private ApplicationDbContext context;
 
@@ -16,5 +17,26 @@ namespace SaraiManagement.Models.ClassesEF
             context = ctx;
         }
         public IQueryable<Doacao> Doacoes => context.Doacaos;
+
+        public void Create(Doacao doacao)
+        {
+            context.Add(doacao);
+            context.SaveChanges();
+        }
+        public Doacao Consultar(int id)
+        {
+            var doacao = context.Doacaos.FirstOrDefault(p => p.DoacaoID == id);
+            return doacao;
+        }
+        public void Edit(Doacao doacao)
+        {
+            context.Entry(doacao).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+        public void Delete(Doacao doacao)
+        {
+            context.Remove(doacao);
+            context.SaveChanges();
+        }
     }
 }

@@ -95,7 +95,18 @@ namespace SaraiManagement.Models.Classes
                 context.SaveChanges();
 
             }
+            if (!context.Usuarios.Any())
+            {
+                context.Usuarios.AddRange(
+                  new Usuario
+                  {
+                      Nome = "Davi Nascimento",
+                      Senha = "123",
+                      Tipo = tipoUsuario.User
+                  });
+                context.SaveChanges();
 
+            }
             if (!context.Movimentacaos.Any())
             {
                 context.Movimentacaos.AddRange(
@@ -113,18 +124,7 @@ namespace SaraiManagement.Models.Classes
 
             }
 
-            if (!context.Usuarios.Any())
-            {
-                context.Usuarios.AddRange(
-                  new Usuario
-                  {
-                      Nome = "Davi Nascimento",
-                      Senha = "123",
-                      Tipo = tipoUsuario.User
-                  });
-                context.SaveChanges();
-
-            }
+           
 
             if (!context.Estoques.Any())
             {

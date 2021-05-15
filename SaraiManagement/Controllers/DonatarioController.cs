@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
+using SaraiManagement.Models.ViewModels;
+using SaraiManagement.Infraestrutura;
 
 namespace SaraiManagement.Controllers
 {
@@ -13,11 +15,28 @@ namespace SaraiManagement.Controllers
     {
         private IDonatarioRepositorio repositorio;
         private ApplicationDbContext context;
+        public int pageSize = 10;
         public DonatarioController(IDonatarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
             context = ctx;
         }
+
+        public ViewResult List(int pagina = 1) =>
+            View(new DonatarioListViewModel
+            {
+                Donatarios = repositorio.Donatarios
+                .OrderBy(d => d.DonatarioID)
+                .Skip((pagina - 1) * pageSize)
+                .Take(pageSize),
+                PagingInfo = new PagingInfo
+                {
+                    PaginaAtual = pagina,
+                    ItensPorPagina = pageSize,
+                    TotalItens = repositorio.Donatarios.Count()
+
+                }
+            });
 
         [HttpGet]
         public IActionResult Create()

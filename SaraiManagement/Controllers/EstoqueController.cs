@@ -83,9 +83,17 @@ namespace SaraiManagement.Controllers
             return RedirectToAction("Home");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View();
+            var estoque = from e in context.Estoques
+                         select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+            }
+
+            return View(await estoque.ToListAsync());
         }
     }
 }

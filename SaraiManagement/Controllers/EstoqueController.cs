@@ -48,7 +48,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Estoque estoque)
         {
             repositorio.Create(estoque);
-            return RedirectToAction("List");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Details(int id)
@@ -68,7 +68,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Estoque estoque)
         {
             repositorio.Edit(estoque);
-            return RedirectToAction("Home");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -80,7 +80,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Estoque estoque)
         {
             repositorio.Delete(estoque);
-            return RedirectToAction("Home");
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Index(string searchString)

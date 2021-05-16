@@ -5,15 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Estoque</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <form asp-controller="Estoque" asp-action="Index">
     <p>
-        Title: <input type="text" name="SearchString" />
-        <input type="submit" value="Filter" />
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Pesquisar" />
     </p>
 </form>
 <table class="table">
@@ -44,11 +42,14 @@
                 @Html.DisplayFor(modelItem => item.Categoria)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.EstoqueID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EstoqueID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EstoqueID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
+
             </td>
         </tr>
 }
     </tbody>
 </table>
+<p>
+    <a class="btn btn-primary" type="submit" asp-action="Create">Cadastrar Novo Item</a>
+</p>

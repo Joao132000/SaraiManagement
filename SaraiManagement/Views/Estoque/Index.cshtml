@@ -8,15 +8,19 @@
 <h1>Estoque</h1>
 
 
-<form asp-controller="Estoque" asp-action="Index">
-    <p>
-        <input type="text" name="SearchString" />
-        <input type="submit" value="Pesquisar" />
-    </p>
-</form>
+
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                <form asp-controller="Estoque" asp-action="Index">
+                    <p>
+                        <input type="text" name="SearchString" />
+                        <input type="submit" value="Pesquisar" />
+                    </p>
+                </form>
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
@@ -32,6 +36,12 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                <div>
+                    <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create">Selecionar</a>
+                </div>
+            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
             </td>

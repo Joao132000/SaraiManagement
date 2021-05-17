@@ -46,6 +46,12 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
+           => f.Nome), "DonatarioID", "Nome"); 
+            ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f
+           => f.Nome), "UsuarioID", "Nome");
+            ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f
+           => f.Descricao), "CaixaID", "Descricao");
             return View();
         }
 

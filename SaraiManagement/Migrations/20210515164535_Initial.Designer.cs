@@ -10,10 +10,7 @@ using SaraiManagement.Models;
 namespace SaraiManagement.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-<<<<<<< HEAD
-=======
 
->>>>>>> JP
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

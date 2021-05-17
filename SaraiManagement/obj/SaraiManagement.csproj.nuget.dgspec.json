@@ -1,22 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj": {}
-  },
-  "projects": {
-    "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
-        "projectName": "SaraiManagement",
-        "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
-        "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
     "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
@@ -31,7 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JGL\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> JP
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

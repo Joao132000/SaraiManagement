@@ -47,11 +47,7 @@ using SaraiManagement.Infraestrutura;
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"74ef01774ef95866c5e67cf3f4b9dab5a670386c", @"/Views/ItemDoado/Create.cshtml")]
-=======
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"058d90e97ff42058f29dbb3c0ab6e81638f33a26", @"/Views/ItemDoado/Create.cshtml")]
->>>>>>> JP
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f313b1f01ac52a4fbf6214bdf8bb969f11c4e10e", @"/Views/_ViewImports.cshtml")]
     public class Views_ItemDoado_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SaraiManagement.Models.ItemDoado>
     {

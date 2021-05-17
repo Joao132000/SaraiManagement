@@ -27,21 +27,33 @@ using SaraiManagement.Models;
 #line hidden
 #nullable disable
 #nullable restore
+<<<<<<< HEAD
 #line 3 "D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\Views\_ViewImports.cshtml"
+=======
+#line 3 "C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\Views\_ViewImports.cshtml"
+>>>>>>> JP
 using SaraiManagement.Models.Enuns;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
+<<<<<<< HEAD
 #line 4 "D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\Views\_ViewImports.cshtml"
+=======
+#line 4 "C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\Views\_ViewImports.cshtml"
+>>>>>>> JP
 using SaraiManagement.Models.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
+<<<<<<< HEAD
 #line 5 "D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\Views\_ViewImports.cshtml"
+=======
+#line 5 "C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\Views\_ViewImports.cshtml"
+>>>>>>> JP
 using SaraiManagement.Infraestrutura;
 
 #line default
@@ -92,7 +104,11 @@ using SaraiManagement.Infraestrutura;
 #line hidden
 #nullable disable
             WriteLiteral("    <div class=\"card card-outline-primary m-1 p-1\">\r\n        <div class=\"bg-faded p-1\">\r\n            <h4>\r\n                ");
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44e6a80514b78f34cf0e4ef7072bdbe63f9d6f506255", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44e6a80514b78f34cf0e4ef7072bdbe63f9d6f506458", async() => {
+>>>>>>> JP
 #nullable restore
 #line 12 "D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\Views\Donatario\List.cshtml"
                                                                  Write(d.Nome);
@@ -163,7 +179,11 @@ using SaraiManagement.Infraestrutura;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n");
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44e6a80514b78f34cf0e4ef7072bdbe63f9d6f509830", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("div", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44e6a80514b78f34cf0e4ef7072bdbe63f9d6f5010207", async() => {
+>>>>>>> JP
                 WriteLiteral("\r\n\r\n");
             }
             );

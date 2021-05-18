@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\elian\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\elian\\.nuget\\packages"
+=======
+      "C:\\Users\\mfmat\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\mfmat\\.nuget\\packages"
+>>>>>>> e338710d0ef36f7b6443bdff13e95303a0fe7cba
     ]
   }
 }

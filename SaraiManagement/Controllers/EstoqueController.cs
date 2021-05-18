@@ -23,6 +23,7 @@ namespace SaraiManagement.Controllers
             repositorio = repo;
             context = ctx;
         }
+
         public ViewResult List(int pagina = 1) =>
            View(new EstoqueListViewModel
            {

@@ -30,7 +30,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Aluno aluno)
         {
             repositorio.Create(aluno);
-            return RedirectToAction("List");
+            return RedirectToAction("HomeController");
         }
         public IActionResult Details(int id)
         {

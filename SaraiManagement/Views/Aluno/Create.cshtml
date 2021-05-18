@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Ano" class="control-label"></label>
-                <select asp-for="Ano" class="form-control"></select>
+                <select asp-for="@Model.Ano" class="form-control" asp-items="Html.GetEnumSelectList<SaraiManagement.Models.Enuns.Ano>()"></select>
                 <span asp-validation-for="Ano" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Período" class="control-label"></label>
-                <input asp-for="Período" class="form-control" />
+                <select asp-for="@Model.Período" class="form-control" asp-items="Html.GetEnumSelectList<SaraiManagement.Models.Enuns.Periodo>()"></select>
                 <span asp-validation-for="Período" class="text-danger"></span>
             </div>
             <div class="form-group">

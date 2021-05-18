@@ -101,7 +101,7 @@ namespace SaraiManagement.Models.Classes
                         Endereco = "Rua Barroso 244 Recreio Vale do Sol ",
                         Cidade = "Alfenas.MG",
                         NomeResponsavel = "Eliano Cordeiro",
-                        Período = "Noturno",
+                        Período = Periodo.Vespertino,
                         Admissao = Convert.ToDateTime("10-05-2021"),
                         DonatarioID = 1
                     });

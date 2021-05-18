@@ -47,7 +47,7 @@
                     <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
                 </div><br />
                       <div>
-                          <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" class="btn btn-primary" />
+                          <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" asp-route-id="@Model.DoacaoID" class="btn btn-primary" />
                       </div>
             </div>
            

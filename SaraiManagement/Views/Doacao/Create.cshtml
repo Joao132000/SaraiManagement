@@ -44,11 +44,11 @@
           
             <div>
                 <div >
-                    <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
+                    <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
                 </div><br />
-                <div>
-                    <a asp-controller="ItemDoado" asp-action="Create" class="btn btn-primary">Fazer Doaçao de Items</a>
-                </div>
+                      <div>
+                          <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" class="btn btn-primary" />
+                      </div>
             </div>
            
 
@@ -64,19 +64,13 @@
                 </div>
             </div>
                    
-                    
-
-
-
-            <div class="form-group">
-                <input type="submit" value="Doar" class="btn btn-primary" />
-            </div>
+           
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
 </div>
 
 

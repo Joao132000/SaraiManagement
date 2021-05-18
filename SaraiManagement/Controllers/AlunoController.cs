@@ -17,9 +17,50 @@ namespace SaraiManagement.Controllers
         public AlunoController(IAlunoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
-;            context = ctx;
+            ; context = ctx;
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Aluno aluno)
+        {
+            repositorio.Create(aluno);
+            return RedirectToAction("List");
+        }
+        public IActionResult Details(int id)
+        {
+            var aluno = repositorio.Consultar(id);
+            return View(aluno);
+        }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var aluno = context.Alunos.Find(id);
+            return View(aluno);
+        }
+        [HttpPost]
+        public IActionResult Edit(Aluno aluno)
+        {
+            repositorio.Edit(aluno);
+            return RedirectToAction("List");
+        }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var aluno = context.Alunos.Find(id);
+            return View(aluno);
+        }
+        [HttpPost]
+        public IActionResult Delete(Aluno aluno)
+        {
+            repositorio.Delete(aluno);
+            return RedirectToAction("List");
+        }
         public IActionResult Index()
         {
             return View();

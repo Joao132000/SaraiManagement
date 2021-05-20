@@ -9,7 +9,7 @@ namespace SaraiManagement.Models.ClassesEF
 {
     public class EFItemDoado : IItemDoadoRepositorio
     {
-        private ApplicationDbContext context;
+        public ApplicationDbContext context;
 
         public EFItemDoado(ApplicationDbContext ctx)
         {

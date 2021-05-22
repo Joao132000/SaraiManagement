@@ -8,6 +8,8 @@ using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.ViewModels;
 using SaraiManagement.Infraestrutura;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -20,6 +22,18 @@ namespace SaraiManagement.Controllers
         {
             repositorio = repo;
             context = ctx;
+        }
+        public IActionResult Index()
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Correto");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         public ViewResult List(int pagina = 1) =>
@@ -41,7 +55,15 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Create(Donatario donatario)
@@ -52,16 +74,32 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var donatario = repositorio.Consulta(id);
-            return View(donatario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var donatario = repositorio.Consulta(id);
+                return View(donatario);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var donatario = context.Donatarios.Find(id);
-            ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
-           => f.Nome), "DonatarioID");
-            return View(donatario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var donatario = context.Donatarios.Find(id);
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
+               => f.Nome), "DonatarioID");
+                return View(donatario);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Edit(Donatario donatario)
@@ -72,19 +110,22 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var donatario = repositorio.Consulta(id);
-            return View(donatario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var donatario = repositorio.Consulta(id);
+                return View(donatario);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Donatario donatario)
         {
             repositorio.Delete(donatario);
             return RedirectToAction("Home");
-        }
-
-        public IActionResult Index()
-        {
-            return View();
         }
     }
 }

@@ -1,11 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SaraiManagement.Models.Classes;
 using SaraiManagement.Models;
+using SaraiManagement.Models.ClassesEF;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SaraiManagement.Models.Enuns;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
+using System.Data;
 
 namespace SaraiManagement.Controllers
 {
@@ -17,15 +23,33 @@ namespace SaraiManagement.Controllers
         public AlunoController(IAlunoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
-            ; context = ctx;
+            context = ctx;
         }
-
+        public IActionResult Index()
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
-
         [HttpPost]
         public IActionResult Create(Aluno aluno)
         {
@@ -34,14 +58,30 @@ namespace SaraiManagement.Controllers
         }
         public IActionResult Details(int id)
         {
-            var aluno = repositorio.Consultar(id);
-            return View(aluno);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var aluno = repositorio.Consultar(id);
+                return View(aluno);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var aluno = context.Alunos.Find(id);
-            return View(aluno);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var aluno = context.Alunos.Find(id);
+                return View(aluno);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Edit(Aluno aluno)
@@ -52,8 +92,16 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var aluno = context.Alunos.Find(id);
-            return View(aluno);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var aluno = context.Alunos.Find(id);
+                return View(aluno);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Aluno aluno)
@@ -61,11 +109,5 @@ namespace SaraiManagement.Controllers
             repositorio.Delete(aluno);
             return RedirectToAction("List");
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
     }
 }

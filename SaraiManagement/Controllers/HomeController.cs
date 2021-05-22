@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -17,15 +19,30 @@ namespace SaraiManagement.Controllers
         {
             _logger = logger; //Att
         }
-
         public IActionResult Index()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -22,35 +24,77 @@ namespace SaraiManagement.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Correto");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpGet]  //Serve para gerar a View
         public IActionResult Create(int id)//ViewBag + .Nome // ordenados pelo Nome
         {
+<<<<<<< HEAD
             ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
             ViewBag.EstoqueID = new SelectList(context.Estoques.OrderBy(e => e.Descricao), "EstoqueID", "Descricao");            
             return View();
+=======
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
+                ViewBag.EstoqueID = new SelectList(context.Estoques.OrderBy(e => e.Descricao), "EstoqueID", "Descricao");
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+>>>>>>> Master
         }
 
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
         public IActionResult Create(ItemDoado itemDoado)
         {
+<<<<<<< HEAD
+=======
+            itemDoado.EstoqueID = id;
+>>>>>>> Master
             repositorio.Create(itemDoado);
             return View("HomeController");
         }
 
         public IActionResult Details(int id)
         {
-            var item = repositorio.PesquisarItemDoado(id);
-            return View(item);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var item = repositorio.PesquisarItemDoado(id);
+                return View(item);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var item = context.ItemDoados.Find(id);
-            return View(item);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var item = context.ItemDoados.Find(id);
+                return View(item);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpPost]
@@ -63,8 +107,16 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var item = repositorio.PesquisarItemDoado(id);
-            return View(item);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var item = repositorio.PesquisarItemDoado(id);
+                return View(item);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpPost]

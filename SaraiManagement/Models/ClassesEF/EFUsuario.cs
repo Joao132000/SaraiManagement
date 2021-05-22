@@ -36,5 +36,11 @@ namespace SaraiManagement.Models.ClassesEF
             context.Remove(usuario);
             context.SaveChanges();
         }
+        public Usuario Validar(string nome, string senha)
+        {
+            var usuario = context.Usuarios.FirstOrDefault(p => p.Nome == nome && p.Senha == senha);
+            return usuario;
+        }
     }
 }
+

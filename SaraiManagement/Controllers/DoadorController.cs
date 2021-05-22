@@ -9,6 +9,8 @@ using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 using System.Data;
 
 namespace SaraiManagement.Controllers
@@ -25,12 +27,24 @@ namespace SaraiManagement.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+                return View("Create");
+            else
+                return RedirectToAction("Login","Usuario");
         }
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpPost]
@@ -44,15 +58,31 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Consultar(int id)
         {
-            var doador = repositorio.Consultar(id);
-            return View(doador);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doador = repositorio.Consultar(id);
+                return View(doador);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var doador = context.Doadors.Find(id);
-            return View(doador);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doador = context.Doadors.Find(id);
+                return View(doador);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Edit(Doador doador)
@@ -63,8 +93,16 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var doador = repositorio.Consultar(id);
-            return View(doador);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doador = repositorio.Consultar(id);
+                return View(doador);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Doador doador)

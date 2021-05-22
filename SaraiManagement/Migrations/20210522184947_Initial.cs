@@ -98,7 +98,7 @@ namespace SaraiManagement.Migrations
                     Endereco = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NomeResponsavel = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: false),
-                    Período = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Período = table.Column<int>(type: "int", nullable: false),
                     Admissao = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

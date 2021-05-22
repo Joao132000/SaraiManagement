@@ -8,10 +8,10 @@ using SaraiManagement.Models;
 using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using SaraiManagement.Models.Enuns;
+using SaraiManagement.Models.ViewModels;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
-using System.Data;
+
 
 namespace SaraiManagement.Controllers
 {
@@ -19,12 +19,25 @@ namespace SaraiManagement.Controllers
     {
         private IAlunoRepositorio repositorio;
         private ApplicationDbContext context;
+        public int pageSize = 1;
 
         public AlunoController(IAlunoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
             context = ctx;
         }
+        public ViewResult List(int pagina = 1) => View(new AlunoListViewModel
+           {
+                Alunos = repositorio.Alunos.OrderBy(d => d.AlunoID)
+               .Skip((pagina - 1) * pageSize)
+               .Take(pageSize),
+               PagingInfo = new PagingInfo
+               {
+                   PaginaAtual = pagina,
+                   ItensPorPagina = pageSize,
+                   TotalItens = repositorio.Alunos.Count()
+               }
+           });
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");

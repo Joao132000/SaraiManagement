@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
+    "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
+    "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "projectUniqueName": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
         "projectName": "SaraiManagement",
-        "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
+        "projectPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
+        "packagesPath": "C:\\Users\\davi-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,8 +4,22 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style type="text/css">
+    .hidden{display:none}
+</style>
 
-<h1>Create</h1>
+<script>
+    function mostra(id) {
+        if (document.getElementById(id).style.display == 'block') {
+            document.getElementById(id).style.display = 'none';
+        }
+        else {
+            document.getElementById(id).style.display = 'block';
+        }
+    }
+</script>
+
+<h1>Create </h1>
 
 <h4>Doacao</h4>
 <hr />
@@ -15,7 +29,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="DonatarioID" class="control-label"></label>
-                <select asp-for="DonatarioID" class ="form-control" asp-items="ViewBag.DonatarioID"></select>
+                <select asp-for="DonatarioID" class="form-control" asp-items="ViewBag.DonatarioID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="dataDoacao" class="control-label"></label>
@@ -24,19 +38,32 @@
             </div>
             <div class="form-group">
                 <label asp-for="UsuarioID" class="control-label"></label>
-                <select asp-for="UsuarioID" class ="form-control" asp-items="ViewBag.UsuarioID"></select>
+                <select asp-for="UsuarioID" class="form-control" asp-items="ViewBag.UsuarioID"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
+          
+            <div>
+                <div >
+                    <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
+                </div><br />
+                <div>
+                    <a asp-controller="ItemDoado" asp-action="Create" class="btn btn-primary">Fazer Doaçao de Items</a>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="CaixaID" class="control-label"></label>
-                <select asp-for="CaixaID" class ="form-control" asp-items="ViewBag.CaixaID"></select>
+           
+            <div id="test" class="hidden form-group" style="display:none">
+                <div >
+                    <label asp-for="Valor" class="control-label"></label>
+                    <input asp-for="Valor" class="form-control" />
+                    <span asp-validation-for="Valor" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="CaixaID" class="control-label"></label>
+                    <select asp-for="CaixaID" class="form-control" asp-items="ViewBag.CaixaID"></select>
+                </div>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Doar" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -45,4 +72,5 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+
 

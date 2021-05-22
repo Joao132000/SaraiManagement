@@ -23,6 +23,7 @@ namespace SaraiManagement.Controllers
             repositorio = repo;
             context = ctx;
         }
+
         public ViewResult List(int pagina = 1) =>
            View(new EstoqueListViewModel
            {
@@ -48,7 +49,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Estoque estoque)
         {
             repositorio.Create(estoque);
-            return RedirectToAction("List");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Details(int id)
@@ -68,7 +69,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Estoque estoque)
         {
             repositorio.Edit(estoque);
-            return RedirectToAction("Home");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -80,12 +81,20 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Estoque estoque)
         {
             repositorio.Delete(estoque);
-            return RedirectToAction("Home");
+            return RedirectToAction("Index");
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View();
+            var estoque = from e in context.Estoques
+                         select e;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+            }
+
+            return View(await estoque.ToListAsync());
         }
     }
 }

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SaraiManagement.Models.Estoque>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Estoque</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <form asp-controller="Estoque" asp-action="Index">
+                    <p>
+                        <input type="text" name="SearchString" />
+                        <input type="submit" value="Pesquisar" />
+                    </p>
+                </form>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <div>
+                    <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create" asp-route-id="@item.EstoqueID">Selecionar</a>
+                    @Html.ActionLink("Selecionar", "Create", "ItemDoado", new { id = item.EstoqueID })
+                </div>
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a class="btn btn-primary" type="submit" asp-action="Create">Cadastrar Novo Item</a>
+</p>

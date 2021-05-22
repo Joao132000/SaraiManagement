@@ -54,7 +54,7 @@ namespace SaraiManagement.Controllers
         }
 
 
-        public IActionResult PesquisarMovimentacao(int id)
+        public IActionResult Consultar(int id)
         {
             var consulta = repositorio.PesquisarMovimentacao(id);
             return View(consulta);

@@ -7113,16 +7113,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\mfmat\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\elian\\.nuget\\packages\\": {}
->>>>>>> Master
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
       "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
@@ -7131,16 +7126,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "projectName": "SaraiManagement",
-      "projectPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\elian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elian\\source\\repos\\SaraiManagement\\SaraiManagement\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\elian\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Master
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7203,11 +7188,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
->>>>>>> Master
       }
     }
   }

@@ -38,11 +38,6 @@ namespace SaraiManagement.Controllers
         [HttpGet]  //Serve para gerar a View
         public IActionResult Create(int id)//ViewBag + .Nome // ordenados pelo Nome
         {
-<<<<<<< HEAD
-            ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
-            ViewBag.EstoqueID = new SelectList(context.Estoques.OrderBy(e => e.Descricao), "EstoqueID", "Descricao");            
-            return View();
-=======
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
@@ -54,16 +49,11 @@ namespace SaraiManagement.Controllers
             {
                 return RedirectToAction("Login", "Usuario");
             }
->>>>>>> Master
         }
 
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
         public IActionResult Create(ItemDoado itemDoado)
         {
-<<<<<<< HEAD
-=======
-            itemDoado.EstoqueID = id;
->>>>>>> Master
             repositorio.Create(itemDoado);
             return View("HomeController");
         }

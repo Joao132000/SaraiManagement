@@ -60,7 +60,7 @@ namespace SaraiManagement.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.Property<int>("Período")
+                    b.Property<int>("Periodo")
                         .HasColumnType("int");
 
                     b.HasKey("AlunoID");

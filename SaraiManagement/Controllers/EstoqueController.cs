@@ -25,12 +25,22 @@ namespace SaraiManagement.Controllers
             repositorio = repo;
             context = ctx;
         }
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index(string searchString)
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
+            var aux = HttpContext.Session.GetString("id_aux");
             if (acesso != null)
             {
-                return View("Correto");
+                var estoque = from e in context.Estoques
+                              select e;
+
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+                }
+
+                return View(await estoque.ToListAsync());
             }
             else
             {
@@ -130,25 +140,6 @@ namespace SaraiManagement.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Index(string searchString)
-        {
-            var acesso = HttpContext.Session.GetString("usuario_session");
-            if (acesso != null)
-            {
-                var estoque = from e in context.Estoques
-                              select e;
-
-                if (!String.IsNullOrEmpty(searchString))
-                {
-                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
-                }
-
-                return View(await estoque.ToListAsync());
-            }
-            else
-            {
-                return RedirectToAction("Login", "Usuario");
-            }
-        }
+        
     }
 }

@@ -36,7 +36,7 @@
             <td>
                 <div>
                     <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create" asp-route-id="@item.EstoqueID">Selecionar</a>
-                    @Html.ActionLink("Selecionar", "Create", "ItemDoado", new { id = item.EstoqueID })
+                    Session ["aux"] = @item.EstoqueID
                 </div>
             </td>
            

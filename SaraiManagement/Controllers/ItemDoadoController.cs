@@ -41,7 +41,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
+                //var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
                 //ViewBag.DoacaoID = idDoacao;
 
                 ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");

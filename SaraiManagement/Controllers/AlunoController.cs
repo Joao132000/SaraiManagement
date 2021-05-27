@@ -43,7 +43,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View("Create");
+                return RedirectToAction("Index", "TelaInicial");
             }
             else
             {

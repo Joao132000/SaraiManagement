@@ -24,14 +24,14 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
 
-<<<<<<< HEAD
+
         public ViewResult List() =>
           View(new DoacaoListViewModel
           {
               Doacaos = repositorio.Doacoes
               .OrderBy(d => d.DoacaoID)
           });
-=======
+
         public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
         {
             Doacaos = repositorio.Doacoes
@@ -45,7 +45,7 @@ namespace SaraiManagement.Controllers
                 TotalItens = repositorio.Doacoes.Count()
             }
         });
->>>>>>> Master
+
 
         public IActionResult Index()
         {

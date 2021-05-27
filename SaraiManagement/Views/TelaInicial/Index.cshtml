@@ -3,11 +3,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Sarai Management</h1>
 </div>
 
-<div class="container-fluid d-flex flex-wrap">
+<div class="container-fluid d-flex flex-wrap" style="margin: 0 auto">
+    <!-- Aluno -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Usuario2.png" alt="Imagem de capa do card">
         <div class="card-body">
@@ -16,11 +16,12 @@
         </div>
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 0 auto">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 5% auto">
             Gerenciar Alunos
         </button>
     </div>
 
+    <!-- Caixa -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
@@ -29,49 +30,94 @@
         </div>
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCaixa" style="margin: 0 auto">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCaixa" style="margin: 5% auto">
             Gerenciar Caixa
         </button>
     </div>
 
+    <!-- Doação -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Doações</h5>
             <p class="card-text">Descricao ---</p>
         </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoacao" style="margin: 5% auto">
+            Gerenciar Doações
+        </button>
     </div>
 
+    <!-- Doadores -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Doadores</h5>
             <p class="card-text">Descricao ---</p>
         </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoadores" style="margin: 5% auto">
+            Gerenciar Doadores
+        </button>
     </div>
 
+    <!-- Donatario -->
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Gerenciamento de Donatarios</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDonatario" style="margin: 5% auto">
+            Gerenciar Donatario
+        </button>
+    </div>
+
+    <!-- Estoque -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Estoque</h5>
             <p class="card-text">Descricao ---</p>
         </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEstoque" style="margin: 5% auto">
+            Gerenciar Estoque
+        </button>
     </div>
 
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Itens Doados</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
-    </div>
 
+    <!-- Movimentação -->
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Movimentações</h5>
             <p class="card-text">Descricao ---</p>
         </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMovimentacao" style="margin: 5% auto">
+            Gerenciar Itens Doados
+        </button>
+    </div>
+
+    <!-- Usuário -->
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Usuário</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalUsuario" style="margin: 5% auto">
+            Gerenciar Usuário
+        </button>
     </div>
 </div>
 
@@ -86,13 +132,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Aluno" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
                 <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Lista de Alunos</a>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar mudanças</button>
             </div>
         </div>
     </div>
@@ -108,12 +150,116 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Caixa</a>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Doacao -->
+<div class="modal fade" id="modalDoacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Doação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Doacao" asp-action="Create" class="btn btn-primary">Realizar Doação</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Doadores -->
+<div class="modal fade" id="modalDoadores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Doadores</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Doador" asp-action="Create" class="btn btn-primary">Cadastrar Doador</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Donatario -->
+<div class="modal fade" id="modalDonatario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Donatario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Cadastrar Donatario</a>
+                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Consultar lista de Donatarios</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Estoque -->
+<div class="modal fade" id="modalEstoque" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Estoque</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Estoque" asp-action="Create" class="btn btn-primary">Cadastrar item no Estoque</a>
+                <a asp-controller="Estoque" asp-action="Index" class="btn btn-primary">Visualizar itens no Estoque</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal Movimentacao -->
+<div class="modal fade" id="modalMovimentacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Movimentação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar uma Movimentação</a>
+                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar lista de Movimentação</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Usuario -->
+<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Usuário</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Usuario" asp-action="Create" class="btn btn-primary">Cadastrar novo Usuário</a>
+                <a asp-controller="Usuario" asp-action="List" class="btn btn-primary">Ver lista de Usuário</a>
             </div>
         </div>
     </div>

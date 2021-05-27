@@ -56,6 +56,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.MovimentacaoID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.MovimentacaoID" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.MovimentacaoID" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" asp-route-id="@Model.MovimentacaoID" class="btn btn-success  btn-lg" role="button" aria-pressed="true">Voltar a Lista</a>
 </div>

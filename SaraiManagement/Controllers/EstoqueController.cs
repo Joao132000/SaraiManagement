@@ -26,12 +26,13 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
 
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, int idDoacao)
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
             var aux = HttpContext.Session.GetString("id_aux");
             if (acesso != null)
             {
+                ViewBag.DoacaoID = new SelectList(context.Doacaos.Where(d => d.DoacaoID == idDoacao), "DoacaoID", "DoacaoID");
                 var estoque = from e in context.Estoques
                               select e;
 
@@ -90,7 +91,6 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
                 var estoque = repositorio.Consulta(id);
-                ViewBag.ID = estoque.EstoqueID;
                 return View(estoque);
             }
             else

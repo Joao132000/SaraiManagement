@@ -16,6 +16,8 @@ namespace SaraiManagement.Controllers
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
+            HttpContext.Session.SetString("idDoacao", 1.ToString());
+
             if (acesso != null)
             {
                 return View();

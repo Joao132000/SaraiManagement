@@ -8,12 +8,9 @@ using SaraiManagement.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
-<<<<<<< HEAD
-using SaraiManagement.Models.ViewModels;
-=======
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
->>>>>>> Master
+
 
 namespace SaraiManagement.Controllers
 {
@@ -29,7 +26,7 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
 
-<<<<<<< HEAD
+
 
         public ViewResult List() =>
           View(new DoacaoListViewModel
@@ -37,7 +34,7 @@ namespace SaraiManagement.Controllers
               Doacaos = repositorio.Doacoes
               .OrderBy(d => d.DoacaoID)
           });
-=======
+
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
@@ -50,32 +47,12 @@ namespace SaraiManagement.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
         }
->>>>>>> Master
-
-        public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
-        {
-            Doacaos = repositorio.Doacoes
-            .OrderBy(d => d.DoacaoID)
-            .Skip((pagina - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
-            {
-                PaginaAtual = pagina,
-                ItensPorPagina = PageSize,
-                TotalItens = repositorio.Doacoes.Count()
-            }
-        });
-<<<<<<< HEAD
 
 
-        public IActionResult Index()
-        {
-            return View();
-        }
 
 
-=======
->>>>>>> Master
+
+ 
         [HttpGet]
         public IActionResult Create()
         {

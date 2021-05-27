@@ -8,6 +8,8 @@ using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Models.ViewModels;
+using SaraiManagement.Infraestrutura;
 
 namespace SaraiManagement.Controllers
 {
@@ -15,6 +17,8 @@ namespace SaraiManagement.Controllers
     {
         private IUsuarioRepositorio repositorio;
         private ApplicationDbContext context;
+        public int pageSize = 1;
+
         public UsuarioController(IUsuarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
@@ -29,6 +33,22 @@ namespace SaraiManagement.Controllers
             else
                 return View("Login");
         }
+        [HttpGet]
+        public ViewResult List(int pagina = 1) =>
+            View(new UsuarioListViewModel
+            {
+                 Usuarios = repositorio.Usuarios
+                .OrderBy(d => d.UsuarioID)
+                .Skip((pagina - 1) * pageSize)
+                .Take(pageSize),
+                PagingInfo = new PagingInfo
+                {
+                    PaginaAtual = pagina,
+                    ItensPorPagina = pageSize,
+                    TotalItens = repositorio.Usuarios.Count()
+                }
+            });
+
 
         [HttpGet]
         public IActionResult Create()

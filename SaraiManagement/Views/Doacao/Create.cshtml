@@ -42,12 +42,21 @@
             </div>
 
             <div>
+<<<<<<< HEAD
                 <div>
                     <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
                 </div><br />
                 <div>
                     <input type="submit" value="Fazer doaçao de Item"  asp-action="List" class="btn btn-primary" />
                 </div>
+=======
+                <div >
+                    <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
+                </div><br />
+                      <div>
+                          <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" asp-route-id="@Model.DoacaoID" class="btn btn-primary" />
+                      </div>
+>>>>>>> Master
             </div>
            
             <div id="test" class="hidden form-group" style="display:none">
@@ -61,17 +70,22 @@
                     <select asp-for="CaixaID" class="form-control" asp-items="ViewBag.CaixaID"></select>
                 </div>
             </div>
+<<<<<<< HEAD
 
 
             <div class="form-group">
                 <input type="submit" value="Doar" class="btn btn-primary" />
             </div>
+=======
+                   
+           
+>>>>>>> Master
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
 </div>
 
 

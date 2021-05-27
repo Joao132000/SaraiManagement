@@ -3,9 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SaraiManagement.Models.Classes;
 using SaraiManagement.Models;
-using SaraiManagement.Models.ClassesEF;
+using SaraiManagement.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
@@ -17,18 +16,36 @@ namespace SaraiManagement.Controllers
     {
         private IDoacaoRepositorio repositorio;
         private ApplicationDbContext context;
+        public int PageSize = 2;
+
         public DoacaoController(IDoacaoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
             context = ctx;
         }
 
+<<<<<<< HEAD
         public ViewResult List() =>
           View(new DoacaoListViewModel
           {
               Doacaos = repositorio.Doacoes
               .OrderBy(d => d.DoacaoID)
           });
+=======
+        public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
+        {
+            Doacaos = repositorio.Doacoes
+            .OrderBy(d => d.DoacaoID)
+            .Skip((pagina - 1) * PageSize)
+            .Take(PageSize),
+            PagingInfo = new PagingInfo
+            {
+                PaginaAtual = pagina,
+                ItensPorPagina = PageSize,
+                TotalItens = repositorio.Doacoes.Count()
+            }
+        });
+>>>>>>> Master
 
         public IActionResult Index()
         {
@@ -68,6 +85,7 @@ namespace SaraiManagement.Controllers
             var doacao = context.Doacaos.Find(id);
             return View(doacao);
         }
+
         [HttpPost]
         public IActionResult Edit(Doacao doacao)
         {

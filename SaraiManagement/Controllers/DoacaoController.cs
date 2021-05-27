@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Controllers;
 
 namespace SaraiManagement.Controllers
 {
@@ -71,10 +72,14 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Doacao doacao)
         {
+<<<<<<< HEAD
             HttpContext.Session.SetString("idDoacao", doacao.DoacaoID.ToString());
 
+=======
+            
+>>>>>>> Joao
             repositorio.Create(doacao);
-            return View();
+            return RedirectToAction("Index", "Estoque");
         }
 
         [HttpGet]

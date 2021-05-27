@@ -31,6 +31,7 @@
         </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
         @foreach (var item in Model)
         {
             <tr>
@@ -39,6 +40,28 @@
                         <a class="btn btn-outline-success" asp-controller="Estoque" asp-action="Details1" asp-route-id="@item.EstoqueID">Selecionar</a>
                     </div>
                 </td>
+=======
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <div>
+                    <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create"  asp-route-idEstoque="@item.EstoqueID" asp-route-idDoacao="">Selecionar</a>
+                </div>
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
+>>>>>>> Joao
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Descricao)

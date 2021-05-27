@@ -29,7 +29,7 @@ namespace SaraiManagement
             services.AddSession(options =>
             {
                 options.Cookie.Name = ".Sarai.Session";
-                options.IdleTimeout = TimeSpan.FromSeconds(20);
+                options.IdleTimeout = TimeSpan.FromSeconds(300);
                 options.Cookie.IsEssential = true;
             });
             services.AddTransient<IAlunoRepositorio, EFAluno>();
@@ -66,7 +66,7 @@ namespace SaraiManagement
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Home", action = "Index" });
             });
-            SeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
 
            //Davi
         }

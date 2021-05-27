@@ -8,8 +8,8 @@
 
 <div class="container-fluid d-flex flex-wrap" style="margin: 0 auto">
     <!-- Aluno -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Usuario2.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Alunos</h5>
             <p class="card-text">Fazer Cadastro de Alunos</p>
@@ -22,8 +22,8 @@
     </div>
 
     <!-- Caixa -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Caixa</h5>
             <p class="card-text">Descricao ---</p>
@@ -36,8 +36,8 @@
     </div>
 
     <!-- Doação -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Doações</h5>
             <p class="card-text">Descricao ---</p>
@@ -50,8 +50,8 @@
     </div>
 
     <!-- Doadores -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Doadores</h5>
             <p class="card-text">Descricao ---</p>
@@ -64,8 +64,8 @@
     </div>
 
     <!-- Donatario -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroDonatarios.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Donatarios</h5>
             <p class="card-text">Descricao ---</p>
@@ -78,8 +78,8 @@
     </div>
 
     <!-- Estoque -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Estoque</h5>
             <p class="card-text">Descricao ---</p>
@@ -93,8 +93,8 @@
 
 
     <!-- Movimentação -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/CadastroMovimentacao.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Movimentações</h5>
             <p class="card-text">Descricao ---</p>
@@ -107,8 +107,8 @@
     </div>
 
     <!-- Usuário -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
-        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
+        <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Usuário</h5>
             <p class="card-text">Descricao ---</p>
@@ -227,8 +227,6 @@
     </div>
 </div>
 
-
-
 <!-- Modal Movimentacao -->
 <div class="modal fade" id="modalMovimentacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -240,8 +238,8 @@
                 </button>
             </div>
             <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar uma Movimentação</a>
-                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar lista de Movimentação</a>
+                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
+                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Lista de Movimentação</a>
             </div>
         </div>
     </div>

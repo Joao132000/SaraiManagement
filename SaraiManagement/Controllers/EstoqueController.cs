@@ -32,7 +32,7 @@ namespace SaraiManagement.Controllers
             var aux = HttpContext.Session.GetString("id_aux");
             if (acesso != null)
             {
-                var estoque = from e in context.Estoques
+                var estoque = from e in context.Estoques.OrderBy(e => e.Descricao)
                               select e;
 
                 if (!String.IsNullOrEmpty(searchString))

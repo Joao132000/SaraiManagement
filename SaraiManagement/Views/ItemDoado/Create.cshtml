@@ -1,4 +1,4 @@
-﻿@model SaraiManagement.Models.ItemDoado
+﻿@model SaraiManagement.Models.ViewModels.EstoqueItemDoadoListViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -16,16 +16,22 @@
 
             <div class="form-group">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="DoacaoID" />
 =======
                 <label asp-for="DoacaoID" class="control-label"></label>
                 <select asp-for="DoacaoID" class="form-control" asp-items="ViewBag.DoacaoID"></select>
 >>>>>>> a8b9f1ce0b59afbe3897c06aa24abb1ae58443ef
+=======
+                <label asp-for="@Model.ItemDoados.DoacaoID" class="control-label"></label>
+                <select asp-for="@Model.ItemDoados.DoacaoID" class="form-control" asp-items="ViewBag.DoacaoID"></select>
+>>>>>>> origin/Matheus3
             </div>
 
-            <input type="hidden" asp-for="EstoqueID" />
+            <input type="hidden" asp-for="@Model.Estoques.EstoqueID" />
             <div class="form-group">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <label asp-for="EstoqueID" class="control-label"></label>
@@ -50,6 +56,12 @@
                 <label asp-for="EstoqueID" class="control-label"></label>
                 <select asp-for="EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
                 <span asp-validation-for="EstoqueID" class="text-danger"></span>
+=======
+                <label asp-for="@Model.Estoques.EstoqueID" class="control-label"></label>
+                <select asp-for="@Model.Estoques.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
+                <select asp-for="@Model.Estoques.Descricao" class="form-control" asp-items="ViewBag.Descricao"></select>
+                <span asp-validation-for="@Model.Estoques.EstoqueID" class="text-danger"></span>
+>>>>>>> origin/Matheus3
             </div>
 >>>>>>> a8b9f1ce0b59afbe3897c06aa24abb1ae58443ef
 
@@ -58,9 +70,9 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Quantidade" class="control-label"></label>
-                <input asp-for="Quantidade" class="form-control" />
-                <span asp-validation-for="Quantidade" class="text-danger"></span>
+                <label asp-for="@Model.Estoques.Quantidade" class="control-label"></label>
+                <input asp-for="@Model.Estoques.Quantidade" class="form-control" />
+                <span asp-validation-for="@Model.Estoques.Quantidade" class="text-danger"></span>
             </div>
 
             <div class="form-group">

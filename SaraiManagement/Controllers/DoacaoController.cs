@@ -8,6 +8,8 @@ using SaraiManagement.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -23,6 +25,19 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
 
+        public IActionResult Index()
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Correto");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
+
         public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
         {
             Doacaos = repositorio.Doacoes
@@ -36,23 +51,24 @@ namespace SaraiManagement.Controllers
                 TotalItens = repositorio.Doacoes.Count()
             }
         });
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
-           => f.Nome), "DonatarioID", "Nome"); 
-            ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f
-           => f.Nome), "UsuarioID", "Nome");
-            ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f
-           => f.Descricao), "CaixaID", "Descricao");
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
+               => f.Nome), "DonatarioID", "Nome");
+                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f
+               => f.Nome), "UsuarioID", "Nome");
+                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f
+               => f.Descricao), "CaixaID", "Descricao");
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpPost]
@@ -65,15 +81,31 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Consultar(int id)
         {
-            var doacao = repositorio.Consultar(id);
-            return View(doacao);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doacao = repositorio.Consultar(id);
+                return View(doacao);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var doacao = context.Doacaos.Find(id);
-            return View(doacao);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doacao = context.Doacaos.Find(id);
+                return View(doacao);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
 
         [HttpPost]
@@ -85,8 +117,16 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var doacao = repositorio.Consultar(id);
-            return View(doacao);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var doacao = repositorio.Consultar(id);
+                return View(doacao);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Doacao doacao)

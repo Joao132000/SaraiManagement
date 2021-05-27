@@ -12,5 +12,6 @@ namespace SaraiManagement.Models
         public Usuario Consultar(int id);
         public void Edit(Usuario usuario);
         public void Delete(Usuario usuario);
+        public Usuario Validar(string nome, string senha);
     }
 }

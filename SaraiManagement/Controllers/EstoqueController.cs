@@ -9,6 +9,8 @@ using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.ViewModels;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -23,6 +25,19 @@ namespace SaraiManagement.Controllers
             repositorio = repo;
             context = ctx;
         }
+        public IActionResult Index()
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View("Correto");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
+
         public ViewResult List(int pagina = 1) =>
            View(new EstoqueListViewModel
            {
@@ -42,7 +57,15 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Create(Estoque estoque)
@@ -53,16 +76,32 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-            var estoque = repositorio.Consulta(id);
-            return View(estoque);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var estoque = repositorio.Consulta(id);
+                return View(estoque);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var estoque = context.Estoques.Find(id);
-            ViewBag.DonatarioID = new SelectList(context.Estoques.OrderBy(f
-           => f.Descricao), "EstoqueID");
-            return View(estoque);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var estoque = context.Estoques.Find(id);
+                ViewBag.DonatarioID = new SelectList(context.Estoques.OrderBy(f
+               => f.Descricao), "EstoqueID");
+                return View(estoque);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Edit(Estoque estoque)
@@ -73,8 +112,16 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var estoque = repositorio.Consulta(id);
-            return View(estoque);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var estoque = repositorio.Consulta(id);
+                return View(estoque);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Estoque estoque)
@@ -85,15 +132,23 @@ namespace SaraiManagement.Controllers
 
         public async Task<IActionResult> Index(string searchString)
         {
-            var estoque = from e in context.Estoques
-                         select e;
-
-            if (!String.IsNullOrEmpty(searchString))
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
             {
-                estoque = estoque.Where(s => s.Descricao.Contains(searchString));
-            }
+                var estoque = from e in context.Estoques
+                              select e;
 
-            return View(await estoque.ToListAsync());
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+                }
+
+                return View(await estoque.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
         }
     }
 }

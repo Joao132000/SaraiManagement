@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement.Controllers
 {
@@ -21,7 +23,11 @@ namespace SaraiManagement.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+                return View("Correto");
+            else
+                return View("Login");
         }
 
         [HttpGet]
@@ -68,5 +74,38 @@ namespace SaraiManagement.Controllers
             repositorio.Delete(usuario);
             return RedirectToAction("HomeController");
         }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public IActionResult Login(string nome, string senha)
+        {
+            var confirma = repositorio.Validar(nome, senha);
+            if (confirma != null)
+            {
+                HttpContext.Session.SetString("usuario_session", confirma.Nome);
+                return RedirectToAction("Correto");
+            }
+            else
+            {
+                return RedirectToAction("Errado");
+            }
+        }
+        [HttpGet]
+        public IActionResult Correto()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Errado()
+        {
+            return View();
+        }
+
     }
 }

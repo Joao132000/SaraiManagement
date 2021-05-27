@@ -46,7 +46,7 @@ namespace SaraiManagement.Models
         public string NomeResponsavel { get; set; }
 
         [Required] //CAMPO 'Periodo' OBRIGATÓRIO
-        public string Período { get; set; }
+        public Periodo Periodo { get; set; }
 
 
 

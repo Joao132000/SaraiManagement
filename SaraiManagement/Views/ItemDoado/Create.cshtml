@@ -13,16 +13,27 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
+<<<<<<< HEAD
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="DoacaoID" />
+=======
+                <label asp-for="DoacaoID" class="control-label"></label>
+                <select asp-for="DoacaoID" class="form-control" asp-items="ViewBag.DoacaoID"></select>
+>>>>>>> a8b9f1ce0b59afbe3897c06aa24abb1ae58443ef
             </div>
+
+            <input type="hidden" asp-for="EstoqueID" />
             <div class="form-group">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <label asp-for="EstoqueID" class="control-label"></label>
                 <select asp-for="EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
                 
 =======
+=======
+>>>>>>> Master
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="EstoqueID" />
 
@@ -35,13 +46,23 @@
                 </div>
 
 
-
+=======
+                <label asp-for="EstoqueID" class="control-label"></label>
+                <select asp-for="EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
+                <span asp-validation-for="EstoqueID" class="text-danger"></span>
             </div>
+>>>>>>> a8b9f1ce0b59afbe3897c06aa24abb1ae58443ef
+
+            <div class="form-group">
+                <a class="btn btn-outline-dark" type="submit" asp-controller="Estoque" asp-action=Index>Estoque</a>
+            </div>
+
             <div class="form-group">
                 <label asp-for="Quantidade" class="control-label"></label>
                 <input asp-for="Quantidade" class="form-control" />
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

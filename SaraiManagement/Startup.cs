@@ -25,6 +25,13 @@ namespace SaraiManagement
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement2021:ConnectionString"]));
+            services.AddControllersWithViews();
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".Sarai.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(20);
+                options.Cookie.IsEssential = true;
+            });
             services.AddTransient<IAlunoRepositorio, EFAluno>();
             services.AddTransient<IDoacaoRepositorio, EFDoacao>();
             services.AddTransient<IDonatarioRepositorio, EFDonatario>();
@@ -52,13 +59,14 @@ namespace SaraiManagement
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseSession();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Home", action = "Index" });
             });
-            //SeedData.EnsurePopulated(app);
+            SeedData.EnsurePopulated(app);
 
            //Davi
         }

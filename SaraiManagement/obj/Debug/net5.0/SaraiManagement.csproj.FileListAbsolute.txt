@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csprojAssemblyReference.cache
@@ -177,6 +178,8 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\S
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 =======
 =======
+=======
+>>>>>>> Master
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\libman.json
@@ -558,6 +561,7 @@ C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Aluno\List.cshtml.g.cs
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.json
@@ -778,3 +782,5 @@ C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiM
 >>>>>>> Master
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Master

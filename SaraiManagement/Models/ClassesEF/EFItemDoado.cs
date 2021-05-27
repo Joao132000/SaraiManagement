@@ -15,7 +15,9 @@ namespace SaraiManagement.Models.ClassesEF
         {
             context = ctx;
         }
-        public IQueryable<ItemDoado> ItemDoados => context.ItemDoados;
+        public IQueryable<ItemDoado> ItemDoados => context.ItemDoados
+            .Include(d => d.Doacao)
+            .Include(e => e.Estoque);
 
         public void Create(ItemDoado itemDoado)
         {

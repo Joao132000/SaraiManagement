@@ -8,17 +8,18 @@
 </div>
 
 <div class="container-fluid d-flex flex-wrap">
-        <div class="card" style="width: 18rem; margin-left: 20px; margin-right: 20px;">
-            <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
-            <div class="card-body">
-                <h5 class="card-title">Título do card</h5>
-                <p class="card-text">Fazer Cadastro de Alunos</p>
-                <!-- Botão para acionar modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno">
-                    Gerenciar Alunos
-                </button>
-            </div>
+    <div class="card" style="width: 18rem; margin-left: 20px; margin-right: 20px;">
+        <img class="card-img-top" src="~/img/Usuario2.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Título do card</h5>
+            <p class="card-text">Fazer Cadastro de Alunos</p>
+
         </div>
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 0 auto">
+            Gerenciar Alunos
+        </button>
+    </div>
 
     <div class="card" style="width: 18rem; margin-left: 20px; margin-right: 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
@@ -28,34 +29,6 @@
         </div>
     </div>
 </div>
-
-<!-- Botão para acionar modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
-    Abrir modal de demonstração
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <a asp-controller="Aluno" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
-                <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Lista de Alunos</a>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Salvar mudanças</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 
 <!-- Modal -->

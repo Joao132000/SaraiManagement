@@ -57,12 +57,9 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f
-               => f.Nome), "DonatarioID", "Nome");
-                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f
-               => f.Nome), "UsuarioID", "Nome");
-                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f
-               => f.Descricao), "CaixaID", "Descricao");
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f => f.Nome), "DonatarioID", "Nome");
+                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f => f.Nome), "UsuarioID", "Nome");
+                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f => f.Descricao), "CaixaID", "Descricao");
                 return View();
             }
             else
@@ -74,6 +71,8 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Doacao doacao)
         {
+            HttpContext.Session.SetString("idDoacao", doacao.DoacaoID.ToString());
+
             repositorio.Create(doacao);
             return View();
         }

@@ -42,7 +42,8 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
                 ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
-                ViewBag.EstoqueID = new SelectList(context.Estoques.OrderBy(e => e.Descricao), "EstoqueID", "Descricao");
+                ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "EstoqueID");
+                ViewBag.Descricao = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "Descricao");
                 return View();
             }
             else

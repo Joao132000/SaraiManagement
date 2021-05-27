@@ -88,7 +88,7 @@ namespace SaraiManagement.Controllers
             if (confirma != null)
             {
                 HttpContext.Session.SetString("usuario_session", confirma.Nome);
-                return RedirectToAction("Correto");
+                return RedirectToAction("Index", "TelaInicial");
             }
             else
             {

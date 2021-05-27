@@ -97,6 +97,22 @@ namespace SaraiManagement.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
         }
+
+        public IActionResult Details1(int id)
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var estoque = repositorio.Consulta(id);
+                ViewBag.ID = estoque.EstoqueID;
+                return View(estoque);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
+
         [HttpGet]
         public IActionResult Edit(int id)
         {

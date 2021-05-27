@@ -9,6 +9,7 @@ using SaraiManagement.Models.ClassesEF;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
+using SaraiManagement.Models.ViewModels;
 
 namespace SaraiManagement.Controllers
 {
@@ -21,6 +22,13 @@ namespace SaraiManagement.Controllers
             repositorio = repo;
             context = ctx;
         }
+
+        public ViewResult List() =>
+          View(new DoacaoListViewModel
+          {
+              Doacaos = repositorio.Doacoes
+              .OrderBy(d => d.DoacaoID)
+          });
 
         public IActionResult Index()
         {

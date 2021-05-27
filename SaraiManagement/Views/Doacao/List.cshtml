@@ -1,0 +1,33 @@
+﻿@model SaraiManagement.Models.ViewModels.DoacaoListViewModel
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List</h1>
+
+
+<table class="table">
+    
+    <tbody>
+@foreach (var item in Model.Doacaos) {
+        <tr>
+            <td>
+                <div class="card-text p-1">@item.DonatarioID</div>
+            </td>
+            <td>
+                <div class="card-text p-1">@item.Usuario.Nome</div>
+            </td>
+            <td>
+                <div class="card-text p-1">@item.dataDoacao</div>
+            </td>
+           
+            <td>
+                <a asp-action="Edit" asp-controller="ItemDoado" asp-route-id="@item.DoacaoID">Adicionar Items</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

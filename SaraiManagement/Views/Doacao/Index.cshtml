@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SaraiManagement.Models.Doacao>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Donatario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataDoacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+           
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Donatario.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataDoacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.Nome)
+            </td>
+
+
+            <td>
+                <a asp-action="Edit" asp-controller="ItemDoado" asp-route-id="@item.DoacaoID">Adicionar Items</a> |
+               
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

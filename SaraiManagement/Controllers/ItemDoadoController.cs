@@ -41,7 +41,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
+                ViewBag.DoacaoID = new SelectList(context.Doacaos.Where(d => d.DoacaoID == id), "DoacaoID", "DoacaoID");
                 ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "EstoqueID");
                 ViewBag.Descricao = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "Descricao");
                 return View();

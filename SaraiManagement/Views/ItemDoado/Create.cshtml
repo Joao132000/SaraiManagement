@@ -19,7 +19,7 @@
                 <select asp-for="@Model.ItemDoados.DoacaoID" class="form-control" asp-items="ViewBag.DoacaoID"></select>
             </div>
 
-            <input type="hidden" asp-for="@Model.Estoques.EstoqueID" />
+            <input type="hidden" asp-for="@Model.Estoques.EstoqueID"/>
             <div class="form-group">
                 <label asp-for="@Model.Estoques.EstoqueID" class="control-label"></label>
                 <select asp-for="@Model.Estoques.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
@@ -27,9 +27,7 @@
                 <span asp-validation-for="@Model.Estoques.EstoqueID" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <a class="btn btn-outline-dark" type="submit" asp-controller="Estoque" asp-action=Index>Estoque</a>
-            </div>
+           
 
             <div class="form-group">
                 <label asp-for="@Model.Estoques.Quantidade" class="control-label"></label>

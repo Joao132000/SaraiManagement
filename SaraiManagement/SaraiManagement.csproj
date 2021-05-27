@@ -3,8 +3,14 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
-    <Folder Include="Imagens\" />
+    <Compile Remove="Imagens\**" />
+    <Content Remove="Imagens\**" />
+    <EmbeddedResource Remove="Imagens\**" />
+    <None Remove="Imagens\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="wwwroot\img\" />
     </ItemGroup>
 

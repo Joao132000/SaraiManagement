@@ -8,35 +8,80 @@
 </div>
 
 <div class="container-fluid d-flex flex-wrap">
-    <div class="card" style="width: 18rem; margin-left: 20px; margin-right: 20px;">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Usuario2.png" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
+            <h5 class="card-title">Gerenciamento de Alunos</h5>
             <p class="card-text">Fazer Cadastro de Alunos</p>
-
         </div>
+
         <!-- Botão para acionar modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 0 auto">
             Gerenciar Alunos
         </button>
     </div>
 
-    <div class="card" style="width: 18rem; margin-left: 20px; margin-right: 20px;">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
         <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+            <h5 class="card-title">Gerenciamento de Caixa</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCaixa" style="margin: 0 auto">
+            Gerenciar Caixa
+        </button>
+    </div>
+
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Gerenciamento de Doações</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Gerenciamento de Doadores</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Gerenciamento de Estoque</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Gerenciamento de Itens Doados</h5>
+            <p class="card-text">Descricao ---</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px;">
+        <img class="card-img-top" src="~/img/Furacao.png" alt="Imagem de capa do card">
+        <div class="card-body">
+            <h5 class="card-title">Movimentações</h5>
+            <p class="card-text">Descricao ---</p>
         </div>
     </div>
 </div>
 
 
-<!-- Modal -->
+<!-- Modal Aluno -->
 <div class="modal fade" id="modalAluno" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                <h5 class="modal-title" id="TituloModalCentralizado">Aluno</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -44,6 +89,27 @@
             <div class="modal-body">
                 <a asp-controller="Aluno" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
                 <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Lista de Alunos</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Caixa -->
+<div class="modal fade" id="modalCaixa" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Caixa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>

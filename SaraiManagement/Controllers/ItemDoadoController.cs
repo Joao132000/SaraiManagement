@@ -36,13 +36,17 @@ namespace SaraiManagement.Controllers
         }
 
         [HttpGet]  //Serve para gerar a View
-        public IActionResult Create()//ViewBag + .Nome // ordenados pelo Nome
+        public IActionResult Create(int id)//ViewBag + .Nome // ordenados pelo Nome
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
+                var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
+                //ViewBag.DoacaoID = idDoacao;
+
                 ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
-                ViewBag.EstoqueID = new SelectList(context.Estoques.OrderBy(e => e.Descricao), "EstoqueID", "Descricao");
+                ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "EstoqueID");
+                ViewBag.Descricao = new SelectList(context.Estoques.Where(e => e.EstoqueID == id), "EstoqueID", "Descricao");
                 return View();
             }
             else
@@ -52,9 +56,8 @@ namespace SaraiManagement.Controllers
         }
 
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
-        public IActionResult Create(ItemDoado itemDoado, int id)
+        public IActionResult Create(ItemDoado itemDoado)
         {
-            itemDoado.EstoqueID = id;
             repositorio.Create(itemDoado);
             return View("HomeController");
         }

@@ -17,6 +17,11 @@
             document.getElementById(id).style.display = 'block';
         }
     }
+
+    function pegarDataAtual() {
+        data = new Date();
+        document.getElementById('data').value = data.getDay() + '/' + data.getMonth() + '/' + data.getFullYear();
+    }
 </script>
 
 <h1>Create </h1>
@@ -30,28 +35,36 @@
             <div class="form-group">
                 <label asp-for="DonatarioID" class="control-label"></label>
                 <select asp-for="DonatarioID" class="form-control" asp-items="ViewBag.DonatarioID"></select>
+                <a asp-action="Create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar novo</a>
+
             </div>
             <div class="form-group">
                 <label asp-for="dataDoacao" class="control-label"></label>
-                <input asp-for="dataDoacao" class="form-control" />
+                <input id="data" asp-for="dataDoacao" class="form-control" />
                 <span asp-validation-for="dataDoacao" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="UsuarioID" class="control-label"></label>
                 <select asp-for="UsuarioID" class="form-control" asp-items="ViewBag.UsuarioID"></select>
             </div>
-          
+
             <div>
+<<<<<<< HEAD
                 <div >
                     <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
+=======
+                <div>
+                    <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
+>>>>>>> 2d2ef98d8029dfae5ff06adaa2ac85beab2a16b1
                 </div><br />
                       <div>
                           <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" asp-route-id="@Model.DoacaoID" class="btn btn-primary" />
                       </div>
             </div>
-           
+
             <div id="test" class="hidden form-group" style="display:none">
-                <div >
+                <div>
                     <label asp-for="Valor" class="control-label"></label>
                     <input asp-for="Valor" class="form-control" />
                     <span asp-validation-for="Valor" class="text-danger"></span>
@@ -75,7 +88,11 @@
 </div>
 
 <div>
+<<<<<<< HEAD
     <a class="btn btn-primary" asp-action="Index">Voltar</a>
+=======
+    <a asp-controller="TelaInicial" asp-action="Index">Back to List</a>
+>>>>>>> 2d2ef98d8029dfae5ff06adaa2ac85beab2a16b1
 </div>
 
 

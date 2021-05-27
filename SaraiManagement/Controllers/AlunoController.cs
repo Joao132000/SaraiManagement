@@ -67,7 +67,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Aluno aluno)
         {
             repositorio.Create(aluno);
-            return RedirectToAction("Details");
+            return RedirectToAction("Create");
         }
         public IActionResult Details(int id)
         {

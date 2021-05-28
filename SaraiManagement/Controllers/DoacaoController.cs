@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using SaraiManagement.Models.Enuns;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Controllers;
 
 namespace SaraiManagement.Controllers
 {
@@ -28,6 +29,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
+
             if (acesso != null)
             {
                 return View("Correto");
@@ -60,6 +62,8 @@ namespace SaraiManagement.Controllers
                 ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f => f.Nome), "DonatarioID", "Nome");
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f => f.Nome), "UsuarioID", "Nome");
                 ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f => f.Descricao), "CaixaID", "Descricao");
+
+                HttpContext.Session.SetString("idDoacao", 1.ToString());
                 return View();
             }
             else
@@ -71,10 +75,10 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Doacao doacao)
         {
-            HttpContext.Session.SetString("idDoacao", doacao.DoacaoID.ToString());
-
             repositorio.Create(doacao);
-            return View();
+
+            HttpContext.Session.SetString("idDoacao", doacao.DoacaoID.ToString());
+            return RedirectToAction("Index", "Estoque");
         }
 
         [HttpGet]

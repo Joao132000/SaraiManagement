@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<SaraiManagement.Models.Estoque>
 
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@{ ViewData["Title"] = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <h1>Estoque</h1>
 
@@ -31,30 +29,31 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    <div>
-                        <a class="btn btn-outline-success" asp-controller="Estoque" asp-action="Details1" asp-route-id="@item.EstoqueID">Selecionar</a>
-                    </div>
-                </td>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+        <div>
+            <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create" asp-route-idEstoque="@item.EstoqueID" asp-route-idDoacao="">Selecionar</a>
+        </div>
+        </td>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
-                </td>
-            </tr>
-        }
+        <td>
+        @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.Categoria)
+        </td>
+        <td>
+        <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
+        <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
+
+        </td>
+    </tr>
+}
     </tbody>
 </table>
 <p>

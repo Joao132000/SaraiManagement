@@ -5,7 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style type="text/css">
-    .hidden{display:none}
+    .hidden {
+        display: none
+    }
 </style>
 
 <script>
@@ -16,11 +18,6 @@
         else {
             document.getElementById(id).style.display = 'block';
         }
-    }
-
-    function pegarDataAtual() {
-        data = new Date();
-        document.getElementById('data').value = data.getDay() + '/' + data.getMonth() + '/' + data.getFullYear();
     }
 </script>
 
@@ -35,28 +32,18 @@
             <div class="form-group">
                 <label asp-for="DonatarioID" class="control-label"></label>
                 <select asp-for="DonatarioID" class="form-control" asp-items="ViewBag.DonatarioID"></select>
-                <a asp-action="Create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar novo</a>
-
             </div>
             <div class="form-group">
                 <label asp-for="dataDoacao" class="control-label"></label>
-                <input id="data" asp-for="dataDoacao" class="form-control" />
+                <input asp-for="dataDoacao" class="form-control" />
                 <span asp-validation-for="dataDoacao" class="text-danger"></span>
-
             </div>
             <div class="form-group">
                 <label asp-for="UsuarioID" class="control-label"></label>
                 <select asp-for="UsuarioID" class="form-control" asp-items="ViewBag.UsuarioID"></select>
             </div>
 
-            <div>
-                <div>
-                    <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
-                </div><br />
-                <div>
-                    <a asp-controller="ItemDoado" asp-action="Create" class="btn btn-primary">Fazer Doaçao de Items</a>
-                </div>
-            </div>
+
 
             <div id="test" class="hidden form-group" style="display:none">
                 <div>
@@ -71,14 +58,15 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Doar" class="btn btn-primary" />
+                <div>
+                    <div>
+                        <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
+                    </div><br />
+                    <div>
+                        <input type="submit" class="btn btn-primary" value="Fazer Doaçao de Itens" />
+                    </div>
+                </div>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-controller="TelaInicial" asp-action="Index">Back to List</a>
-</div>
-
-

@@ -154,7 +154,6 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\R
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Create.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Delete.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Details.cshtml.g.cs
-D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Details1.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Edit.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\Index.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Estoque\List.cshtml.g.cs
@@ -163,7 +162,6 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\R
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Create.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Delete.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Details.cshtml.g.cs
-D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Details1.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\ItemDoado\Edit.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Movimentacao\Consultar.cshtml.g.cs
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Movimentacao\Create.cshtml.g.cs

@@ -8,6 +8,8 @@ using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Models.ViewModels;
+
 
 namespace SaraiManagement.Controllers
 {
@@ -15,7 +17,9 @@ namespace SaraiManagement.Controllers
     {
         private IItemDoadoRepositorio repositorio;
         private ApplicationDbContext context;
-       
+        
+
+
         public ItemDoadoController(IItemDoadoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
@@ -27,13 +31,24 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View("Correto");
+
+                IQueryable<ItemDoado> itemDoados = context.ItemDoados.Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString());   
+                return View(itemDoados);
             }
             else
             {
                 return RedirectToAction("Login", "Usuario");
             }
         }
+
+        //public ViewResult List() =>
+        //    View(new ItemEstoqueListViewModel
+        //    {
+        //        ItemDoados = repositorio.ItemDoados
+        //        .OrderBy(p => p.ItemDoadoID)
+        //        .Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString())
+        //    });
+
 
         [HttpGet]  //Serve para gerar a View
         public IActionResult Create(int idEstoque)//ViewBag + .Nome // ordenados pelo Nome
@@ -55,11 +70,20 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(ItemDoado itemDoado, string x)
         {
             repositorio.Create(itemDoado);
-            if(x == "Sim")
+            foreach (var item in context.Estoques)
+            {
+                if (item.EstoqueID == itemDoado.EstoqueID)
+                {
+                    item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                }
+            }
+            context.SaveChanges();
+            if (x == "Sim")
                 return RedirectToAction("Index", "Estoque");
+            else if(x == "Vizualizar")
+                return RedirectToAction("Index");
             else
                 return RedirectToAction("Index", "TelaInicial");
-
         }
 
         public IActionResult Details(int id)

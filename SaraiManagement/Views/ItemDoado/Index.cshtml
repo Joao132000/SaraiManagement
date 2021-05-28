@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SaraiManagement.Models.ItemDoado>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EstoqueID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @item.Estoque.Descricao
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.ItemDoadoID">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" asp-action="Index" asp-controller="TelaInicial" clas> Confirmar </a>
+<a class="btn btn-primary" asp-action="Index" asp-controller="Estoque" > Voltar </a>
+
+

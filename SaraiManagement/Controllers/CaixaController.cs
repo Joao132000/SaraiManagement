@@ -26,7 +26,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View("Correto");
+                return View(context.Caixas);
             }
             else
             {

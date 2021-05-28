@@ -73,12 +73,25 @@ namespace SaraiManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Doacao doacao)
+        public IActionResult Create(Doacao doacao, int x)
         {
             repositorio.Create(doacao);
-
-            HttpContext.Session.SetString("idDoacao", doacao.DoacaoID.ToString());
-            return RedirectToAction("Index", "Estoque");
+            if (doacao.Valor != null)
+            {
+                foreach (var item in context.Caixas)
+                {
+                    if (item.CaixaID == doacao.CaixaID)
+                    {
+                        item.Saldo = item.Saldo - doacao.Valor;
+                    }
+                }
+                context.SaveChanges();
+            }           
+           
+            if (x==1)
+                return RedirectToAction("Index", "Estoque");
+            else
+                return RedirectToAction("Index", "TelaInicial");
         }
 
         [HttpGet]

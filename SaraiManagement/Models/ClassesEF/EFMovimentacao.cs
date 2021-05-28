@@ -22,7 +22,6 @@ namespace SaraiManagement.Models.ClassesEF
 
         public void Create(Movimentacao movimentacao)
         {
-            movimentacao.CaixaID = 1;
             context.Add(movimentacao);
             context.SaveChanges();
         }

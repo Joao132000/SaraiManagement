@@ -15,7 +15,7 @@ namespace SaraiManagement.Controllers
     {
         private IItemDoadoRepositorio repositorio;
         private ApplicationDbContext context;
-
+       
         public ItemDoadoController(IItemDoadoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
@@ -42,9 +42,12 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
                 //ViewBag.DoacaoID = idDoacao;
 =======
+=======
+>>>>>>> Master
                 var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
                 ViewBag.DoacaoID = idDoacao;
 >>>>>>> Master
@@ -52,6 +55,11 @@ namespace SaraiManagement.Controllers
                 //ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
                 ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "EstoqueID");
                 ViewBag.Descricao = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "Descricao");
+=======
+                ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
+                ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "Descricao");
+
+>>>>>>> Joao
                 return View();
             }
             else
@@ -61,12 +69,14 @@ namespace SaraiManagement.Controllers
         }
 
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
-        public IActionResult Create(ItemDoado itemDoado)
+        public IActionResult Create(ItemDoado itemDoado, string x)
         {
-
-            
             repositorio.Create(itemDoado);
-            return View("HomeController");
+            if(x == "Sim")
+                return RedirectToAction("Index", "Estoque");
+            else
+                return RedirectToAction("Index", "TelaInicial");
+
         }
 
         public IActionResult Details(int id)

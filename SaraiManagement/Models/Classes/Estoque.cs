@@ -15,5 +15,6 @@ namespace SaraiManagement.Models
         public double Quantidade { get; set; }
         public Categoria Categoria { get; set; }
 
+        public virtual ICollection<ItemDoado> ItemDoados{ get; set; }
     }
 }

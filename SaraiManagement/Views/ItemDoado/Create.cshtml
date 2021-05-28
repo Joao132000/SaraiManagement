@@ -1,4 +1,4 @@
-﻿@model SaraiManagement.Models.ViewModels.EstoqueItemDoadoListViewModel
+﻿@model SaraiManagement.Models.ItemDoado
 
 @{
     ViewData["Title"] = "Create";
@@ -14,36 +14,28 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="@Model.ItemDoados.DoacaoID" class="control-label"></label>
-                <select  asp-for="@Model.ItemDoados.DoacaoID" >
-                    <option>@((ViewBag.DoacaoID as SelectList).Count())</option>  
+                <label asp-for="@Model.DoacaoID" class="control-label"></label>
+                <select asp-for="@Model.DoacaoID">
+                    <option>@((ViewBag.DoacaoID as SelectList).Count())</option>
                 </select>
             </div>
-
-            <input type="hidden" asp-for="@Model.Estoques.EstoqueID" />
             <div class="form-group">
-                <label asp-for="@Model.Estoques.EstoqueID" class="control-label"></label>
-                <select asp-for="@Model.Estoques.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
-                <select asp-for="@Model.Estoques.Descricao" class="form-control" asp-items="ViewBag.Descricao"></select>
-                <span asp-validation-for="@Model.Estoques.EstoqueID" class="text-danger"></span>
+                <label asp-for="@Model.EstoqueID" class="control-label"></label>
+                <select asp-for="@Model.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
             </div>
-
-
-
             <div class="form-group">
-                <label asp-for="@Model.Estoques.Quantidade" class="control-label"></label>
-                <input asp-for="@Model.Estoques.Quantidade" class="form-control" />
-                <span asp-validation-for="@Model.Estoques.Quantidade" class="text-danger"></span>
+                <label asp-for="@Model.Quantidade" class="control-label"></label>
+                <input asp-for="@Model.Quantidade" class="form-control" />
+                <span asp-validation-for="@Model.Quantidade" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Adicionar Novo Item a esta Doaçao" class="btn btn-primary" asp-route-x="Sim" /> <br /><br />
+                <input type="submit" value="Finalizar" asp-route-x="Nao" class="btn btn-primary" />
+
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

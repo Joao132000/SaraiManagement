@@ -5,7 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style type="text/css">
-    .hidden{display:none}
+    .hidden {
+        display: none
+    }
 </style>
 
 <script>
@@ -16,11 +18,6 @@
         else {
             document.getElementById(id).style.display = 'block';
         }
-    }
-
-    function pegarDataAtual() {
-        data = new Date();
-        document.getElementById('data').value = data.getDay() + '/' + data.getMonth() + '/' + data.getFullYear();
     }
 </script>
 
@@ -35,40 +32,19 @@
             <div class="form-group">
                 <label asp-for="DonatarioID" class="control-label"></label>
                 <select asp-for="DonatarioID" class="form-control" asp-items="ViewBag.DonatarioID"></select>
-                <a asp-action="Create" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cadastrar novo</a>
-
             </div>
             <div class="form-group">
                 <label asp-for="dataDoacao" class="control-label"></label>
-                <input id="data" asp-for="dataDoacao" class="form-control" />
+                <input asp-for="dataDoacao" class="form-control" />
                 <span asp-validation-for="dataDoacao" class="text-danger"></span>
-
             </div>
             <div class="form-group">
                 <label asp-for="UsuarioID" class="control-label"></label>
                 <select asp-for="UsuarioID" class="form-control" asp-items="ViewBag.UsuarioID"></select>
             </div>
-<<<<<<< HEAD
 
-            <div>
-<<<<<<< HEAD
-                <div >
-                    <a class="btn btn-primary" onclick="mostra('test')">Doaçao em Dinheiro</a>
-=======
-                <div>
-                    <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
->>>>>>> 2d2ef98d8029dfae5ff06adaa2ac85beab2a16b1
-                </div><br />
-                      <div>
-                          <input  type="submit" value="Doaçao de items" asp-controller="Estoque" asp-action="Index" asp-route-id="@Model.DoacaoID" class="btn btn-primary" />
-                      </div>
-            </div>
 
-=======
-          
-            
-           
->>>>>>> Joao
+
             <div id="test" class="hidden form-group" style="display:none">
                 <div>
                     <label asp-for="Valor" class="control-label"></label>
@@ -80,10 +56,6 @@
                     <select asp-for="CaixaID" class="form-control" asp-items="ViewBag.CaixaID"></select>
                 </div>
             </div>
-<<<<<<< HEAD
-                   
-           
-=======
 
             <div class="form-group">
                 <div>
@@ -91,25 +63,10 @@
                         <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
                     </div><br />
                     <div>
-                        <input type="submit" class="btn btn-primary" value="Fazer Doaçao de Items" />
+                        <input type="submit" class="btn btn-primary" value="Fazer Doaçao de Itens" />
                     </div>
                 </div>
             </div>
->>>>>>> a8b9f1ce0b59afbe3897c06aa24abb1ae58443ef
         </form>
     </div>
 </div>
-
-<<<<<<< HEAD
-<div>
-<<<<<<< HEAD
-    <a class="btn btn-primary" asp-action="Index">Voltar</a>
-=======
-    <a asp-controller="TelaInicial" asp-action="Index">Back to List</a>
->>>>>>> 2d2ef98d8029dfae5ff06adaa2ac85beab2a16b1
-</div>
-=======
-
->>>>>>> Joao
-
-

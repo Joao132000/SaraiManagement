@@ -29,16 +29,9 @@ namespace SaraiManagement.Controllers
         public async Task<IActionResult> Index(string searchString, int idDoacao)
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
-            var aux = HttpContext.Session.GetString("id_aux");
             if (acesso != null)
             {
-<<<<<<< HEAD
-                var estoque = from e in context.Estoques.OrderBy(e => e.Descricao)
-=======
-                ViewBag.DoacaoID = new SelectList(context.Doacaos.Where(d => d.DoacaoID == idDoacao), "DoacaoID", "DoacaoID");
-                var estoque = from e in context.Estoques
->>>>>>> Joao
-                              select e;
+                var estoque = from e in context.Estoques.OrderBy(e => e.Descricao) select e;
 
                 if (!String.IsNullOrEmpty(searchString))
                 {

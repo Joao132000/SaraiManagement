@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Items Selecionados</h1>
+<h1>Itens Selecionados</h1>
 
 
 <table class="table">
@@ -17,7 +17,6 @@
             <th>
                 Quantidade
             </th>
-
         </tr>
     </thead>
     <tbody>
@@ -33,7 +32,7 @@
                 </td>
 
                 <td>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ItemDoadoID">Delete</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ItemDoadoID">Excluir</a>
                 </td>
             </tr>
         }
@@ -50,7 +49,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja concluir a doação?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>

@@ -110,6 +110,7 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
                 var consulta = context.Movimentacaos.Find(id);
+                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
                 ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
                 return View(consulta);

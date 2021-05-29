@@ -582,3 +582,5 @@ C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\List.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Doador\List.cshtml.g.cs
+C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\Erro.cshtml.g.cs

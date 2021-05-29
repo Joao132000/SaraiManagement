@@ -85,7 +85,7 @@ namespace SaraiManagement.Controllers
                 }
             }
             context.SaveChanges();
-            return RedirectToAction("Index", "TelaInicial");
+            return RedirectToAction("List");
         }
 
         [HttpGet]

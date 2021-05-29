@@ -60,7 +60,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Usuario usuario)
         {
             repositorio.Create(usuario);
-            return View();
+            return View("List");
         }
 
         [HttpGet]

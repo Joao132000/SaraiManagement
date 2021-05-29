@@ -38,6 +38,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.DonatarioID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.DonatarioID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.DonatarioID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" asp-route-id="@Model.DonatarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>

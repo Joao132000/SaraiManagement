@@ -12,7 +12,7 @@
         <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Alunos</h5>
-            <p class="card-text">Fazer Cadastro de Alunos</p>
+            <p class="card-text">Realizar cadastro</p>
         </div>
 
         <!-- Botão para acionar modal -->
@@ -26,7 +26,7 @@
         <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
         <div class="card-body">
             <h5 class="card-title">Gerenciamento de Caixa</h5>
-            <p class="card-text">Vizualizar Caixas</p>
+            <p class="card-text">Vizualizar caixas</p>
         </div>
 
         <!-- Botão para acionar modal -->
@@ -67,7 +67,7 @@
     <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
         <img class="card-img-top" src="~/img/CadastroDonatarios.png" alt="Imagem de capa do card">
         <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Donatarios</h5>
+            <h5 class="card-title">Gerenciamento de Donatários</h5>
             <p class="card-text">Descricao ---</p>
         </div>
 
@@ -134,7 +134,7 @@
             </div>
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Aluno" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
-                <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Lista de Alunos</a>
+                <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Alunos</a>
             </div>
         </div>
     </div>
@@ -152,8 +152,7 @@
             </div>
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Caixa</a>
-                <a asp-controller="Caixa" asp-action="Index" class="btn btn-primary">Visualizar Caixas</a>
-
+                <a asp-controller="Caixa" asp-action="Index" class="btn btn-primary">Consultar Caixas</a>
             </div>
         </div>
     </div>
@@ -188,6 +187,7 @@
             </div>
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Doador" asp-action="Create" class="btn btn-primary">Cadastrar Doador</a>
+                <a asp-controller="Doador" asp-action="List" class="btn btn-primary">Consultar Doadores</a>
             </div>
         </div>
     </div>
@@ -204,8 +204,8 @@
                 </button>
             </div>
             <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Cadastrar Donatario</a>
-                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Consultar lista de Donatarios</a>
+                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Cadastrar Donatário</a>
+                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Consultar Donatários</a>
             </div>
         </div>
     </div>
@@ -223,7 +223,7 @@
             </div>
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Estoque" asp-action="Create" class="btn btn-primary">Cadastrar item no Estoque</a>
-                <a asp-controller="Estoque" asp-action="List" class="btn btn-primary">Visualizar itens no Estoque</a>
+                <a asp-controller="Estoque" asp-action="List" class="btn btn-primary">Consultar item no Estoque</a>
             </div>
         </div>
     </div>
@@ -241,7 +241,7 @@
             </div>
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
-                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Lista de Movimentação</a>
+                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar Movimentação</a>
             </div>
         </div>
     </div>
@@ -258,8 +258,8 @@
                 </button>
             </div>
             <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Usuario" asp-action="Create" class="btn btn-primary">Cadastrar novo Usuário</a>
-                <a asp-controller="Usuario" asp-action="List" class="btn btn-primary">Ver lista de Usuário</a>
+                <a asp-controller="Usuario" asp-action="Create" class="btn btn-primary">Cadastrar Usuário</a>
+                <a asp-controller="Usuario" asp-action="List" class="btn btn-primary">Consultar Usuário</a>
             </div>
         </div>
     </div>

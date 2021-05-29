@@ -1,31 +1,56 @@
-﻿@model SaraiManagement.Models.ViewModels.EstoqueListViewModel
+﻿@model IEnumerable<SaraiManagement.Models.Estoque>
 
 @{
     ViewData["Title"] = "List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>List</h1>
+<h1>Estoque</h1>
 
-@foreach (var d in Model.Estoques)
-{
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p-1">
-            <h4>
-                <a asp-action="Details" asp-route-id="@d.EstoqueID">@d.Descricao </a>
 
-            </h4>
-        </div>
-        <div class="card-text p-1">@d.Categoria</div>
-        <div class="card-text p-1">@d.Quantidade</div>
-
-    </div>
-
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <form asp-controller="Estoque" asp-action="List">
+                    <p>
+                        <input type="text" name="SearchString" />
+                        <input class="btn btn-primary" type="submit" value="Pesquisar" />
+                    </p>
+                </form>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.EstoqueID">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.EstoqueID">Delete</a>
+            </td>
+        </tr>
 }
-
-<div page-model="@Model.PagingInfo" paging-action="List" page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1">
-
-</div>
-
-
+    </tbody>
+</table>
+<p>
+      <a class="btn btn-primary" asp-action="Create">Adicionar Novo Item</a>
+</p>

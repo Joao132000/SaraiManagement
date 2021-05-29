@@ -34,7 +34,7 @@
     <tr>
         <td>
         <div>
-            <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create" asp-route-idEstoque="@item.EstoqueID" asp-route-idDoacao="">Selecionar</a>
+            <a class="btn btn-outline-success" asp-controller="ItemDoado" asp-action="Create" asp-route-idEstoque="@item.EstoqueID" >Selecionar</a>
         </div>
         </td>
 
@@ -47,15 +47,11 @@
         <td>
         @Html.DisplayFor(modelItem => item.Categoria)
         </td>
-        <td>
-        <a asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a> |
-        <a asp-action="Delete" asp-route-id="@item.EstoqueID">Deletar</a>
-
-        </td>
+       
     </tr>
 }
     </tbody>
 </table>
 <p>
-    <a class="btn btn-primary" type="submit" asp-action="Create">Cadastrar Novo Item</a>
+    <a class="btn btn-primary" asp-action="List" asp-controller="ItemDoado" clas> Voltar </a>
 </p>

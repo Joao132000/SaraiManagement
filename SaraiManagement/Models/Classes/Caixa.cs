@@ -11,7 +11,7 @@ namespace SaraiManagement.Models
         public int CaixaID { get; set; }
 
         [Required] //CAMPO 'Saldo' OBRIGATÓRIO
-        public double Saldo { get; set; }
+        public double? Saldo { get; set; }
 
         public string Descricao { get; set; }
     }

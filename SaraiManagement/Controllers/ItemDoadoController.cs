@@ -8,6 +8,8 @@ using SaraiManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Models.ViewModels;
+
 
 namespace SaraiManagement.Controllers
 {
@@ -15,7 +17,9 @@ namespace SaraiManagement.Controllers
     {
         private IItemDoadoRepositorio repositorio;
         private ApplicationDbContext context;
-       
+        
+
+
         public ItemDoadoController(IItemDoadoRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
@@ -27,7 +31,9 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View("Correto");
+
+                IQueryable<ItemDoado> itemDoados = context.ItemDoados.Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString());   
+                return View(itemDoados);
             }
             else
             {
@@ -35,24 +41,23 @@ namespace SaraiManagement.Controllers
             }
         }
 
+        public ViewResult List() =>
+            View(new ItemEstoqueListViewModel
+            {
+                ItemDoados = repositorio.ItemDoados
+                .OrderBy(p => p.ItemDoadoID)
+                .Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString())
+            });
+
+
         [HttpGet]  //Serve para gerar a View
         public IActionResult Create(int idEstoque)//ViewBag + .Nome // ordenados pelo Nome
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-<<<<<<< HEAD
-                var idDoacao = int.Parse(HttpContext.Session.GetString("idDoacao"));
-                ViewBag.DoacaoID = idDoacao;
-
-                //ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
-                ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "EstoqueID");
-                ViewBag.Descricao = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "Descricao");
-=======
                 ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
                 ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID == idEstoque), "EstoqueID", "Descricao");
-
->>>>>>> Joao
                 return View();
             }
             else
@@ -65,11 +70,20 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(ItemDoado itemDoado, string x)
         {
             repositorio.Create(itemDoado);
-            if(x == "Sim")
+            foreach (var item in context.Estoques)
+            {
+                if (item.EstoqueID == itemDoado.EstoqueID)
+                {
+                    item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                }
+            }
+            context.SaveChanges();
+            if (x == "Sim")
                 return RedirectToAction("Index", "Estoque");
+            else if(x == "Vizualizar")
+                return RedirectToAction("List");
             else
                 return RedirectToAction("Index", "TelaInicial");
-
         }
 
         public IActionResult Details(int id)
@@ -114,6 +128,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
+
                 var item = repositorio.PesquisarItemDoado(id);
                 return View(item);
             }
@@ -123,11 +138,29 @@ namespace SaraiManagement.Controllers
             }
         }
 
+        
         [HttpPost]
         public IActionResult Delete(ItemDoado itemDoado)
         {
+            foreach (var item in context.ItemDoados)
+            {
+                if (item.ItemDoadoID == itemDoado.ItemDoadoID)
+                {
+
+                    foreach (var item1 in context.Estoques)
+                    {
+                        if (item1.EstoqueID == item.EstoqueID)
+                        {
+                            item1.Quantidade = item1.Quantidade + item.Quantidade;
+                        }
+                    }
+                    itemDoado = item;
+
+                }
+            }
+            context.SaveChanges();
             repositorio.Delete(itemDoado);
-            return View("HomeController");
+            return RedirectToAction("List");
         }
     }
 }

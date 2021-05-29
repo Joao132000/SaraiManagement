@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using SaraiManagement.Models.Enuns;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SaraiManagement.Models
 {
@@ -15,6 +15,8 @@ namespace SaraiManagement.Models
         public double Quantidade { get; set; }
         public Categoria Categoria { get; set; }
 
-        public virtual ICollection<ItemDoado> ItemDoados{ get; set; }
+        public virtual ICollection<ItemDoado> ItemDoados { get; set; }
+
+
     }
 }

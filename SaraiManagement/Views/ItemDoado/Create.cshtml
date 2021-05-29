@@ -1,13 +1,8 @@
 ﻿@model SaraiManagement.Models.ItemDoado
 
-@using Microsoft.AspNetCore.Http;
-
-@inject IHttpContextAccessor HttpContextAccessor
-
 @{ ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<h1>Create</h1>
 
 <h4>ItemDoado</h4>
 <hr />
@@ -16,15 +11,12 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-<<<<<<< HEAD
-                <label asp-for="@Model.ItemDoados.DoacaoID" class="control-label"></label>
-                <select asp-for="@HttpContextAccessor.HttpContext.Session.GetInt32("idDoacao")"></select>
-=======
+
                 <label asp-for="@Model.DoacaoID" class="control-label"></label>
                 <select asp-for="@Model.DoacaoID">
                     <option>@((ViewBag.DoacaoID as SelectList).Count())</option>
                 </select>
->>>>>>> Joao
+
             </div>
             <div class="form-group">
                 <label asp-for="@Model.EstoqueID" class="control-label"></label>
@@ -38,17 +30,14 @@
 
             <div class="form-group">
                 <input type="submit" value="Adicionar Novo Item a esta Doaçao" class="btn btn-primary" asp-route-x="Sim" /> <br /><br />
-                <input type="submit" value="Finalizar" asp-route-x="Nao" class="btn btn-primary" />
+                <input type="submit" value="Vizualizar" class="btn btn-primary" asp-route-x="Vizualizar" /> <br /><br />
+                <input type="submit" value="Finalizar" class="btn btn-primary" /> <br /><br />
 
             </div>
         </form>
     </div>
 </div>
 
-<<<<<<< HEAD
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-=======
 
->>>>>>> Joao
+
+

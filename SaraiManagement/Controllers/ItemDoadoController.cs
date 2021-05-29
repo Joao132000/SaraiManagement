@@ -107,6 +107,8 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
                 var item = context.ItemDoados.Find(id);
+                ViewBag.DoacaoID = new SelectList(context.Doacaos.OrderBy(d => d.DoacaoID), "DoacaoID", "DoacaoID");
+                ViewBag.EstoqueID = new SelectList(context.Estoques.Where(e => e.EstoqueID==item.EstoqueID),"EstoqueID", "Descricao");
                 return View(item);
             }
             else
@@ -119,7 +121,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(ItemDoado itemDoado)
         {
             repositorio.Edit(itemDoado);
-            return View("HomeController");
+            return View("List");
         }
 
         [HttpGet]

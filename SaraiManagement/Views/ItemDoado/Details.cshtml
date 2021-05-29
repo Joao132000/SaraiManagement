@@ -5,33 +5,35 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
-    <h4>ItemDoado</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantidade)
+            @* @Html.DisplayNameFor(model => model.Quantidade)*@
+            <label>Quantidade:</label>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Quantidade)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Estoque)
+            @*@Html.DisplayNameFor(model => model.Estoque)*@
+            <label>Item</label>
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Estoque.EstoqueID)
+            @Html.DisplayFor(model => model.Estoque.Descricao)
         </dd>
-        <dt class = "col-sm-2">
+        @*<dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Doacao)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Doacao.DoacaoID)
-        </dd>
+        </dd>*@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.ItemDoadoID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ItemDoadoID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.ItemDoadoID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>

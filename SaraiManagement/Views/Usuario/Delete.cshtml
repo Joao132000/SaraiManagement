@@ -5,11 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+<h1>Excluir</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem certeza que deseja excluir?</h3>
 <div>
-    <h4>Usuario</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -34,7 +33,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="UsuarioID" />
-        <input type="submit" value="Excluir" class="btn btn-danger" />
-        <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar a Lista</a>
+        <input type="submit" value="Excluir" class="btn btn-danger"/>
+        <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
     </form>
 </div>

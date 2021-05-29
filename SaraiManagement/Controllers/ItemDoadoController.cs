@@ -128,6 +128,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
+
                 var item = repositorio.PesquisarItemDoado(id);
                 return View(item);
             }
@@ -137,11 +138,29 @@ namespace SaraiManagement.Controllers
             }
         }
 
+        
         [HttpPost]
         public IActionResult Delete(ItemDoado itemDoado)
         {
+            foreach (var item in context.ItemDoados)
+            {
+                if (item.ItemDoadoID == itemDoado.ItemDoadoID)
+                {
+
+                    foreach (var item1 in context.Estoques)
+                    {
+                        if (item1.EstoqueID == item.EstoqueID)
+                        {
+                            item1.Quantidade = item1.Quantidade + item.Quantidade;
+                        }
+                    }
+                    itemDoado = item;
+
+                }
+            }
+            context.SaveChanges();
             repositorio.Delete(itemDoado);
-            return View("HomeController");
+            return RedirectToAction("Index");
         }
     }
 }

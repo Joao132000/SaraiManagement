@@ -14,8 +14,9 @@ namespace SaraiManagement.Models
         public string Descricao { get; set; }
         public double Quantidade { get; set; }
         public Categoria Categoria { get; set; }
-        
-  
+
+        public virtual ICollection<ItemDoado> ItemDoados { get; set; }
+
 
     }
 }

@@ -41,13 +41,13 @@ namespace SaraiManagement.Controllers
             }
         }
 
-        //public ViewResult List() =>
-        //    View(new ItemEstoqueListViewModel
-        //    {
-        //        ItemDoados = repositorio.ItemDoados
-        //        .OrderBy(p => p.ItemDoadoID)
-        //        .Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString())
-        //    });
+        public ViewResult List() =>
+            View(new ItemEstoqueListViewModel
+            {
+                ItemDoados = repositorio.ItemDoados
+                .OrderBy(p => p.ItemDoadoID)
+                .Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString())
+            });
 
 
         [HttpGet]  //Serve para gerar a View
@@ -81,7 +81,7 @@ namespace SaraiManagement.Controllers
             if (x == "Sim")
                 return RedirectToAction("Index", "Estoque");
             else if(x == "Vizualizar")
-                return RedirectToAction("Index");
+                return RedirectToAction("List");
             else
                 return RedirectToAction("Index", "TelaInicial");
         }
@@ -160,7 +160,7 @@ namespace SaraiManagement.Controllers
             }
             context.SaveChanges();
             repositorio.Delete(itemDoado);
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
     }
 }

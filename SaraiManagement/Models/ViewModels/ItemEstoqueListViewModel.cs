@@ -11,7 +11,7 @@ namespace SaraiManagement.Models.ViewModels
     {
         public IEnumerable<ItemDoado> ItemDoados { get; set; }
 
-        public Estoque Estoque { get; set; }
+        public IEnumerable<Estoque> Estoques { get; set; }
 
     }
 }

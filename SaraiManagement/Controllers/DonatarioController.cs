@@ -17,7 +17,7 @@ namespace SaraiManagement.Controllers
     {
         private IDonatarioRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 1;
+        public int pageSize = 20;
         public DonatarioController(IDonatarioRepositorio repo, ApplicationDbContext ctx)
         {
             repositorio = repo;
@@ -58,7 +58,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View();
+                return View("Create");
             }
             else
             {
@@ -105,7 +105,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Donatario donatario)
         {
             repositorio.Edit(donatario);
-            return RedirectToAction("Home");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -125,7 +125,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Donatario donatario)
         {
             repositorio.Delete(donatario);
-            return RedirectToAction("Home");
+            return RedirectToAction("List");
         }
     }
 }

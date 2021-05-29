@@ -5,10 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Consultar</h1>
+<h1>Detalhes</h1>
 
-<div>
-    <h4>Doador</h4>
     <hr /> 
     <dl class="row">
         <dt class = "col-sm-2">
@@ -36,8 +34,8 @@
             @Html.DisplayFor(model => model.inicioDaDoacao)
         </dd>
     </dl>
-</div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.DoadorID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.DoadorID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.DoadorID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" asp-route-id="@Model.DoadorID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>

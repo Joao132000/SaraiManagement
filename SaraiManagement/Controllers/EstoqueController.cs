@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IEstoqueRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 1;
+        public int pageSize = 5;
 
         public EstoqueController(IEstoqueRepositorio repo, ApplicationDbContext ctx)
         {

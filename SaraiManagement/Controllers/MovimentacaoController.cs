@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IMovimentacaoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int PageSize = 2;
+        public int PageSize = 4;
 
         public MovimentacaoController(IMovimentacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -85,7 +85,7 @@ namespace SaraiManagement.Controllers
                 }
             }
             context.SaveChanges();
-            return RedirectToAction("Index", "TelaInicial");
+            return RedirectToAction("List");
         }
 
         [HttpGet]

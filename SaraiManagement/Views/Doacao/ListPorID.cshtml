@@ -1,24 +1,12 @@
 ﻿@model SaraiManagement.Models.ViewModels.DoacaoListViewModel
 
 @{
-    ViewData["Title"] = "ListaMostra";
+    ViewData["Title"] = "ListPorID";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Lista de Doaçoes</h1>
 <br />
-
-
-<form asp-controller="Doacao" asp-action="List">
-    <p>
-        <h4>Pesquisar Doaçoes por Donatario:</h4>
-        <input type="text" name="SearchString" />
-        <input class="btn btn-primary" type="submit" value="Pesquisar" />
-    </p>
-</form>
-
-
-
 
 <table class="table">
     <thead>
@@ -68,11 +56,4 @@
         }
     </tbody>
 </table>
-
-
-<a style="align-self:flex-end" asp-controller="Donatario" asp-action="List" class="btn btn-primary">Ver Lista de Donatarios</a>
-<br />
-<br />
-<a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success">Voltar</a>
-
-
+<a class="btn btn-primary" asp-controller="Doacao" asp-action="List">Voltar</a>

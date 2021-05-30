@@ -74,7 +74,15 @@ namespace SaraiManagement.Controllers
             {
                 if (item.EstoqueID == itemDoado.EstoqueID)
                 {
-                    item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                    if (itemDoado.Quantidade > item.Quantidade)
+                    {
+                        return View("Erro");
+                    }
+                    else
+                    {
+                        repositorio.Create(itemDoado);
+                        item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                    }
                 }
             }
             context.SaveChanges();

@@ -40,19 +40,15 @@ namespace SaraiManagement.Controllers
             }
         }
 
-        public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
-        {
-            Doacaos = repositorio.Doacoes
-            .OrderBy(d => d.DoacaoID)
-            .Skip((pagina - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
+       
+        public ViewResult List(string searchString) =>
+            View(new DoacaoListViewModel
             {
-                PaginaAtual = pagina,
-                ItensPorPagina = PageSize,
-                TotalItens = repositorio.Doacoes.Count()
-            }
-        });
+                Doacaos = repositorio.Doacoes
+                .Where(s => s.Donatario.Nome.Contains(searchString))
+                .OrderByDescending(p => p.dataDoacao)
+
+            });
         [HttpGet]
         public IActionResult Create()
         {

@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\elian\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\elian\\.nuget\\packages"
-=======
-      "C:\\Users\\davi-\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\davi-\\.nuget\\packages"
->>>>>>> Davi
+      "C:\\Users\\mfmat\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\mfmat\\.nuget\\packages"
     ]
   }
 }

@@ -17,7 +17,7 @@ namespace SaraiManagement.Controllers
     {
         private IUsuarioRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 1;
+        public int pageSize = 5;
 
         public UsuarioController(IUsuarioRepositorio repo, ApplicationDbContext ctx)
         {
@@ -60,7 +60,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Usuario usuario)
         {
             repositorio.Create(usuario);
-            return View();
+            return RedirectToAction("List");
         }
 
         [HttpGet]

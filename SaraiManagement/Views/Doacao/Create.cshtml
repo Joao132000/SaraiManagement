@@ -21,9 +21,7 @@
     }
 </script>
 
-<h1>Create </h1>
-
-<h4>Doacao</h4>
+<h1>Doação</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -59,14 +57,20 @@
 
             <div class="form-group">
                 <div>
-                    <div>
-                        <a class="btn btn-primary" onclick="mostra('test')">Fazer Doaçao em Dinheiro</a>
-                    </div><br />
-                    <div>
-                        <input type="submit" class="btn btn-primary" value="Fazer Doaçao de Itens" />
-                    </div>
+                    <a class="btn btn-outline-primary" onclick="mostra('test')">Fazer doaçao em dinheiro</a>
+                </div>
+                <br />
+                <div>
+                    <input type="submit" class="btn btn-outline-primary" asp-route-x="1" value="Fazer doaçao de itens" />
+                </div>
+                <br />
+
+                <div>
+                    <input type="submit" class="btn btn-success" value="Finalizar" />
                 </div>
             </div>
+
         </form>
     </div>
 </div>
+

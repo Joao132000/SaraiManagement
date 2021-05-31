@@ -24,7 +24,6 @@ namespace SaraiManagement.Models.ClassesEF
 
         public void Create(Doacao doacao)
         {
-            doacao.CaixaID = 1;
             context.Add(doacao);
             context.SaveChanges();
         }

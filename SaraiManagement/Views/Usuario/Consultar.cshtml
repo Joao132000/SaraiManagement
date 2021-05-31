@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Consultar</h1>
+<h1>Detalhes</h1>
 
 <div>
     <h4>Usuario</h4>
@@ -32,7 +32,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.UsuarioID" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Editar</a>
-    <a asp-action="Delete" asp-route-id="@Model.UsuarioID" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Excluir</a>
-    <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success  btn-lg" role="button" aria-pressed="true">Voltar a Lista</a>
+    <a asp-action="Edit" asp-route-id="@Model.UsuarioID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.UsuarioID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>

@@ -19,7 +19,7 @@ namespace SaraiManagement.Controllers
     {
         private IAlunoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 1;
+        public int pageSize = 20;
 
         public AlunoController(IAlunoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -43,7 +43,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return RedirectToAction("Index", "TelaInicial");
+                return RedirectToAction();
             }
             else
             {
@@ -67,7 +67,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Aluno aluno)
         {
             repositorio.Create(aluno);
-            return RedirectToAction("Create");
+            return RedirectToAction("List");
         }
         public IActionResult Details(int id)
         {

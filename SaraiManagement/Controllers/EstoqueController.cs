@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IEstoqueRepositorio repositorio;
         private ApplicationDbContext context;
-        public int pageSize = 1;
+        public int pageSize = 5;
 
         public EstoqueController(IEstoqueRepositorio repo, ApplicationDbContext ctx)
         {
@@ -46,22 +46,25 @@ namespace SaraiManagement.Controllers
             }
         }
 
-        public ViewResult List(int pagina = 1) =>
-           View(new EstoqueListViewModel
-           {
-               Estoques = repositorio.Estoques
-               .OrderBy(d => d.EstoqueID)
-               .Skip((pagina - 1) * pageSize)
-               .Take(pageSize),
-               PagingInfo = new PagingInfo
-               {
-                   PaginaAtual = pagina,
-                   ItensPorPagina = pageSize,
-                   TotalItens = repositorio.Estoques.Count()
+        public async Task<IActionResult> List(string searchString, int idDoacao)
+        {
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var estoque = from e in context.Estoques.OrderBy(e => e.Descricao) select e;
 
-               }
-           });
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+                }
 
+                return View(await estoque.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
         [HttpGet]
         public IActionResult Create()
         {
@@ -79,7 +82,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Estoque estoque)
         {
             repositorio.Create(estoque);
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Details(int id)
@@ -117,7 +120,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Estoque estoque)
         {
             repositorio.Edit(estoque);
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -137,7 +140,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Estoque estoque)
         {
             repositorio.Delete(estoque);
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
 
         

@@ -1,14 +1,14 @@
-﻿@model SaraiManagement.Models.ViewModels.AlunoListViewModel
+﻿@model SaraiManagement.Models.ViewModels.DoadorListViewModel
 
 <h1>Lista</h1>
 
-@foreach (var p in Model.Alunos)
+@foreach (var p in Model.Doadors)
 {
     <div class="card card-outline-primary m-1 p-1">
         <div class="bg-faded p-1">
             <h4>
-                <a asp-action="Details" asp-route-id="@p.AlunoID"> @p.Nome </a>
-                <span class="badge badge-pill badge-danger" style="float:right">@p.Periodo</span>
+                <a asp-action="Consultar" asp-route-id="@p.DoadorID"> @p.Nome </a>
+                <span class="badge badge-pill badge-danger" style="float:right">@p.regularidadeDoador</span>
             </h4>
         </div>
     </div>

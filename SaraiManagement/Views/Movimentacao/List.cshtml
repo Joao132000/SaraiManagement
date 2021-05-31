@@ -11,9 +11,7 @@
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Consultar" asp-route-id="@m.MovimentacaoID">@m.Descricao </a>
-                <span class="badge badge-pill badge-primary" style="float:right">
-                    <small>@m.Valor</small>
-                </span>
+                <span class="badge badge-pill badge-danger" style="float:right">@m.Valor.ToString("c")</span>
             </h4>
         </div>
         <div class="card-text p-1">@m.TipoMovimentacao</div>
@@ -23,6 +21,9 @@
 <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-secondary"
      page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
+<div>
+    <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>
 
 

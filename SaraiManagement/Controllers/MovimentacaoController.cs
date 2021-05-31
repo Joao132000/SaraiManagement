@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IMovimentacaoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int PageSize = 2;
+        public int PageSize = 4;
 
         public MovimentacaoController(IMovimentacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -57,7 +57,7 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Nome");
+                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
                 ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
                 return View();
@@ -72,7 +72,20 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Movimentacao movimentacao)
         {
             repositorio.Create(movimentacao);
-            return View("HomeController");
+            foreach (var item in context.Caixas)
+            {
+                if (item.CaixaID == movimentacao.CaixaID)
+                {
+                    if(movimentacao.TipoMovimentacao == tipoMovimentacao.Credito)
+                        item.Saldo = item.Saldo + movimentacao.Valor;
+                    else
+                        item.Saldo = item.Saldo - movimentacao.Valor;
+
+
+                }
+            }
+            context.SaveChanges();
+            return RedirectToAction("List");
         }
 
         [HttpGet]
@@ -97,6 +110,7 @@ namespace SaraiManagement.Controllers
             if (acesso != null)
             {
                 var consulta = context.Movimentacaos.Find(id);
+                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
                 ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
                 return View(consulta);

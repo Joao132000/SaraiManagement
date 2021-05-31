@@ -80,7 +80,8 @@ namespace SaraiManagement.Migrations
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Saldo")
+                    b.Property<double?>("Saldo")
+                        .IsRequired()
                         .HasColumnType("float");
 
                     b.HasKey("CaixaID");
@@ -323,7 +324,7 @@ namespace SaraiManagement.Migrations
             modelBuilder.Entity("SaraiManagement.Models.ItemDoado", b =>
                 {
                     b.HasOne("SaraiManagement.Models.Doacao", "Doacao")
-                        .WithMany()
+                        .WithMany("ItemDoados")
                         .HasForeignKey("DoacaoID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -362,6 +363,11 @@ namespace SaraiManagement.Migrations
                     b.Navigation("Doador");
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("SaraiManagement.Models.Doacao", b =>
+                {
+                    b.Navigation("ItemDoados");
                 });
 
             modelBuilder.Entity("SaraiManagement.Models.Donatario", b =>

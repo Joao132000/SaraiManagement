@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Lista de Usuarios</h1>
+<h1>Lista</h1>
 
 @foreach (var d in Model.Usuarios)
 {
@@ -13,15 +13,15 @@
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Consultar" asp-route-id="@d.UsuarioID">@d.Nome </a>
-                <span class="badge badge-pill badge-primary" style="float:right">
-                    <small>@d.Tipo</small>
-                </span>
-           </h4>
+                <span class="badge badge-pill badge-secondary badge-danger" style="float:right">@d.Tipo</span>
+            </h4>
         </div>
     </div>
 }
 
 <div page-model="@Model.PagingInfo" paging-action="List" page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
      page-class-selected="btn-primary" class="btn-group pull-right m-1">
-
+</div>
+<div>
+    <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar </a>
 </div>

@@ -76,10 +76,10 @@ namespace SaraiManagement.Controllers
             {
                 if (item.CaixaID == movimentacao.CaixaID)
                 {
-                    if(movimentacao.TipoMovimentacao == tipoMovimentacao.Credito)
-                        item.Saldo = item.Saldo + movimentacao.Valor;
-                    else
+                    if(movimentacao.TipoMovimentacao == tipoMovimentacao.Debito)
                         item.Saldo = item.Saldo - movimentacao.Valor;
+                    else
+                        item.Saldo = item.Saldo + movimentacao.Valor;
 
 
                 }

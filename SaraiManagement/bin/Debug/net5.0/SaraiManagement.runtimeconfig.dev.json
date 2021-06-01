@@ -1,8 +1,13 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\mfmat\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\mfmat\\.nuget\\packages"
+=======
+      "C:\\Users\\JGL\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\JGL\\.nuget\\packages"
+>>>>>>> 42d2ef47323c1e607be4c1be042befb59c1a6a39
     ]
   }
 }

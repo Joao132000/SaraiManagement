@@ -67,7 +67,10 @@ namespace SaraiManagement
                 endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Home", action = "Index" });
             });
             //SeedData.EnsurePopulated(app);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42d2ef47323c1e607be4c1be042befb59c1a6a39
         }
     }
 }

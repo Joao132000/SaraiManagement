@@ -47,7 +47,18 @@ namespace SaraiManagement.Controllers
                 ItemDoados = repositorio.ItemDoados
                 .OrderBy(p => p.ItemDoadoID)
                 .Where(d => d.DoacaoID.ToString() == context.Doacaos.Count().ToString())
+
             });
+
+        public ViewResult ListaDoacao(int x) =>
+           View(new ItemEstoqueListViewModel
+           {
+               ItemDoados = repositorio.ItemDoados
+               .OrderBy(p => p.ItemDoadoID)
+               .Where(d => d.DoacaoID == x)
+               
+
+           });
 
 
         [HttpGet]  //Serve para gerar a View
@@ -74,7 +85,15 @@ namespace SaraiManagement.Controllers
             {
                 if (item.EstoqueID == itemDoado.EstoqueID)
                 {
-                    item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                    if (itemDoado.Quantidade > item.Quantidade)
+                    {
+                        return View("Erro");
+                    }
+                    else
+                    {
+                        repositorio.Create(itemDoado);
+                        item.Quantidade = item.Quantidade - itemDoado.Quantidade;
+                    }
                 }
             }
             context.SaveChanges();

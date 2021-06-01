@@ -22,7 +22,7 @@ namespace SaraiManagement.Models.ClassesEF
         public void Create(ItemDoado itemDoado)
         {
             context.Add(itemDoado);
-            context.SaveChanges();
+            //context.SaveChanges();
         }
 
         public ItemDoado PesquisarItemDoado(int id)

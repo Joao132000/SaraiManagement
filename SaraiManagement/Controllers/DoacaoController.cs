@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IDoacaoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int PageSize = 2;
+        public int pageSize = 10;
 
         public DoacaoController(IDoacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -40,19 +40,25 @@ namespace SaraiManagement.Controllers
             }
         }
 
-        public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
-        {
-            Doacaos = repositorio.Doacoes
-            .OrderBy(d => d.DoacaoID)
-            .Skip((pagina - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
-            {
-                PaginaAtual = pagina,
-                ItensPorPagina = PageSize,
-                TotalItens = repositorio.Doacoes.Count()
-            }
-        });
+       
+        public ViewResult List(string searchString) =>
+            View(new DoacaoListViewModel
+            {                 
+                 Doacaos = repositorio.Doacoes
+                .Where(s => s.Donatario.Nome.StartsWith(searchString))
+                .OrderByDescending(p => p.dataDoacao)
+               
+            });
+
+        public ViewResult ListPorID(int id) =>
+           View(new DoacaoListViewModel
+           {
+               Doacaos = repositorio.Doacoes
+               .Where(s => s.Donatario.DonatarioID==id)
+               .OrderByDescending(p => p.dataDoacao)
+
+           });
+
         [HttpGet]
         public IActionResult Create()
         {
@@ -86,8 +92,13 @@ namespace SaraiManagement.Controllers
                     }
                 }
                 context.SaveChanges();
-            }           
-           
+            }
+            else
+            {
+                doacao.Valor = 0;
+                context.SaveChanges();
+            }
+
             if (x==1)
                 return RedirectToAction("Index", "Estoque");
             else

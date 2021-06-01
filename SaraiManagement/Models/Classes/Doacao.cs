@@ -16,7 +16,6 @@ namespace SaraiManagement.Models
         public int? CaixaID { get; set; }
         public Caixa Caixa { get; set; }
         public Donatario Donatario { get; set; }
-        public virtual ICollection<ItemDoado> ItemDoados { get; set; }
 
     }
 }

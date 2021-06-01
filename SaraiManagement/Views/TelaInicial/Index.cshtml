@@ -6,118 +6,72 @@
     <h1 class="display-4">Sarai Management</h1>
 </div>
 
-<div class="container-fluid d-flex flex-wrap" style="margin: 0 auto">
+<div class="container-fluid d-flex flex-wrap" style="margin: 0 auto; width: 60%">
+
     <!-- Aluno -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Alunos</h5>
-            <p class="card-text">Realizar cadastro</p>
-        </div>
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 5% auto">
-            Gerenciar Alunos
+        <button data-toggle="modal" data-target="#modalAluno">
+            <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
+            <h5 class="card-title">Gerenciamento de Alunos</h5>
         </button>
+
     </div>
 
-    <!-- Caixa -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Caixa</h5>
-            <p class="card-text">Vizualizar caixas</p>
-        </div>
+    <!-- Financeiro -->
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCaixa" style="margin: 5% auto">
-            Gerenciar Caixa
+        <button data-toggle="modal" data-target="#modalCaixa">
+            <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
+            <h5 class="card-title">Gerenciamento Financeiro</h5>
         </button>
+
     </div>
 
     <!-- Doação -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Doações</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoacao" style="margin: 5% auto">
-            Gerenciar Doações
+        <button data-toggle="modal" data-target="#modalDoacao">
+            <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
+            <h5 class="card-title">Gerenciamento de Doação</h5>
         </button>
+
     </div>
 
-    <!-- Doadores -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Doadores</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
+    <!-- Donatario e Doador -->
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDoadores" style="margin: 5% auto">
-            Gerenciar Doadores
+        <button data-toggle="modal" data-target="#modalDonatarioDoador">
+            <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
+            <h5 class="card-title">Doadores e Donatarios</h5>
         </button>
-    </div>
 
-    <!-- Donatario -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroDonatarios.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Gerenciamento de Donatários</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
-
-        <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDonatario" style="margin: 5% auto">
-            Gerenciar Donatario
-        </button>
     </div>
 
     <!-- Estoque -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
-        <div class="card-body">
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+        <!-- Botão para acionar modal -->
+        <button data-toggle="modal" data-target="#modalEstoque">
+            <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
             <h5 class="card-title">Gerenciamento de Estoque</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
-
-        <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEstoque" style="margin: 5% auto">
-            Gerenciar Estoque
         </button>
-    </div>
 
-
-    <!-- Movimentação -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/CadastroMovimentacao.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Movimentações</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
-
-        <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalMovimentacao" style="margin: 5% auto">
-            Gerenciar Movimentaçoes
-        </button>
     </div>
 
     <!-- Usuário -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black;">
-        <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Usuário</h5>
-            <p class="card-text">Descricao ---</p>
-        </div>
+    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
         <!-- Botão para acionar modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalUsuario" style="margin: 5% auto">
-            Gerenciar Usuário
+        <button data-toggle="modal" data-target="#modalUsuario">
+            <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
+            <h5 class="card-title">Gerenciamento de Usuário</h5>
         </button>
+
     </div>
 </div>
 
@@ -153,6 +107,9 @@
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Caixa</a>
                 <a asp-controller="Caixa" asp-action="Index" class="btn btn-primary">Consultar Caixas</a>
+                <hr />
+                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
+                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar Movimentação</a>
             </div>
         </div>
     </div>
@@ -177,12 +134,12 @@
     </div>
 </div>
 
-<!-- Modal Doadores -->
-<div class="modal fade" id="modalDoadores" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+<!-- Modal Doador e Donatario -->
+<div class="modal fade" id="modalDonatarioDoador" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Doadores</h5>
+                <h5 class="modal-title" id="TituloModalCentralizado">Doador e Donatário</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -190,24 +147,9 @@
             <div class="modal-body" style="margin: 0 auto">
                 <a asp-controller="Doador" asp-action="Create" class="btn btn-primary">Cadastrar Doador</a>
                 <a asp-controller="Doador" asp-action="List" class="btn btn-primary">Consultar Doadores</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Donatario -->
-<div class="modal fade" id="modalDonatario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Donatario</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" style="margin: 0 auto">
+                <hr />
                 <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Cadastrar Donatário</a>
-                <a asp-controller="Donatario" asp-action="List" class="btn btn-primary">Consultar Donatários </a>
+                <a asp-controller="Donatario" asp-action="List" class="btn btn-primary">Consultar Donatários</a>
             </div>
         </div>
     </div>
@@ -231,23 +173,6 @@
     </div>
 </div>
 
-<!-- Modal Movimentacao -->
-<div class="modal fade" id="modalMovimentacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Movimentação</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
-                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar Movimentação</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Modal Usuario -->
 <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -268,3 +193,16 @@
 </div>
 
 
+<!-- triste -->
+<!--<div class="card" style="width: 15rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 35%">
+    <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">-->
+@*<div class="card-body">
+        <h5 class="card-title">Gerenciamento de Alunos</h5>
+        <p class="card-text">Realizar cadastro</p>
+    </div>*@
+
+@*Botão para acionar modal*@
+<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 5% auto">
+        Gerenciar Alunos
+    </button>
+</div>-->

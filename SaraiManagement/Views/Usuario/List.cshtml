@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Lista</h1>
+<h1 style="text-align: center">Lista de Usuários</h1>
 
 @foreach (var d in Model.Usuarios)
 {
@@ -19,7 +19,8 @@
     </div>
 }
 
-<div page-model="@Model.PagingInfo" paging-action="List" page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
+<div page-model="@Model.PagingInfo" paging-action="List" page-classes-enabled="true" 
+     page-class="btn" page-class-normal="btn-secondary"
      page-class-selected="btn-primary" class="btn-group pull-right m-1">
 </div>
 <div>

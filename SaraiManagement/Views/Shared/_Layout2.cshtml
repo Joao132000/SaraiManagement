@@ -18,14 +18,8 @@
     </div>
     <!-- m (margin) Margem externa de uma div
          p (padding) Margem interna de uma div -->
-    <div class="row m-1 p-1">
-        @*<div id="categories" class="col">
-        </div>*@
-        @*Renderbody é o que ta dentro de uma view, fora disso não muda continua com suas proprias formatações*@
-        <div class="col-12">
-            @RenderBody()
-        </div>
-    </div>
+    <!-- Div pai esta dentro do RenderBody da Pagina Inicial-->
+    @RenderBody()
 
     @await RenderSectionAsync("Scripts", required: false)
 

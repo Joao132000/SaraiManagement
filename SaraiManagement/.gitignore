@@ -214,7 +214,6 @@ project.lock.json
 # compiled source #
 ###################
 *.com
-*.class
 *.dll
 *.exe
 *.pdb

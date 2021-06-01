@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\libman.json
@@ -402,7 +401,6 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 >>>>>>> Davi
-=======
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\appsettings.json
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\bin\Debug\net5.0\libman.json

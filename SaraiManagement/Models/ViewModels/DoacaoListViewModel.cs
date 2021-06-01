@@ -9,5 +9,6 @@ namespace SaraiManagement.Models.ViewModels
     {
         public IEnumerable<Doacao> Doacaos { get; set; }
         public PagingInfo PagingInfo { get; set; }
+
     }
 }

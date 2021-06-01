@@ -1,0 +1,36 @@
+﻿@model SaraiManagement.Models.ViewModels.ItemEstoqueListViewModel
+
+@{
+    ViewData["Title"] = "ListaDoacao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Descriçao
+            </th>
+            <th>
+                Quantidade
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.ItemDoados)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estoque.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Doacao" asp-action="List" class="btn btn-primary">Voltar</a>

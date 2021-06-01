@@ -11,11 +11,12 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Saldo)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saldo)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -23,14 +24,14 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Saldo)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Descricao)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Saldo)
+            </td>
+
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.CaixaID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
-                @*@<a asp-action="Details" asp-route-id="@item.CaixaID">Details</a>*@
                 <a asp-action="Delete" asp-route-id="@item.CaixaID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
             </td>
         </tr>

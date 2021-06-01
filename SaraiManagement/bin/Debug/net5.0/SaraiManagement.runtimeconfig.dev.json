@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\davi-\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\davi-\\.nuget\\packages"
-=======
-      "C:\\Users\\mfmat\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mfmat\\.nuget\\packages"
->>>>>>> Matheus3
+      "C:\\Users\\JGL\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\JGL\\.nuget\\packages"
     ]
   }
 }

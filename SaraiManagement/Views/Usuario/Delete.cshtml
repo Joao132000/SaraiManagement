@@ -31,30 +31,27 @@
             @*@Html.DisplayNameFor(model => model.Nome)*@
             <label class="fonte">Nome: </label>
         </dt>
-        <dd class = "col-sm-10 fonte">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Nome)
         </dd>
         <dt class="col-sm-2">
             @*@Html.DisplayNameFor(model => model.Senha)*@
             <label class="fonte">Senha: </label>
         </dt>
-        <dd class = "col-sm-10 fonte">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Senha)
         </dd>
         <dt class="col-sm-2">
             @*@Html.DisplayNameFor(model => model.Tipo)*@
             <label class="fonte">Tipo: </label>
         </dt>
-        <dd class = "col-sm-10 fonte">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Tipo)
         </dd>
     </dl>
-</div>
-<hr />
-<div class="centraliza">
-    <form asp-action="Delete">
+    <form asp-action="Delete" class="centraliza">
         <input type="hidden" asp-for="UsuarioID" />
-        <input type="submit" value="Excluir" class="btn btn-danger" />
-        <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+        <input type="submit" value="Excluir" class="btn btn-danger botao" />
+        <a asp-action="List" asp-route-id="@Model.UsuarioID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
     </form>
 </div>

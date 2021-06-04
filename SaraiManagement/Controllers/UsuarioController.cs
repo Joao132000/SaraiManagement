@@ -81,7 +81,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Usuario usuario)
         {
             repositorio.Edit(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -93,7 +93,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Usuario usuario)
         {
             repositorio.Delete(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
 
         [HttpGet]

@@ -5,21 +5,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Detalhes</h1>
+<h1 style="text-align: center">Detalhes do Item</h1>
 
-<div>
+<hr />
+
+<div class="container-fluid d-flex flex-wrap centraliza">
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @* @Html.DisplayNameFor(model => model.Quantidade)*@
-            <label>Quantidade:</label>
+            <label class="fonte">Quantidade:</label>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Quantidade)
         </dd>
         <dt class = "col-sm-2">
             @*@Html.DisplayNameFor(model => model.Estoque)*@
-            <label>Item</label>
+            <label class="fonte">Item</label>
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Estoque.Descricao)
@@ -32,8 +34,9 @@
         </dd>*@
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ItemDoadoID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
-    <a asp-action="Delete" asp-route-id="@Model.ItemDoadoID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
-    <a asp-action="List" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+<hr />
+<div class="centraliza">
+    <a asp-action="Edit" asp-route-id="@Model.ItemDoadoID" class="btn btn-primary botao" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.ItemDoadoID" class="btn btn-danger botao" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
 </div>

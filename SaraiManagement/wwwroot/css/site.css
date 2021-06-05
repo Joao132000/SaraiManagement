@@ -94,8 +94,9 @@ body {
 .gradient {
     height: 100%;
     width: 100%;
-    background: linear-gradient(#9bcfe0, #57b0cd, #318dab, #127494);
+    background: linear-gradient(45deg, #9bcfe0, #57b0cd, #318dab, #127494);
     background-size: 300% 300%;
+    animation: colors 5s ease;
 }
 
 .botaoLogin{

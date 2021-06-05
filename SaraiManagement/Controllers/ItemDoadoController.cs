@@ -99,7 +99,7 @@ namespace SaraiManagement.Controllers
             context.SaveChanges();
             if (x == "Sim")
                 return RedirectToAction("Index", "Estoque");
-            else if(x == "Vizualizar")
+            else if(x == "Visualizar")
                 return RedirectToAction("List");
             else
                 return View("ValidacaoSucesso");

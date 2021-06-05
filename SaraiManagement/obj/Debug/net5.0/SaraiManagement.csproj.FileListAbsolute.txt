@@ -193,3 +193,4 @@ C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref\SaraiManagement.dll
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
+C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csproj.AssemblyReference.cache

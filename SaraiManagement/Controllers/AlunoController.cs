@@ -27,17 +27,17 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
         public ViewResult List(int pagina = 1) => View(new AlunoListViewModel
-           {
-                Alunos = repositorio.Alunos.OrderBy(d => d.AlunoID)
+        {
+            Alunos = repositorio.Alunos.OrderBy(d => d.AlunoID)
                .Skip((pagina - 1) * pageSize)
                .Take(pageSize),
-               PagingInfo = new PagingInfo
-               {
-                   PaginaAtual = pagina,
-                   ItensPorPagina = pageSize,
-                   TotalItens = repositorio.Alunos.Count()
-               }
-           });
+            PagingInfo = new PagingInfo
+            {
+                PaginaAtual = pagina,
+                ItensPorPagina = pageSize,
+                TotalItens = repositorio.Alunos.Count()
+            }
+        });
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
@@ -48,7 +48,7 @@ namespace SaraiManagement.Controllers
             else
             {
                 return RedirectToAction("Login", "Usuario");
-            }
+            }  
         }
         [HttpGet]
         public IActionResult Create()

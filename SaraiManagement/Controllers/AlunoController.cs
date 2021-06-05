@@ -53,6 +53,7 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(d => d.Nome), "DonatarioID", "Nome");
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
@@ -68,7 +69,7 @@ namespace SaraiManagement.Controllers
         {
             aluno.Admissao = DateTime.Now;
             repositorio.Create(aluno);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         public IActionResult Details(int id)
         {
@@ -101,7 +102,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Aluno aluno)
         {
             repositorio.Edit(aluno);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Delete(int id)

@@ -78,6 +78,9 @@ body {
     justify-content: center; 
     align-items: center;
 }
+.botao {
+    margin: 0 5px;
+}
 
 .fonte {
     font-size: 20px;

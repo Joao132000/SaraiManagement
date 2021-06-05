@@ -102,7 +102,7 @@ namespace SaraiManagement.Controllers
                 }
             }
             context.SaveChanges();
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -142,7 +142,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Movimentacao movimentacao)
         {
             repositorio.Edit(movimentacao);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -165,7 +165,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Movimentacao movimentacao)
         {
             repositorio.Delete(movimentacao);
-            return RedirectToAction("List", "Movimentacao");
+            return View("ValidacaoSucesso");
         }
     }
 }

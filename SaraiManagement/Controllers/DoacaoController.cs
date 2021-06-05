@@ -104,7 +104,7 @@ namespace SaraiManagement.Controllers
             if (x==1)
                 return RedirectToAction("Index", "Estoque");
             else
-                return RedirectToAction("Index", "TelaInicial");
+                return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -157,6 +157,7 @@ namespace SaraiManagement.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
         }
+
         [HttpPost]
         public IActionResult Delete(Doacao doacao)
         {

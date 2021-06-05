@@ -66,7 +66,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Doador doador)
         {
             repositorio.Create(doador);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -102,7 +102,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Doador doador)
         {
             repositorio.Edit(doador);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -122,7 +122,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Doador doador)
         {
             repositorio.Delete(doador);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
     }
 }

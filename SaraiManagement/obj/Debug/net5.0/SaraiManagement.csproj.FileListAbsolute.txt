@@ -199,3 +199,5 @@ D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\r
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout2.cshtml.g.cs
+D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\TelaInicial\Sobre.cshtml.g.cs
+D:\Faculdade\5º periodo\Integradoras V\Sarai\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout3.cshtml.g.cs

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\bin\Debug\net5.0\libman.json
@@ -402,6 +403,8 @@ C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.csproj.AssemblyReference.cache
 C:\Users\elian\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\ValidacaoSucesso.cshtml.g.cs
+=======
+>>>>>>> Master
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\appsettings.json
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\bin\Debug\net5.0\libman.json
@@ -581,6 +584,7 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Raz
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Movimentacao\List.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\Erro.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\ValidacaoSucesso.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout2.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -593,6 +597,7 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Raz
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Errado.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\List.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Login.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Logout.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.RazorTargetAssemblyInfo.cache
@@ -603,9 +608,12 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Sar
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\ref\SaraiManagement.dll
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.pdb
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\SaraiManagement.genruntimeconfig.cache
+<<<<<<< HEAD
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Logout.cshtml.g.cs
 >>>>>>> Davi
 >>>>>>> Master
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\ValidacaoSucesso.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout2.cshtml.g.cs
 C:\Users\JGL\Desktop\UNIFENAS\Ferramentas de Desenvolvimento\ProjetoFinal\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Logout.cshtml.g.cs
+=======
+>>>>>>> Master

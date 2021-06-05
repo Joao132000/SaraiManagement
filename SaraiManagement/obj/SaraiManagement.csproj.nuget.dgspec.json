@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\davi-\\source\\repos\\SaraiManagement\\SaraiManagement\\SaraiManagement.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\davi-\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj": {}
-  },
-  "projects": {
-    "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
-        "projectName": "SaraiManagement",
-        "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
-        "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
-        "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Matheus3
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

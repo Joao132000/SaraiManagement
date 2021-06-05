@@ -82,3 +82,29 @@ body {
 .fonte {
     font-size: 20px;
 }
+
+.textCenter{
+    text-align: center;
+}
+
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#9bcfe0, #57b0cd, #318dab, #127494);
+    background-size: 300% 300%;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

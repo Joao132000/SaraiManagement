@@ -6,6 +6,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<h1 style="text-align: center">Lista de Movimentações</h1>
+<hr />
+
 <form asp-controller="Movimentacao" asp-action="List" method="get">
     <p>
 
@@ -16,11 +19,9 @@
     </p>
 </form>
 
-
-
 @foreach (var m in Model)
 {
-    <div class="card card-outline-primary m-1 p-1">
+    <div class="card card-outline-primary m-1 p-1" style="border: 5px solid black;">
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Consultar" asp-route-id="@m.MovimentacaoID">@m.Descricao </a>

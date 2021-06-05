@@ -1,13 +1,27 @@
-﻿@model SaraiManagement.Models.ViewModels.MovimentacaoListViewModel
+﻿@model  IEnumerable<SaraiManagement.Models.Movimentacao>
+
 
 @{
     ViewData["Title"] = "List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@foreach (var m in Model.Movimentacaos)
+<h1 style="text-align: center">Lista de Movimentações</h1>
+<hr />
+
+<form asp-controller="Movimentacao" asp-action="List" method="get">
+    <p>
+
+        <h4>Pesquisar Movimentações por Caixa:</h4>
+        <select asp-items="ViewBag.CaixaID" name="searchString" ></select>
+        <input type="submit" class="btn btn-primary" value="Pesquisar" />
+
+    </p>
+</form>
+
+@foreach (var m in Model)
 {
-    <div class="card card-outline-primary m-1 p-1">
+    <div class="card card-outline-primary m-1 p-1" style="border: 5px solid black;">
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Consultar" asp-route-id="@m.MovimentacaoID">@m.Descricao </a>
@@ -18,10 +32,7 @@
         <div class="card-text p-1">@m.DataMovimentacao.ToString("d")</div>
     </div>
 }
-<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-secondary"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1">
-</div>
+
 <div>
     <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
 </div>
@@ -30,69 +41,69 @@
 
 
 @*
-<h1>List</h1>
+    <h1>List</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoMovimentacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataMovimentacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Doador)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Caixa)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TipoMovimentacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataMovimentacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Doador.Cidade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Usuario.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Caixa.CaixaID)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.MovimentacaoID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.MovimentacaoID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.MovimentacaoID">Delete</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Valor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TipoMovimentacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataMovimentacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Doador)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Caixa)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>*@
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Valor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TipoMovimentacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataMovimentacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Doador.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Caixa.CaixaID)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.MovimentacaoID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.MovimentacaoID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.MovimentacaoID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@

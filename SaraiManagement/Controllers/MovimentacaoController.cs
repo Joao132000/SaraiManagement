@@ -18,7 +18,6 @@ namespace SaraiManagement.Controllers
     {
         private IMovimentacaoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int PageSize = 4;
 
         public MovimentacaoController(IMovimentacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -37,19 +36,31 @@ namespace SaraiManagement.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
         }
-        public ViewResult List(int pagina = 1)=> View(new MovimentacaoListViewModel
+        public async Task<IActionResult> List(int searchString)
         {
-            Movimentacaos = repositorio.Movimentacoes
-            .OrderBy(m => m.MovimentacaoID)
-            .Skip((pagina - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
             {
-                PaginaAtual = pagina,
-                ItensPorPagina = PageSize,
-                TotalItens = repositorio.Movimentacoes.Count()
+                ViewBag.CaixaID = new SelectList(context.Caixas, "CaixaID", "Descricao");
+                
+                var movimentacao = from e in repositorio.Movimentacoes.OrderBy(e => e.Descricao) select e;
+
+                if (searchString != 0)
+                {
+                    movimentacao = movimentacao.Where(s => s.Caixa.CaixaID == searchString);
+                }
+
+                return View(await movimentacao.ToListAsync());
             }
-        });
+            else
+            {
+                return RedirectToAction("Login", "Usuario");
+            }
+        }
+
+
+
+
 
         [HttpGet]  //Serve para gerar a View
         public IActionResult Create()//ViewBag + .Nome // ordenados pelo Nome
@@ -57,9 +68,11 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
+                var a = HttpContext.Session.GetString("usuario_session1");
+                int i = int.Parse(a.ToString());
+                ViewBag.UsuarioID = new SelectList(context.Usuarios.Where(d => d.UsuarioID == i), "UsuarioID", "Nome");
                 ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
                 ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
-                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
                 return View();
             }
             else
@@ -71,16 +84,20 @@ namespace SaraiManagement.Controllers
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
         public IActionResult Create(Movimentacao movimentacao)
         {
+            movimentacao.DataMovimentacao = DateTime.Now;
             repositorio.Create(movimentacao);
             foreach (var item in context.Caixas)
             {
                 if (item.CaixaID == movimentacao.CaixaID)
                 {
-                    if(movimentacao.TipoMovimentacao == tipoMovimentacao.Credito)
-                        item.Saldo = item.Saldo + movimentacao.Valor;
-                    else
+                    if(movimentacao.TipoMovimentacao == tipoMovimentacao.Debito)
+                    {
                         item.Saldo = item.Saldo - movimentacao.Valor;
-
+                    }
+                    else
+                    {
+                        item.Saldo = item.Saldo + movimentacao.Valor;
+                    }
 
                 }
             }
@@ -148,7 +165,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Movimentacao movimentacao)
         {
             repositorio.Delete(movimentacao);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List", "Movimentacao");
         }
     }
 }

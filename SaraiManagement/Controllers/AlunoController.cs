@@ -66,6 +66,7 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Aluno aluno)
         {
+            aluno.Admissao = DateTime.Now;
             repositorio.Create(aluno);
             return RedirectToAction("List");
         }

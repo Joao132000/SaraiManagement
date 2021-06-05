@@ -7,18 +7,16 @@
 
 <h1>Estoque</h1>
 
-
+<form asp-controller="Estoque" asp-action="List">
+    <p>
+        <input type="text" name="SearchString" />
+        <input class="btn btn-primary" type="submit" value="Pesquisar" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                <form asp-controller="Estoque" asp-action="List">
-                    <p>
-                        <input type="text" name="SearchString" />
-                        <input class="btn btn-primary" type="submit" value="Pesquisar" />
-                    </p>
-                </form>
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
@@ -32,25 +30,26 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria)
-            </td>
-            <td>
-                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a>
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.EstoqueID">Excluir</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.EstoqueID">Editar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.EstoqueID">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 <p>
-      <a class="btn btn-primary" asp-action="Create">Adicionar Novo Item</a>
+    <a class="btn btn-primary" asp-action="Create">Adicionar Novo Item</a>
 </p>

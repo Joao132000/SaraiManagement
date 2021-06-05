@@ -1,0 +1,80 @@
+﻿@model SaraiManagement.Models.ViewModels.DoacaoListViewModel
+
+@{
+    ViewData["Title"] = "ListaMostra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Lista de Doaçoes</h1>
+<br />
+
+
+<form asp-controller="Doacao" asp-action="List">
+    <p>
+        <h4>Pesquisar Doaçoes por Donatario:</h4>
+        <input type="text" name="SearchString" />
+        <input type="submit" class="btn btn-primary" value="Pesquisar" />
+
+    </p>
+</form>
+
+
+
+
+<table class="table" >
+    <thead>
+        <tr>
+            <th>
+                Donatário
+            </th>
+
+            <th>
+                Valor
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Usuário
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Doacaos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Donatario.Nome)
+                </td>
+
+                <td>
+                    R$ @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.dataDoacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.Nome)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="ItemDoado" asp-action="ListaDoacao" asp-route-x="@item.DoacaoID">Visualizar Items</a>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a style="align-self:flex-end" asp-controller="Donatario" asp-action="List" class="btn btn-primary">Ver Lista de Donatarios</a>
+<br />
+<br />
+<a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success">Voltar</a>
+
+

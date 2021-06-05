@@ -35,7 +35,7 @@ namespace SaraiManagement.Controllers
 
                 if (!String.IsNullOrEmpty(searchString))
                 {
-                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+                    estoque = estoque.Where(s => s.Descricao.StartsWith(searchString));
                 }
 
                 return View(await estoque.ToListAsync());
@@ -55,7 +55,7 @@ namespace SaraiManagement.Controllers
 
                 if (!String.IsNullOrEmpty(searchString))
                 {
-                    estoque = estoque.Where(s => s.Descricao.Contains(searchString));
+                    estoque = estoque.Where(s => s.Descricao.StartsWith(searchString));
                 }
 
                 return View(await estoque.ToListAsync());

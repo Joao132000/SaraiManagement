@@ -18,7 +18,7 @@ namespace SaraiManagement.Controllers
     {
         private IDoacaoRepositorio repositorio;
         private ApplicationDbContext context;
-        public int PageSize = 2;
+        public int pageSize = 10;
 
         public DoacaoController(IDoacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -40,30 +40,38 @@ namespace SaraiManagement.Controllers
             }
         }
 
-        public ViewResult List(int pagina = 1) => View(new DoacaoListViewModel
-        {
-            Doacaos = repositorio.Doacoes
-            .OrderBy(d => d.DoacaoID)
-            .Skip((pagina - 1) * PageSize)
-            .Take(PageSize),
-            PagingInfo = new PagingInfo
-            {
-                PaginaAtual = pagina,
-                ItensPorPagina = PageSize,
-                TotalItens = repositorio.Doacoes.Count()
-            }
-        });
+       
+        public ViewResult List(string searchString) =>
+            View(new DoacaoListViewModel
+            {                 
+                 Doacaos = repositorio.Doacoes
+                .Where(s => s.Donatario.Nome.StartsWith(searchString))
+                .OrderByDescending(p => p.dataDoacao)
+               
+            });
+
+        public ViewResult ListPorID(int id) =>
+           View(new DoacaoListViewModel
+           {
+               Doacaos = repositorio.Doacoes
+               .Where(s => s.Donatario.DonatarioID==id)
+               .OrderByDescending(p => p.dataDoacao)
+
+           });
+
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(int idDonatario)
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(f => f.Nome), "DonatarioID", "Nome");
-                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(f => f.Nome), "UsuarioID", "Nome");
+
+                var a = HttpContext.Session.GetString("usuario_session1");
+                int i = int.Parse(a.ToString());
+                ViewBag.UsuarioID = new SelectList(context.Usuarios.Where(d => d.UsuarioID == i), "UsuarioID", "Nome");
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.Where(e => e.DonatarioID == idDonatario), "DonatarioID", "Nome");                
                 ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f => f.Descricao), "CaixaID", "Descricao");
 
-                HttpContext.Session.SetString("idDoacao", 1.ToString());
                 return View();
             }
             else
@@ -86,8 +94,13 @@ namespace SaraiManagement.Controllers
                     }
                 }
                 context.SaveChanges();
-            }           
-           
+            }
+            else
+            {
+                doacao.Valor = 0;
+                context.SaveChanges();
+            }
+
             if (x==1)
                 return RedirectToAction("Index", "Estoque");
             else

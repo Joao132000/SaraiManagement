@@ -12,22 +12,14 @@
 <body class="gradient">
     <div class="navbar navbar-dark bg-dark" role="navigation">
         <a class="navbar-brand" asp-controller="TelaInicial" asp-action="Index">SARAI MANAGEMENT</a>
-        
+
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>
     </div>
-    <!-- m (margin) Margem externa de uma div
-         p (padding) Margem interna de uma div -->
-    <div class="row m-1 p-1">
-        @*<div id="categories" class="col">
-            </div>*@
-        @*Renderbody é o que ta dentro de uma view, fora disso não muda continua com suas proprias formatações*@
-        <div class="col-12">
-            @RenderBody()
-        </div>
-    </div>
+
+    @RenderBody()
 
     @await RenderSectionAsync("Scripts", required: false)
 
@@ -37,5 +29,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <footer class="textCenter">Sarai Management © 2021, Todos os Direitos Reservados.</footer>
 </body>
 </html>

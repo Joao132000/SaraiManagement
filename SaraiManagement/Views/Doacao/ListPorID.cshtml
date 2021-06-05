@@ -1,0 +1,59 @@
+﻿@model SaraiManagement.Models.ViewModels.DoacaoListViewModel
+
+@{
+    ViewData["Title"] = "ListPorID";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Lista de Doaçoes</h1>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Donatario
+            </th>
+
+            <th>
+                Valor
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Usuario
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Doacaos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Donatario.Nome)
+                </td>
+
+                <td>
+                    R$ @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.dataDoacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.Nome)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="ItemDoado" asp-action="ListaDoacao" asp-route-x="@item.DoacaoID">Visualizar Items</a>
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-controller="Doacao" asp-action="List">Voltar</a>

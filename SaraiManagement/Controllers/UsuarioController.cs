@@ -27,6 +27,7 @@ namespace SaraiManagement.Controllers
 
         public IActionResult Index()
         {
+
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
                 return View("Correto");
@@ -80,7 +81,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Usuario usuario)
         {
             repositorio.Edit(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -92,7 +93,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Usuario usuario)
         {
             repositorio.Delete(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
 
         [HttpGet]
@@ -108,6 +109,8 @@ namespace SaraiManagement.Controllers
             if (confirma != null)
             {
                 HttpContext.Session.SetString("usuario_session", confirma.Nome);
+                HttpContext.Session.SetString("usuario_session1", confirma.UsuarioID.ToString());
+                HttpContext.Session.SetString("tipo_session",confirma.Tipo.ToString());
                 return RedirectToAction("Index", "TelaInicial");
             }
             else

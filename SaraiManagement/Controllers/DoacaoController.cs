@@ -65,10 +65,18 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
+<<<<<<< HEAD
                 var a = HttpContext.Session.GetString("usuario_session1");
                 int i = int.Parse(a.ToString());
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.Where(d => d.UsuarioID == i), "UsuarioID", "Nome");
                 ViewBag.DonatarioID = new SelectList(context.Donatarios.Where(e => e.DonatarioID == idDonatario), "DonatarioID", "Nome");
+=======
+
+                var a = HttpContext.Session.GetString("usuario_session1");
+                int i = int.Parse(a.ToString());
+                ViewBag.UsuarioID = new SelectList(context.Usuarios.Where(d => d.UsuarioID == i), "UsuarioID", "Nome");
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.Where(e => e.DonatarioID == idDonatario), "DonatarioID", "Nome");                
+>>>>>>> Master
                 ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f => f.Descricao), "CaixaID", "Descricao");
                 return View();
             }

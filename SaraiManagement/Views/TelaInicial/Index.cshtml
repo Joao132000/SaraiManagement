@@ -1,78 +1,85 @@
 ﻿@{
     ViewData["Title"] = "Tela Inicial";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Sarai Management</h1>
+    <h1 class="display-4">SARAI MANAGEMENT</h1>
 </div>
 
-<div class="container-fluid d-flex flex-wrap" style="margin: 0 auto; width: 60%">
+<div>
 
-    <!-- Aluno -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+    <div class="container-fluid d-flex flex-wrap" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Aluno -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalAluno">
-            <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Gerenciamento de Alunos</h5>
-        </button>
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalAluno">
+                <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Alunos</h5>
+            </button>
 
-    </div>
+        </div>
 
-    <!-- Financeiro -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+        <!-- Financeiro -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalCaixa">
-            <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Gerenciamento Financeiro</h5>
-        </button>
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalCaixa">
+                <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento Financeiro</h5>
+            </button>
 
-    </div>
+        </div>
 
-    <!-- Doação -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+        <!-- Doação -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalDoacao">
-            <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Gerenciamento de Doação</h5>
-        </button>
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalDoacao">
+                <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Doação</h5>
+            </button>
 
-    </div>
-
-    <!-- Donatario e Doador -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
-
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalDonatarioDoador">
-            <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Doadores e Donatarios</h5>
-        </button>
+        </div>
 
     </div>
 
-    <!-- Estoque -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+    <div class="container-fluid d-flex flex-wrap" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Donatario e Doador -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
 
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalEstoque">
-            <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Gerenciamento de Estoque</h5>
-        </button>
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalDonatarioDoador">
+                <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Doadores e Donatarios</h5>
+            </button>
 
+        </div>
+
+        <!-- Estoque -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalEstoque">
+                <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Estoque</h5>
+            </button>
+
+        </div>
+
+        <!-- Usuário -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalUsuario">
+                <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Usuário</h5>
+            </button>
+
+        </div>
     </div>
 
-    <!-- Usuário -->
-    <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
-
-        <!-- Botão para acionar modal -->
-        <button data-toggle="modal" data-target="#modalUsuario">
-            <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
-            <h5 class="card-title">Gerenciamento de Usuário</h5>
-        </button>
-
-    </div>
 </div>
 
 

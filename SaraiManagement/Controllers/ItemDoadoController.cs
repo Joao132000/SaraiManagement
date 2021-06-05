@@ -102,7 +102,7 @@ namespace SaraiManagement.Controllers
             else if(x == "Vizualizar")
                 return RedirectToAction("List");
             else
-                return RedirectToAction("Index", "TelaInicial");
+                return View("ValidacaoSucesso");
         }
 
         public IActionResult Details(int id)
@@ -140,7 +140,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(ItemDoado itemDoado)
         {
             repositorio.Edit(itemDoado);
-            return View("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -181,7 +181,7 @@ namespace SaraiManagement.Controllers
             }
             context.SaveChanges();
             repositorio.Delete(itemDoado);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
     }
 }

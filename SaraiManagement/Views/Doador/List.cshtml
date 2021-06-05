@@ -1,27 +1,27 @@
 ﻿@model SaraiManagement.Models.ViewModels.DoadorListViewModel
 
-<h1>Lista</h1>
+    <h1>Lista</h1>
 
-@foreach (var p in Model.Doadors)
-{
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p-1">
-            <h4>
-                <a asp-action="Consultar" asp-route-id="@p.DoadorID"> @p.Nome </a>
-                <span class="badge badge-pill badge-danger" style="float:right">@p.regularidadeDoador</span>
-            </h4>
+    @foreach (var p in Model.Doadors)
+    {
+        <div class="card card-outline-primary m-1 p-1">
+            <div class="bg-faded p-1">
+                <h4>
+                    <a asp-action="Consultar" asp-route-id="@p.DoadorID"> @p.Nome </a>
+                    <span class="badge badge-pill badge-danger" style="float:right">@p.regularidadeDoador</span>
+                </h4>
+            </div>
         </div>
+    }
+
+    <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-secondary"
+         page-class-selected="btn-primary" class="btn-group pull-right m-1">
     </div>
-}
 
-<div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
-     page-class="btn" page-class-normal="btn-secondary"
-     page-class-selected="btn-primary" class="btn-group pull-right m-1">
-</div>
-
-<div>
-    <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar </a>
-</div>
+    <div>
+        <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar </a>
+    </div>
 
 
 

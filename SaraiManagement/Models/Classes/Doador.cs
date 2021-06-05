@@ -30,7 +30,7 @@ namespace SaraiManagement.Models
 
         [Display(Name = "Data de Inicio da doacao")]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime inicioDaDoacao { get; set; }
     }
 }

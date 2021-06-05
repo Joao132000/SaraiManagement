@@ -1,7 +1,7 @@
 ﻿@model SaraiManagement.Models.ViewModels.AlunoListViewModel
 
+<!--LISTA ALUNO-->
 <h1>Lista</h1>
-
 @foreach (var p in Model.Alunos)
 {
     <div class="card card-outline-primary m-1 p-1">
@@ -22,6 +22,7 @@
 <div>
     <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar </a>
 </div>
+
 
 
 

@@ -1,4 +1,4 @@
-﻿@model  IEnumerable<SaraiManagement.Models.Movimentacao>
+﻿@model IEnumerable<SaraiManagement.Models.Movimentacao>
 
 
 @{
@@ -13,7 +13,7 @@
     <p>
 
         <h4>Pesquisar Movimentações por Caixa:</h4>
-        <select asp-items="ViewBag.CaixaID" name="searchString" ></select>
+        <select asp-items="ViewBag.CaixaID" name="searchString"></select>
         <input type="submit" class="btn btn-primary" value="Pesquisar" />
 
     </p>
@@ -29,7 +29,7 @@
             </h4>
         </div>
         <div class="card-text p-1">@m.TipoMovimentacao</div>
-        <div class="card-text p-1">@m.DataMovimentacao</div>
+        <div class="card-text p-1">@m.DataMovimentacao.ToString("d")</div>
     </div>
 }
 

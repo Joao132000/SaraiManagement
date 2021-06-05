@@ -22,14 +22,17 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View();
-            }
-            else
-            {
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                    return View();
+                else
+                    return View("TelaInicioUser");
+           }
+           else
+           {
                 return RedirectToAction("Login", "Usuario");
-            }
+           }
         }
-
         public IActionResult Sobre()
         {
             return View();

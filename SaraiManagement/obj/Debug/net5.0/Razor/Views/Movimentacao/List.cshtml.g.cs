@@ -47,13 +47,8 @@ using SaraiManagement.Infraestrutura;
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f75e3d5566962cf29a052a79c0d288f349902111", @"/Views/Movimentacao/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d952a69ecbabda7b37f2440026741ec893a02eec", @"/Views/_ViewImports.cshtml")]
-=======
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"76e85092e601a20e7b6cd488b1d6bb72e95b2634", @"/Views/Movimentacao/List.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a7580aea04b072e9f39c26374ddd2c49c40ea56", @"/Views/_ViewImports.cshtml")]
->>>>>>> Matheus3
     public class Views_Movimentacao_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<SaraiManagement.Models.Movimentacao>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "searchString", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

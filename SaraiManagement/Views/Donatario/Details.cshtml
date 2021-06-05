@@ -5,42 +5,58 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<style>
+    .botao {
+        margin: 0 5px;
+    }
 
-<div>
-    <h4>Donatario</h4>
-    <hr />
+    .fonte {
+        font-size: 20px;
+    }
+
+    .centraliza {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<h1 style="text-align: center">Detalhes</h1>
+<hr />
+<div class="centraliza">
+
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Endereco)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Endereco)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Telefone)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Telefone)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Email)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Email)
         </dd>
     </dl>
 </div>
-<div>
-    <a class="btn btn-info" asp-controller="Doacao" asp-action="Create" asp-route-idDonatario="@Model.DonatarioID">Realizar Nova Doação</a>
-    <a asp-controller="Doacao" asp-action="ListPorID" asp-route-id="@Model.DonatarioID" class="btn btn-info">Visualizar Doaçoes</a>
-    <a asp-action="Edit" asp-route-id="@Model.DonatarioID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
-    <a asp-action="Delete" asp-route-id="@Model.DonatarioID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
-    <a asp-action="List" asp-route-id="@Model.DonatarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
-</div>
+    <hr/>
+    <div class="centraliza">
+        <a class="btn btn-info botao" asp-controller="Doacao" asp-action="Create" asp-route-idDonatario="@Model.DonatarioID">Realizar Nova Doação</a>
+        <a asp-controller="Doacao" asp-action="ListPorID" asp-route-id="@Model.DonatarioID" class="btn btn-info botao">Visualizar Doaçoes</a>
+        <a asp-action="Edit" asp-route-id="@Model.DonatarioID" class="btn btn-primary botao" role="button" aria-pressed="true">Editar</a>
+        <a asp-action="Delete" asp-route-id="@Model.DonatarioID" class="btn btn-danger botao" role="button" aria-pressed="true">Excluir</a>
+        <a asp-action="List" asp-route-id="@Model.DonatarioID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
+    </div>

@@ -47,13 +47,8 @@ using SaraiManagement.Infraestrutura;
 #line default
 #line hidden
 #nullable disable
-<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"280623a8f75df3adbacf38261c1efc562e32c49f", @"/Views/Aluno/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d952a69ecbabda7b37f2440026741ec893a02eec", @"/Views/_ViewImports.cshtml")]
-=======
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3b2ddc4a90f1c23597dbeb306e906759670643a3", @"/Views/Aluno/Create.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a7580aea04b072e9f39c26374ddd2c49c40ea56", @"/Views/_ViewImports.cshtml")]
->>>>>>> Matheus3
     public class Views_Aluno_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SaraiManagement.Models.Aluno>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-danger"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

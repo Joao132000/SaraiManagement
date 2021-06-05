@@ -40,7 +40,11 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View();
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                    return View();
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {
@@ -73,8 +77,14 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var caixa = context.Caixas.Find(id);
-                return View(caixa);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var caixa = context.Caixas.Find(id);
+                    return View(caixa);
+                }
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {
@@ -91,10 +101,15 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(int id)
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
-            if (acesso != null)
-            {
-                var caixa = context.Caixas.Find(id);
-                return View(caixa);
+            if (acesso != null) {
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var caixa = context.Caixas.Find(id);
+                    return View(caixa);
+                }
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {

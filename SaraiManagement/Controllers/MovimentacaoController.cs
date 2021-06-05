@@ -84,6 +84,7 @@ namespace SaraiManagement.Controllers
         [HttpPost] //Executar a ação do metodo que vai modificar o BD - Envia dados para o metodo que modifica o BD
         public IActionResult Create(Movimentacao movimentacao)
         {
+            movimentacao.DataMovimentacao = DateTime.Now;
             repositorio.Create(movimentacao);
             foreach (var item in context.Caixas)
             {
@@ -101,7 +102,7 @@ namespace SaraiManagement.Controllers
                 }
             }
             context.SaveChanges();
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -141,7 +142,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Movimentacao movimentacao)
         {
             repositorio.Edit(movimentacao);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -164,7 +165,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Movimentacao movimentacao)
         {
             repositorio.Delete(movimentacao);
-            return RedirectToAction("List", "Movimentacao");
+            return View("ValidacaoSucesso");
         }
     }
 }

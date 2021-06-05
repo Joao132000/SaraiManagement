@@ -27,17 +27,17 @@ namespace SaraiManagement.Controllers
             context = ctx;
         }
         public ViewResult List(int pagina = 1) => View(new AlunoListViewModel
-           {
-                Alunos = repositorio.Alunos.OrderBy(d => d.AlunoID)
+        {
+            Alunos = repositorio.Alunos.OrderBy(d => d.AlunoID)
                .Skip((pagina - 1) * pageSize)
                .Take(pageSize),
-               PagingInfo = new PagingInfo
-               {
-                   PaginaAtual = pagina,
-                   ItensPorPagina = pageSize,
-                   TotalItens = repositorio.Alunos.Count()
-               }
-           });
+            PagingInfo = new PagingInfo
+            {
+                PaginaAtual = pagina,
+                ItensPorPagina = pageSize,
+                TotalItens = repositorio.Alunos.Count()
+            }
+        });
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
@@ -48,11 +48,12 @@ namespace SaraiManagement.Controllers
             else
             {
                 return RedirectToAction("Login", "Usuario");
-            }
+            }  
         }
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.DonatarioID = new SelectList(context.Donatarios.OrderBy(d => d.Nome), "DonatarioID", "Nome");
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
@@ -66,8 +67,9 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Aluno aluno)
         {
+            aluno.Admissao = DateTime.Now;
             repositorio.Create(aluno);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         public IActionResult Details(int id)
         {
@@ -100,7 +102,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Aluno aluno)
         {
             repositorio.Edit(aluno);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Delete(int id)

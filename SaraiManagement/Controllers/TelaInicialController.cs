@@ -3,11 +3,15 @@ using Microsoft.Extensions.Logging;
 using SaraiManagement.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using SaraiManagement.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using SaraiManagement.Models.Enuns;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using SaraiManagement.Controllers;
 
 namespace SaraiManagement.Controllers
 {
@@ -16,8 +20,6 @@ namespace SaraiManagement.Controllers
         public IActionResult Index()
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
-            HttpContext.Session.SetString("idDoacao", 1.ToString());
-
             if (acesso != null)
             {
                 return View();
@@ -29,10 +31,10 @@ namespace SaraiManagement.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        //public IActionResult Error()
+        //{
+        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //}
 
         public ActionResult MyImage()
         {

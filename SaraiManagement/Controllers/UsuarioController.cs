@@ -27,10 +27,9 @@ namespace SaraiManagement.Controllers
 
         public IActionResult Index()
         {
-
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
-                return View("Correto");
+                return View();
             else
                 return View("Login");
         }
@@ -54,7 +53,15 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
 
         [HttpPost]
@@ -67,33 +74,57 @@ namespace SaraiManagement.Controllers
         [HttpGet]
         public IActionResult Consultar(int id)
         {
-            var usuario = repositorio.Consultar(id);
-            return View(usuario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if ( acesso != null)
+            {
+                var usuario = repositorio.Consultar(id);
+                return View(usuario);
+            }
+            else 
+            {
+                return RedirectToAction("Login");
+            }
         }
 
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var usuario = context.Usuarios.Find(id);
-            return View(usuario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var usuario = context.Usuarios.Find(id);
+                return View(usuario);
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
         [HttpPost]
         public IActionResult Edit(Usuario usuario)
         {
             repositorio.Edit(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var usuario = repositorio.Consultar(id);
-            return View(usuario);
+            var acesso = HttpContext.Session.GetString("usuario_session");
+            if (acesso != null)
+            {
+                var usuario = repositorio.Consultar(id);
+                return View(usuario);
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
         [HttpPost]
         public IActionResult Delete(Usuario usuario)
         {
             repositorio.Delete(usuario);
-            return RedirectToAction("HomeController");
+            return RedirectToAction("List");
         }
 
         [HttpGet]
@@ -130,5 +161,11 @@ namespace SaraiManagement.Controllers
             return View();
         }
 
+        public IActionResult Logout() 
+        {
+            HttpContext.Session.Remove("usuario_session");
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
+        }
     }
 }

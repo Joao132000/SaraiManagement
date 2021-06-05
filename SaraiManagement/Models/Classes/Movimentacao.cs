@@ -22,7 +22,7 @@ namespace SaraiManagement.Models
 
         [Display(Name = "Data da movimentação")]
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DataMovimentacao { get; set; }
 
 

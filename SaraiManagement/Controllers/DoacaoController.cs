@@ -65,13 +65,11 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-
                 var a = HttpContext.Session.GetString("usuario_session1");
                 int i = int.Parse(a.ToString());
                 ViewBag.UsuarioID = new SelectList(context.Usuarios.Where(d => d.UsuarioID == i), "UsuarioID", "Nome");
-                ViewBag.DonatarioID = new SelectList(context.Donatarios.Where(e => e.DonatarioID == idDonatario), "DonatarioID", "Nome");
+                ViewBag.DonatarioID = new SelectList(context.Donatarios.Where(e => e.DonatarioID == idDonatario), "DonatarioID", "Nome");                
                 ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(f => f.Descricao), "CaixaID", "Descricao");
-
                 return View();
             }
             else
@@ -104,7 +102,7 @@ namespace SaraiManagement.Controllers
             if (x==1)
                 return RedirectToAction("Index", "Estoque");
             else
-                return RedirectToAction("Index", "TelaInicial");
+                return View("ValidacaoSucesso");
         }
 
         [HttpGet]
@@ -157,6 +155,7 @@ namespace SaraiManagement.Controllers
                 return RedirectToAction("Login", "Usuario");
             }
         }
+
         [HttpPost]
         public IActionResult Delete(Doacao doacao)
         {

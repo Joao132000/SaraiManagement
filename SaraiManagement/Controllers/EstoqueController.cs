@@ -82,7 +82,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Estoque estoque)
         {
             repositorio.Create(estoque);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Details(int id)
@@ -120,7 +120,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Estoque estoque)
         {
             repositorio.Edit(estoque);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -140,7 +140,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Estoque estoque)
         {
             repositorio.Delete(estoque);
-            return RedirectToAction("List");
+            return View("ValidacaoSucesso");
         }
 
         

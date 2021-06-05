@@ -52,7 +52,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Create(Caixa caixa)
         {
             repositorio.Create(caixa);
-            return RedirectToAction("Index");
+            return View("ValidacaoSucesso");
         }
         public IActionResult Details(int id)
         {
@@ -85,7 +85,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Edit(Caixa caixa)
         {
             repositorio.Edit(caixa);
-            return RedirectToAction("Index");
+            return View("ValidacaoSucesso");
         }
         [HttpGet]
         public IActionResult Delete(int id)
@@ -105,7 +105,7 @@ namespace SaraiManagement.Controllers
         public IActionResult Delete(Caixa caixa)
         {
             repositorio.Delete(caixa);
-            return RedirectToAction("Index");
+            return View("ValidacaoSucesso");
         }
     }
 }

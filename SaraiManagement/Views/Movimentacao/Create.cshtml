@@ -46,14 +46,20 @@
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="DoadorID" class="control-label">Doador:</label>
-                <select asp-for="DoadorID" class="form-control" asp-items="ViewBag.DoadorID"></select>
-            </div>
+
 
             <div class="form-group">
                 <label asp-for="UsuarioID" class="control-label">Usuario:</label>
                 <select asp-for="UsuarioID" class="form-control" asp-items="ViewBag.UsuarioID"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DoadorID" class="control-label">Doador:</label>
+                <select asp-for="DoadorID" class="form-control" asp-items="ViewBag.DoadorID">
+                    <option>
+                        Nenhum
+                    </option>
+                </select>
             </div>
 
             <div class="form-group centraliza">

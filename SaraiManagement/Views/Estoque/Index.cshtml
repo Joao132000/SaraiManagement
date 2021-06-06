@@ -3,25 +3,10 @@
 @{ ViewData["Title"] = "Index";
    Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<style>
-    .botao {
-        margin: 0 5px;
-    }
-
-    .fonte {
-        font-size: 20px;
-    }
-
-    .centraliza {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
 
 <h1>Estoque</h1>
 
-<table class="table centraliza">
+<table>
     <thead>
         <tr>
             <th>
@@ -49,7 +34,7 @@
 {
     <tr>
         <td>
-        <div class="centraliza">
+        <div>
             <a class="btn btn-outline-success botao" asp-controller="ItemDoado" asp-action="Create" asp-route-idEstoque="@item.EstoqueID" >Selecionar</a>
         </div>
         </td>
@@ -68,6 +53,6 @@
 }
     </tbody>
 </table>
-<p class="centraliza">
+<p>
     <a class="btn btn-primary botao" asp-action="List" asp-controller="ItemDoado" clas> Voltar </a>
 </p>

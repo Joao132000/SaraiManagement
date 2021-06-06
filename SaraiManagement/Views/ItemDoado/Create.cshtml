@@ -11,31 +11,15 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
-        <div style="visibility:hidden" class="form-group" >
-            <label asp-for="@Model.DoacaoID" class="control-label"></label>
-            <select asp-for="@Model.DoacaoID">
-                <option>@((ViewBag.DoacaoID as SelectList).Count())</option>
-            </select>
-        </div>
-<<<<<<< HEAD
-            
-            <div class="form-group">
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> Master
+            <div style="visibility:hidden" class="form-group" >
                 <label asp-for="@Model.DoacaoID" class="control-label"></label>
                 <select asp-for="@Model.DoacaoID">
                     <option>@((ViewBag.DoacaoID as SelectList).Count())</option>
                 </select>
             </div>
+
             <div class="form-group">
-               
-
                 <label asp-for="@Model.EstoqueID" class="control-label">Item:</label>
-
                 <select asp-for="@Model.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
             </div>
             <div class="form-group">
@@ -47,40 +31,11 @@
             <div class="form-group">
                 <input type="submit" value="Finalizar" class="btn btn-success">
                 <input type="submit" value="Novo item" class="btn btn-primary" asp-route-x="Sim" />
-                <input type="submit" value="Vizualizar Itens" class="btn btn-primary" asp-route-x="Vizualizar">
+                <input type="submit" value="Vizualizar Itens" class="btn btn-primary" asp-route-x="Visualizar">
             </div>
-=======
 
-        <div class="form-group">
-            <label asp-for="@Model.EstoqueID" class="control-label"></label>
-
-            <label asp-for="@Model.EstoqueID" class="control-label">Item:</label>
-
-            <select asp-for="@Model.EstoqueID" class="form-control" asp-items="ViewBag.EstoqueID"></select>
-        </div>
-
-        <div class="form-group">
-            <label asp-for="@Model.Quantidade" class="control-label">Quantidade:</label>
-            <input asp-for="@Model.Quantidade" class="form-control" />
-            <span asp-validation-for="@Model.Quantidade" class="text-danger"></span>
-        </div>
-
-        <div class="form-group">
-            <input type="submit" value="Finalizar" class="btn btn-success botao">
-            <input type="submit" value="Novo item" class="btn btn-primary botao" asp-route-x="Sim" />
-            <input type="submit" value="Visualizar Itens" class="btn btn-primary botao" asp-route-x="Visualizar">
-        </div>
->>>>>>> Master
         </form>
     </div>
 </div>
 
-<<<<<<< HEAD
 
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-=======
->>>>>>> Master

@@ -1,4 +1,6 @@
-﻿@model IEnumerable<SaraiManagement.Models.Caixa>
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@model IEnumerable<SaraiManagement.Models.Caixa>
 
 @{
     ViewData["Title"] = "Index";
@@ -33,8 +35,11 @@
                 </td>
 
                 <td>
+                    @if (@HttpContextAccessor.HttpContext.Session.GetString("usuario_session") == "Admin")
+                    {
                     <a asp-action="Edit" asp-route-id="@item.CaixaID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
                     <a asp-action="Delete" asp-route-id="@item.CaixaID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
+                    }
                 </td>
             </tr>
         }

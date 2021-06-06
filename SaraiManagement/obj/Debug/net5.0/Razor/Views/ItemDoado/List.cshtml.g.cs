@@ -47,7 +47,11 @@ using SaraiManagement.Infraestrutura;
 #line default
 #line hidden
 #nullable disable
+<<<<<<< HEAD
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5d21f0a980670c739d65e7dd3764a596c8012b72", @"/Views/ItemDoado/List.cshtml")]
+=======
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d7986eeb5874b1663fa2443ddba4158bbb3fd22f", @"/Views/ItemDoado/List.cshtml")]
+>>>>>>> Davi
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0a7580aea04b072e9f39c26374ddd2c49c40ea56", @"/Views/_ViewImports.cshtml")]
     public class Views_ItemDoado_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SaraiManagement.Models.ViewModels.ItemEstoqueListViewModel>
     {

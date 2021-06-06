@@ -5,10 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Deletar</h1>
+<style>
+    .botao {
+        margin: 0 5px;
+    }
 
-<h3>Tem certeza que deseja excluir?</h3>
-<div>
+    .fonte {
+        font-size: 20px;
+    }
+
+    .centraliza {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<h1 style="text-align: center;">Tem certeza que deseja excluir?</h1>
+<hr/>
+<div class="centraliza">
+
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
@@ -35,10 +51,10 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
     </dl>
-
-    <form asp-action="Delete">
+    </div>
+    <hr />
+    <form class="centraliza" asp-action="Delete" >
         <input type="hidden" asp-for="DonatarioID" />
-        <input type="submit" value="Excluir" class="btn btn-danger" />
-        <a asp-action="Details" asp-route-id="@Model.DonatarioID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+        <input type="submit" value="Excluir" class="btn btn-danger botao" />
+        <a asp-action="Details" asp-route-id="@Model.DonatarioID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
     </form>
-</div>

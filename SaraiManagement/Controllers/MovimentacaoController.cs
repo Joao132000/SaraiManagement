@@ -41,16 +41,24 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                ViewBag.CaixaID = new SelectList(context.Caixas, "CaixaID", "Descricao");
-                
-                var movimentacao = from e in repositorio.Movimentacoes.OrderBy(e => e.Descricao) select e;
-
-                if (searchString != 0)
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
                 {
-                    movimentacao = movimentacao.Where(s => s.Caixa.CaixaID == searchString);
-                }
+                    ViewBag.CaixaID = new SelectList(context.Caixas, "CaixaID", "Descricao");
 
-                return View(await movimentacao.ToListAsync());
+                    var movimentacao = from e in repositorio.Movimentacoes.OrderBy(e => e.Descricao) select e;
+
+                    if (searchString != 0)
+                    {
+                        movimentacao = movimentacao.Where(s => s.Caixa.CaixaID == searchString);
+                    }
+
+                    return View(await movimentacao.ToListAsync());
+                }
+                else 
+                {
+                    return RedirectToAction("Index", "TelaInicial");
+                }
             }
             else
             {
@@ -111,8 +119,15 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var consulta = repositorio.PesquisarMovimentacao(id);
-                return View(consulta);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var consulta = repositorio.PesquisarMovimentacao(id);
+                    return View(consulta);
+                }else 
+                {
+                    return RedirectToAction("Index", "TelaInicial");
+                }
             }
             else
             {
@@ -126,11 +141,19 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var consulta = context.Movimentacaos.Find(id);
-                ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
-                ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
-                ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
-                return View(consulta);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var consulta = context.Movimentacaos.Find(id);
+                    ViewBag.CaixaID = new SelectList(context.Caixas.OrderBy(c => c.CaixaID), "CaixaID", "Descricao");
+                    ViewBag.DoadorID = new SelectList(context.Doadors.OrderBy(d => d.Nome), "DoadorID", "Nome");
+                    ViewBag.UsuarioID = new SelectList(context.Usuarios.OrderBy(u => u.Nome), "UsuarioID", "Nome");
+                    return View(consulta);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "TelaInicial");
+                }
             }
             else
             {
@@ -152,8 +175,16 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var consulta = repositorio.PesquisarMovimentacao(id);
-                return View(consulta);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var consulta = repositorio.PesquisarMovimentacao(id);
+                    return View(consulta);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "TelaInicial");
+                }
             }
             else
             {

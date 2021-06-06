@@ -6,19 +6,16 @@
 
   <ItemGroup>
     <Compile Remove="Imagens\**" />
-    <Compile Remove="Migrations\**" />
     <Content Remove="Imagens\**" />
-    <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Imagens\**" />
-    <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Imagens\**" />
-    <None Remove="Migrations\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Views\Shared\_Layout2 - Cópia.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="NovaPasta\" />
     <Folder Include="wwwroot\img\" />
     </ItemGroup>
 

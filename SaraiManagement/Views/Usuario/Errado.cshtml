@@ -1,2 +1,17 @@
-﻿@{ Layout = "~/Views/Shared/_Layout.cshtml";}
+﻿@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
+<div class="centraliza container-fluid d-flex flex-wrap">
+    <div>
+        <h5 class="font-weight-bold text-dark">Usuário ou Senha Inválido</h5>
+    </div>
+</div>
+
+
+<div class="centraliza container-fluid d-flex flex-wrap">
+    <div>
+        <a class="text-center btn btn-lg btn-dark " asp-action="Login" asp-controller="Usuario">OK </a>
+    </div>
+</div>

@@ -14,6 +14,7 @@ using SaraiManagement.Models.ClassesEF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.AspNetCore.Http;
 
 namespace SaraiManagement
 {
@@ -26,12 +27,15 @@ namespace SaraiManagement
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:SaraiManagement2021:ConnectionString"]));
             services.AddControllersWithViews();
+            services.AddDistributedMemoryCache();
             services.AddSession(options =>
             {
                 options.Cookie.Name = ".Sarai.Session";
                 options.IdleTimeout = TimeSpan.FromSeconds(300);
+                options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IAlunoRepositorio, EFAluno>();
             services.AddTransient<IDoacaoRepositorio, EFDoacao>();
             services.AddTransient<IDonatarioRepositorio, EFDonatario>();
@@ -64,7 +68,7 @@ namespace SaraiManagement
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "Home", action = "Index" });
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action}/{id?}", defaults: new { controller = "TelaInicial", action = "Sobre" });
             });
            // SeedData.EnsurePopulated(app);
         }

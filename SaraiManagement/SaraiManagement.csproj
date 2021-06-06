@@ -10,6 +10,10 @@
     <EmbeddedResource Remove="Imagens\**" />
     <None Remove="Imagens\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_Layout2 - Cópia.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\img\" />
     </ItemGroup>

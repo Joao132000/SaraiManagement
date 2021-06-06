@@ -29,7 +29,13 @@ namespace SaraiManagement.Controllers
         {
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
-                return View();
+            {
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                    return View();
+                else
+                    return RedirectToAction("Index", "TelaInicial");
+            }
             else
                 return View("Login");
         }
@@ -56,7 +62,11 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                return View();
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                    return View();
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {
@@ -77,8 +87,14 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if ( acesso != null)
             {
-                var usuario = repositorio.Consultar(id);
-                return View(usuario);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var usuario = repositorio.Consultar(id);
+                    return View(usuario);
+                }
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else 
             {
@@ -92,8 +108,14 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var usuario = context.Usuarios.Find(id);
-                return View(usuario);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var usuario = context.Usuarios.Find(id);
+                    return View(usuario);
+                }
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {
@@ -112,8 +134,14 @@ namespace SaraiManagement.Controllers
             var acesso = HttpContext.Session.GetString("usuario_session");
             if (acesso != null)
             {
-                var usuario = repositorio.Consultar(id);
-                return View(usuario);
+                var tipo = HttpContext.Session.GetString("tipo_session");
+                if (tipo.ToString() == "Admin")
+                {
+                    var usuario = repositorio.Consultar(id);
+                    return View(usuario);
+                }
+                else
+                    return RedirectToAction("Index", "TelaInicial");
             }
             else
             {
@@ -146,6 +174,7 @@ namespace SaraiManagement.Controllers
             }
             else
             {
+                ViewBag.Message = confirma;
                 return RedirectToAction("Errado");
             }
         }

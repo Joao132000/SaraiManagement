@@ -1,4 +1,4 @@
-@using Microsoft.AspNetCore.Http
+﻿@using Microsoft.AspNetCore.Http
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 <!DOCTYPE html>
 <html>
@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" asp-href-include="/lib/bootstrap/dist/**/*.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
     <title>Sarai Management</title>
 </head>
 
 <body class="gradient">
-    <div class="navbar navbar-dark bg-dark" role="navigation">
-        <a class="navbar-brand" asp-controller="TelaInicial" asp-action="Index">SARAI MANAGEMENT</a>
-        <h4 class="nav-link dropdown-toggle navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> @HttpContextAccessor.HttpContext.Session.GetString("usuario_session")</h4>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" asp-controller="TelaInicial" asp-action="Sobre">Sobre</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" asp-controller="Usuario" asp-action="Logout">Sair</a>
-        </div>
-    </div>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" style="opacity: 0">Navbar</a>
+        <form class="form-inline">
+            @if (@HttpContextAccessor.HttpContext.Session.GetString("usuario_session") == null)
+            {
+              <button asp-controller="Usuario" asp-action="Login" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Fazer Login</button>
+            }
+            else{
+             <button asp-controller="TelaInicial" asp-action="Index" class="btn btn-success my-2 my-sm-0" role="button" aria-pressed="true">Voltar</button> 
+            }
+        </form>
+    </nav>
 
     @RenderBody()
 

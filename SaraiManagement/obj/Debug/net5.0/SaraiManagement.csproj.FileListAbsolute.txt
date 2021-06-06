@@ -180,8 +180,11 @@ C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Raz
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\ValidacaoSucesso.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout3.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\TelaInicial\Index.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\TelaInicial\Sobre.cshtml.g.cs
+C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\TelaInicial\TelaInicioUser.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Consultar.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Correto.cshtml.g.cs
 C:\Users\davi-\source\repos\SaraiManagement\SaraiManagement\obj\Debug\net5.0\Razor\Views\Usuario\Create.cshtml.g.cs

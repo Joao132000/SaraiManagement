@@ -1,0 +1,163 @@
+﻿@{ Layout = "~/Views/Shared/_Layout2.cshtml";}
+<div class="text-center">
+    <h1 class="display-4">SARAI MANAGEMENT</h1>
+</div>
+
+<div>
+
+    <div class="container-fluid d-flex flex-wrap" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Aluno -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalAluno">
+                <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Alunos</h5>
+            </button>
+
+        </div>
+
+        <!-- Financeiro -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalCaixa">
+                <img class="card-img-top" src="~/img/CadastroCaixa.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento Financeiro</h5>
+            </button>
+
+        </div>
+
+        <!-- Doação -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalDoacao">
+                <img class="card-img-top" src="~/img/CadastroDoacao.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Doação</h5>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Donatario e Doador -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalDonatarioDoador">
+                <img class="card-img-top" src="~/img/CadastroDoadores.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Doadores e Donatarios</h5>
+            </button>
+
+        </div>
+
+        <!-- Estoque -->
+        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
+
+            <!-- Botão para acionar modal -->
+            <button data-toggle="modal" data-target="#modalEstoque">
+                <img class="card-img-top" src="~/img/CadastroEstoque.png" alt="Imagem de capa do card">
+                <h5 class="card-title">Gerenciamento de Estoque</h5>
+            </button>
+
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Aluno -->
+<div class="modal fade" id="modalAluno" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Aluno</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Aluno" asp-action="Create" class="btn btn-primary">Cadastrar Aluno</a>
+                <a asp-controller="Aluno" asp-action="List" class="btn btn-primary">Consultar Alunos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Caixa -->
+<div class="modal fade" id="modalCaixa" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Caixa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Caixa" asp-action="Index" class="btn btn-primary">Consultar Caixas</a>
+                <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Doacao -->
+<div class="modal fade" id="modalDoacao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Doação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Donatario" asp-action="List" class="btn btn-primary">Realizar Doação</a>
+                <a asp-controller="Doacao" asp-action="List" class="btn btn-primary">Visualizar Doaçoes</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Doador e Donatario -->
+<div class="modal fade" id="modalDonatarioDoador" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Doador e Donatário</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Doador" asp-action="Create" class="btn btn-primary">Cadastrar Doador</a>
+                <a asp-controller="Doador" asp-action="List" class="btn btn-primary">Consultar Doadores</a>
+                <hr />
+                <a asp-controller="Donatario" asp-action="Create" class="btn btn-primary">Cadastrar Donatário</a>
+                <a asp-controller="Donatario" asp-action="List" class="btn btn-primary">Consultar Donatários</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Estoque -->
+<div class="modal fade" id="modalEstoque" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Estoque</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="margin: 0 auto">
+                <a asp-controller="Estoque" asp-action="Create" class="btn btn-primary">Cadastrar item no Estoque</a>
+                <a asp-controller="Estoque" asp-action="List" class="btn btn-primary">Consultar item no Estoque</a>
+            </div>
+        </div>
+    </div>
+</div>

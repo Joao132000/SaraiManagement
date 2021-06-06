@@ -174,6 +174,7 @@ namespace SaraiManagement.Controllers
             }
             else
             {
+                ViewBag.Message = confirma;
                 return RedirectToAction("Errado");
             }
         }

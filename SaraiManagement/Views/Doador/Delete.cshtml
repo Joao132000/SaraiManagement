@@ -5,16 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
 <h1 style="text-align: center">Tem certeza que deseja excluir?</h1>
+<hr />
 <div>
     <dl class="row">
         <dt class="col-sm-2">
             @*@Html.DisplayNameFor(model => model.Nome)*@
             <label class="fonte">Nome: </label>
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Nome)
         </dd>
         <dt class="col-sm-2">
@@ -22,7 +21,7 @@
             <label class="fonte">Cidade: </label>
 
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Cidade)
         </dd>
         <dt class="col-sm-2">
@@ -30,7 +29,7 @@
             <label class="fonte">Regularidade: </label>
 
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.regularidadeDoador)
         </dd>
         <dt class="col-sm-2">
@@ -38,7 +37,7 @@
             <label class="fonte">Início da Doação: </label>
 
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.inicioDaDoacao)
         </dd>
     </dl>

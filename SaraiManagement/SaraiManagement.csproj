@@ -15,7 +15,6 @@
     <Content Remove="Views\Shared\_Layout2 - Cópia.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NovaPasta\" />
     <Folder Include="wwwroot\img\" />
     </ItemGroup>
 

@@ -4,37 +4,50 @@
     ViewData["Title"] = "Consultar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h1 style="text-align: center">Detalhes</h1>
 
-<h1>Detalhes</h1>
 
-    <hr /> 
+<hr />
+<div class="container-fluid d-flex flex-wrap" style="display: flex; justify-content: center; align-items: center;">
+
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
+        <dt class="col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Nome)*@
+            <label class="fonte">Nome: </label>
+
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cidade)
+        <dt class="col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Cidade)*@
+            <label class="fonte">Cidade: </label>
+
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Cidade)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.regularidadeDoador)
+        <dt class="col-sm-2">
+            @*@Html.DisplayNameFor(model => model.regularidadeDoador)*@
+            <label class="fonte">Regularidade: </label>
+
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.regularidadeDoador)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.inicioDaDoacao)
+        <dt class="col-sm-2">
+            @*@Html.DisplayNameFor(model => model.inicioDaDoacao)*@
+            <label class="fonte">Inicio da Doação: </label>
+
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.inicioDaDoacao)
         </dd>
     </dl>
-<div>
+</div>
+<hr />
+
+<div class="centraliza">
     <a asp-action="Edit" asp-route-id="@Model.DoadorID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
     <a asp-action="Delete" asp-route-id="@Model.DoadorID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
     <a asp-action="List" asp-route-id="@Model.DoadorID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>

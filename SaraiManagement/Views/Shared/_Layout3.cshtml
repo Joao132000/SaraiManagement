@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -14,7 +15,13 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" style="opacity: 0">Navbar</a>
         <form class="form-inline">
-            <button asp-controller="Usuario" asp-action="Login" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Fazer Login</button>
+            @if (@HttpContextAccessor.HttpContext.Session.GetString("usuario_session") == null)
+            {
+              <button asp-controller="Usuario" asp-action="Login" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-pressed="true">Fazer Login</button>
+            }
+            else{
+             <button asp-controller="TelaInicial" asp-action="Index" class="btn btn-success my-2 my-sm-0" role="button" aria-pressed="true">Voltar</button> 
+            }
         </form>
     </nav>
 

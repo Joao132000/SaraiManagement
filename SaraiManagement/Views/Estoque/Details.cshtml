@@ -4,13 +4,28 @@
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .botao {
+        margin: 0 5px;
+    }
 
-<h1>Detalhes</h1>
+    .fonte {
+        font-size: 20px;
+    }
 
-<div>
+    .centraliza {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<h1 class="centraliza">Detalhes</h1>
+<hr/>
+<div class="centraliza">
     <dl class="row">
         <dt class = "col-sm-2">
-            <label>Descrição</label>
+            <label class="fonte">Descrição</label>
             @*@Html.DisplayNameFor(model => model.Descricao)*@
         </dt>
         <dd class = "col-sm-10">
@@ -30,8 +45,8 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-controller="ItemDoado" asp-action="Create" asp-route-id="@Model.EstoqueID" class="btn btn-primary">Selecionar</a>
-    <a asp-action="Edit" asp-route-id="@Model.EstoqueID"  class="btn btn-outline-success">Editar</a>
-    <a class="btn btn-success" asp-action="List" asp-controller="Estoque" clas> Voltar </a>
+<div class="centraliza">
+    <a asp-controller="ItemDoado" asp-action="Create" asp-route-id="@Model.EstoqueID" class="btn btn-primary botao">Selecionar</a>
+    <a asp-action="Edit" asp-route-id="@Model.EstoqueID"  class="btn btn-outline-success botao">Editar</a>
+    <a class="btn btn-success botao" asp-action="List" asp-controller="Estoque" clas> Voltar </a>
 </div>

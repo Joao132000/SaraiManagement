@@ -23,7 +23,7 @@ namespace SaraiManagement.Models.Classes
                   new Caixa
                   {
                       Saldo = 10000,
-                      Descricao = "aaa"
+                      Descricao = "Sarai"
 
                   });
                 context.SaveChanges();
@@ -36,7 +36,7 @@ namespace SaraiManagement.Models.Classes
                   {
                       Nome = "Davi Nascimento",
                       Senha = "123",
-                      Tipo = tipoUsuario.User
+                      Tipo = tipoUsuario.Admin
                   });
                 context.SaveChanges();
 
@@ -116,7 +116,7 @@ namespace SaraiManagement.Models.Classes
                   {
                       Descricao = "Arrumar parede da Classe",
                       DataMovimentacao = Convert.ToDateTime("15-06-2021"),
-                      TipoMovimentacao = tipoMovimentacao.Debito,
+                      TipoMovimentacao = tipoMovimentacao.Credito,
                       Valor = 1000.50,
                       CaixaID = 1,
                       UsuarioID=1
@@ -132,7 +132,7 @@ namespace SaraiManagement.Models.Classes
                 context.Estoques.AddRange(
                   new Estoque
                   {
-                      Descricao="aaa",
+                      Descricao="Arroz",
                       Quantidade=1,
                       Categoria=Categoria.Alimento
                       
@@ -149,7 +149,7 @@ namespace SaraiManagement.Models.Classes
                   {
                       EstoqueID = 1,
                       DoacaoID = 1,
-                      Quantidade = 9
+                      Quantidade = 1
 
                   });
                 context.SaveChanges();

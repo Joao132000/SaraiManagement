@@ -5,24 +5,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Lista de Doaçoes</h1>
+<h1 style="text-align: center">Lista de Doaçoes</h1>
 <br />
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                Donatario
+                <label class="fonte">Donatário </label>
+
             </th>
 
             <th>
-                Valor
+                <label class="fonte">Valor </label>
+
             </th>
             <th>
-                Data
+                <label class="fonte">Data Doação </label>
             </th>
             <th>
-                Usuario
+                <label class="fonte">Usuário </label>
+
             </th>
             <th>
 
@@ -56,4 +59,4 @@
         }
     </tbody>
 </table>
-<a class="btn btn-primary" asp-controller="Doacao" asp-action="List">Voltar</a>
+<a class="btn btn-primary" asp-controller="Donatario" asp-action="List">Voltar</a>

@@ -19,6 +19,8 @@ namespace SaraiManagement.Controllers
         private IDoacaoRepositorio repositorio;
         private ApplicationDbContext context;
         public int pageSize = 10;
+        static private int x;
+
 
         public DoacaoController(IDoacaoRepositorio repo, ApplicationDbContext ctx)
         {
@@ -40,24 +42,32 @@ namespace SaraiManagement.Controllers
             }
         }
 
-       
-        public ViewResult List(string searchString) =>
-            View(new DoacaoListViewModel
-            {                 
-                 Doacaos = repositorio.Doacoes
-                .Where(s => s.Donatario.Nome.StartsWith(searchString))
-                .OrderByDescending(p => p.dataDoacao)
-               
-            });
 
-        public ViewResult ListPorID(int id) =>
-           View(new DoacaoListViewModel
-           {
-               Doacaos = repositorio.Doacoes
-               .Where(s => s.Donatario.DonatarioID==id)
-               .OrderByDescending(p => p.dataDoacao)
+        public IActionResult ListPorID(int id)
+        {
+            if (id==0)
+            {
+                return View(new DoacaoListViewModel
+                {
+                    Doacaos = repositorio.Doacoes
+                    .Where(s => s.Donatario.DonatarioID == x)
+                    .OrderByDescending(p => p.dataDoacao)
 
-           });
+                }) ;
+            }
+            else
+            {
+                x = id;
+                return View(new DoacaoListViewModel
+                {
+                    Doacaos = repositorio.Doacoes
+                    .Where(s => s.Donatario.DonatarioID == x)
+                    .OrderByDescending(p => p.dataDoacao)
+
+                });
+            }
+        }
+    
 
         [HttpGet]
         public IActionResult Create(int idDonatario)

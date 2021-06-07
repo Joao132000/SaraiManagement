@@ -181,7 +181,7 @@ namespace SaraiManagement.Controllers
             }
             context.SaveChanges();
             repositorio.Delete(itemDoado);
-            return View("ValidacaoSucesso");
+            return RedirectToAction("Index", "Estoque");
         }
     }
 }

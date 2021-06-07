@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "Tela Inicial";
-    Layout = "~/Views/Shared/_Layout2.cshtml";
-}
-
+﻿@{ Layout = "~/Views/Shared/_Layout2.cshtml";}
 <div class="text-center">
     <h1 class="display-4">SARAI MANAGEMENT</h1>
 </div>
@@ -67,16 +63,6 @@
             </button>
 
         </div>
-
-        <!-- Usuário -->
-        <div class="card" style="width: 18rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 25%">
-
-            <!-- Botão para acionar modal -->
-            <button data-toggle="modal" data-target="#modalUsuario">
-                <img class="card-img-top" src="~/img/Usuario.png" alt="Imagem de capa do card">
-                <h5 class="card-title">Gerenciamento de Usuário</h5>
-            </button>
-
         </div>
     </div>
 </div>
@@ -111,11 +97,8 @@
                 </button>
             </div>
             <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Caixa" asp-action="Create" class="btn btn-primary">Cadastrar Caixa</a>
                 <a asp-controller="Caixa" asp-action="Index" class="btn btn-primary">Consultar Caixas</a>
-                <hr />
                 <a asp-controller="Movimentacao" asp-action="Create" class="btn btn-primary">Realizar Movimentação</a>
-                <a asp-controller="Movimentacao" asp-action="List" class="btn btn-primary">Consultar Movimentação</a>
             </div>
         </div>
     </div>
@@ -178,37 +161,3 @@
         </div>
     </div>
 </div>
-
-
-<!-- Modal Usuario -->
-<div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Usuário</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" style="margin: 0 auto">
-                <a asp-controller="Usuario" asp-action="Create" class="btn btn-primary">Cadastrar Usuário</a>
-                <a asp-controller="Usuario" asp-action="List" class="btn btn-primary">Consultar Usuário</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- triste -->
-<!--<div class="card" style="width: 15rem; margin: 10px 20px 10px 20px; border: 5px solid black; height: 35%">
-    <img class="card-img-top" src="~/img/CadastroAluno.png" alt="Imagem de capa do card">-->
-@*<div class="card-body">
-        <h5 class="card-title">Gerenciamento de Alunos</h5>
-        <p class="card-text">Realizar cadastro</p>
-    </div>*@
-
-@*Botão para acionar modal*@
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAluno" style="margin: 5% auto">
-        Gerenciar Alunos
-    </button>
-</div>-->

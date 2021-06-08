@@ -9,7 +9,7 @@
 
 @foreach (var d in Model.Usuarios)
 {
-    <div class="card card-outline-primary m-1 p-1">
+    <div class="card card-outline-primary m-1 p-1" style="border: 5px solid black;">
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Consultar" asp-route-id="@d.UsuarioID">@d.Nome </a>

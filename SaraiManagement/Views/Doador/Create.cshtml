@@ -26,11 +26,11 @@
                 <select asp-for="regularidadeDoador" class="form-control" asp-items="Html.GetEnumSelectList<SaraiManagement.Models.Enuns.Regularidade>()"></select>
                 <span asp-validation-for="regularidadeDoador" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="inicioDaDoacao" class="control-label"></label>
                 <input asp-for="inicioDaDoacao" class="form-control" />
                 <span asp-validation-for="inicioDaDoacao" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-primary" />
                 <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success" role="button" aria-pressed="true">Voltar </a>

@@ -9,7 +9,7 @@
 <h1 style="text-align: center;">Tem certeza que deseja excluir? </h1>
 
 <hr />
-<div class="centraliza">
+<div style="padding: 0 0 0 35%;">
     <dl class="row">
         <dt class="col-sm-2">
             @*@Html.DisplayNameFor(model => model.Descricao):*@
@@ -18,8 +18,9 @@
         <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Descricao)
         </dd>
-        <dt class="col-sm-2 fonte">
-            @Html.DisplayNameFor(model => model.Quantidade):
+        <dt class="col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Quantidade):*@
+            <label class="fonte">Quantidade: </label>
         </dt>
         <dd class="col-sm-10 fonte">
             @Html.DisplayFor(model => model.Quantidade)

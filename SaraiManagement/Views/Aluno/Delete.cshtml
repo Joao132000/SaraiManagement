@@ -89,10 +89,9 @@
         </dl>
     </div>
 </div>
-
 <hr />
 <form class="centraliza" asp-action="Delete">
     <input type="hidden" asp-for="AlunoID" />
-    <input type="submit" value="Excluir" class="btn btn-danger" />
-    <a asp-action="Details" asp-route-id="@Model.AlunoID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+    <input type="submit" value="Excluir" class="btn btn-danger botao" />
+    <a asp-action="Details" asp-route-id="@Model.AlunoID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
 </form>

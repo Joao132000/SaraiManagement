@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
     ViewData["Title"] = "Tela Inicial";
     Layout = "~/Views/Shared/_Layout3.cshtml";
 }
@@ -17,6 +20,22 @@
             </div>
         </div>
 
+    </div>
+
+    <hr />
+
+    <div class="container-fluid d-flex flex-wrap centraliza">
+
+        @if (@HttpContextAccessor.HttpContext.Session.GetString("usuario_session") == null)
+        {
+            <a asp-controller="Usuario" asp-action="Login" class="btn btn-success btn-lg botao" role="button" aria-pressed="true">Fazer Login</a>
+        }
+        else
+        {
+            <a asp-controller="TelaInicial" asp-action="Index" class="btn btn-success btn-lg botao" role="button" aria-pressed="true">Voltar</a>
+        }
+
+        <a href="https://www.youtube.com/watch?v=kdvmMd3VCeY&list=PLVyHSBRe2K-nkfLWCU2Koh9tNC-eoPfH1&index=1" target="_blank" class="btn btn-primary btn-lg botao" role="button" aria-pressed="true">Ajuda</a>
     </div>
 
     <hr />

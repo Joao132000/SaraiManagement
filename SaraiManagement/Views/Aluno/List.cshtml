@@ -1,10 +1,10 @@
 ﻿@model SaraiManagement.Models.ViewModels.AlunoListViewModel
 
 <!--LISTA ALUNO-->
-<h1>Lista</h1>
+<h1 style="text-align:center;">Lista</h1>
 @foreach (var p in Model.Alunos)
 {
-    <div class="card card-outline-primary m-1 p-1">
+    <div class="card card-outline-primary m-1 p-1" style="border: 5px solid black;">
         <div class="bg-faded p-1">
             <h4>
                 <a asp-action="Details" asp-route-id="@p.AlunoID"> @p.Nome </a>

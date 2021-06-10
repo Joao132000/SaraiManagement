@@ -5,75 +5,78 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Detalhes</h1>
+<h1 style="text-align: center;">Detalhes</h1>
 
-<div>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Escola)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Escola)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ano)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ano)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeResponsavel)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NomeResponsavel)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Periodo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Periodo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Admissao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Admissao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Donatario)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Donatario.Nome)
-        </dd>
-    </dl>
+<hr />
+<div class="container-fluid d-flex flex-wrap centraliza">
+    <div style="padding: 0 0 0 35%;">
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DataNascimento)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Escola)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Escola)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Ano)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Ano)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Endereco)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Endereco)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cidade)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cidade)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.NomeResponsavel)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NomeResponsavel)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Periodo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Periodo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Admissao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Admissao)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Donatario)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Donatario.Nome)
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.AlunoID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
-    <a asp-action="Delete" asp-route-id="@Model.AlunoID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>
-    <a asp-action="List" asp-route-id="@Model.AlunoID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+<hr />
+<div class="centraliza">
+    <a asp-action="Edit" asp-route-id="@Model.AlunoID" class="btn btn-primary botao" role="button" aria-pressed="true">Editar</a>
+    <a asp-action="Delete" asp-route-id="@Model.AlunoID" class="btn btn-danger botao" role="button" aria-pressed="true">Excluir</a>
+    <a asp-action="List" asp-route-id="@Model.AlunoID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
 </div>

@@ -7,7 +7,7 @@
 
 <h1 style="text-align: center">Tem certeza que deseja excluir?</h1>
 <hr />
-<div>
+<div style="padding: 0 0 0 35%;">
     <dl class="row">
         <dt class="col-sm-2">
             @*@Html.DisplayNameFor(model => model.Nome)*@
@@ -41,10 +41,11 @@
             @Html.DisplayFor(model => model.inicioDaDoacao)
         </dd>
     </dl>
-
-    <form class="centraliza" asp-action="Delete">
-        <input type="hidden" asp-for="DoadorID" />
-        <input type="submit" value="Excluir" class="btn btn-danger" />
-        <a asp-action="Consultar" asp-route-id="@Model.DoadorID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
-    </form>
 </div>
+
+<hr />
+<form class="centraliza" asp-action="Delete">
+    <input type="hidden" asp-for="DoadorID" />
+    <input type="submit" value="Excluir" class="btn btn-danger" />
+    <a asp-action="Consultar" asp-route-id="@Model.DoadorID" class="btn btn-success" role="button" aria-pressed="true">Voltar</a>
+</form>

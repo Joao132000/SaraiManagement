@@ -23,7 +23,7 @@
 
 <h1 style="text-align: center;">Tem certeza que deseja excluir?</h1>
 <hr />
-<div style="display: flex; justify-content: center; align-items: center;">
+<div style="padding: 0 0 0 35%;">
 
     <dl class="row">
         <dt class="col-sm-2">
@@ -83,9 +83,10 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="MovimentacaoID" />
-        <input type="submit" value="Excluir" class="btn btn-danger botao"/>
-        <a asp-action="List" asp-route-id="@Model.MovimentacaoID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
-    </form>
 </div>
+<form class="centraliza" asp-action="Delete">
+    <input type="hidden" asp-for="MovimentacaoID" />
+    <input type="submit" value="Excluir" class="btn btn-danger botao" />
+    <a asp-action="List" asp-route-id="@Model.MovimentacaoID" class="btn btn-success botao" role="button" aria-pressed="true">Voltar</a>
+</form>
+

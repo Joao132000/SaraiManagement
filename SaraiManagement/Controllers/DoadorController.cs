@@ -65,6 +65,7 @@ namespace SaraiManagement.Controllers
         [HttpPost]
         public IActionResult Create(Doador doador)
         {
+            doador.inicioDaDoacao = DateTime.Now;
             repositorio.Create(doador);
             return View("ValidacaoSucesso");
         }

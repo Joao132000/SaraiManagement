@@ -35,7 +35,7 @@
                 </td>
 
                 <td>
-                    @if (@HttpContextAccessor.HttpContext.Session.GetString("usuario_session") == "Admin")
+                    @if (@HttpContextAccessor.HttpContext.Session.GetString("tipo_session") == "Admin")
                     {
                     <a asp-action="Edit" asp-route-id="@item.CaixaID" class="btn btn-primary" role="button" aria-pressed="true">Editar</a>
                     <a asp-action="Delete" asp-route-id="@item.CaixaID" class="btn btn-danger" role="button" aria-pressed="true">Excluir</a>

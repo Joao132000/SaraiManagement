@@ -42,7 +42,6 @@ namespace SaraiManagement.Controllers
             }
         }
 
-
         public IActionResult ListPorID(int id)
         {
             if (id==0)
@@ -63,12 +62,10 @@ namespace SaraiManagement.Controllers
                     Doacaos = repositorio.Doacoes
                     .Where(s => s.Donatario.DonatarioID == x)
                     .OrderByDescending(p => p.dataDoacao)
-
                 });
             }
         }
     
-
         [HttpGet]
         public IActionResult Create(int idDonatario)
         {

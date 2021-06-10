@@ -7113,19 +7113,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mfmat\\.nuget\\packages\\": {}
+    "C:\\Users\\JGL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
+      "projectUniqueName": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
       "projectName": "SaraiManagement",
-      "projectPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\SaraiManagement.csproj",
-      "packagesPath": "C:\\Users\\mfmat\\.nuget\\packages\\",
-      "outputPath": "D:\\Faculdade\\5º periodo\\Integradoras V\\Sarai\\SaraiManagement\\obj\\",
+      "projectPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\SaraiManagement.csproj",
+      "packagesPath": "C:\\Users\\JGL\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JGL\\Desktop\\UNIFENAS\\Ferramentas de Desenvolvimento\\ProjetoFinal\\SaraiManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mfmat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JGL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7188,7 +7188,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

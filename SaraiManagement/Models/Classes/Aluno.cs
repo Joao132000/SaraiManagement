@@ -36,10 +36,8 @@ namespace SaraiManagement.Models
         [Required] //CAMPO 'Bairro' OBRIGATÓRIO
         public string Endereco { get; set; }
 
-
         [Required] //CAMPO 'Cidade' OBRIGATÓRIO
         public string Cidade { get; set; }
-
 
         [Required] //CAMPO 'NomeResponsavel' OBRIGATÓRIO
         [StringLength(60, MinimumLength = 4, ErrorMessage = "Digite um texto com 4 a 60 caracteres")]
@@ -48,13 +46,10 @@ namespace SaraiManagement.Models
         [Required] //CAMPO 'Periodo' OBRIGATÓRIO
         public Periodo Periodo { get; set; }
 
-
-
         [Display(Name = "Data de Admissao")]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime Admissao { get; set; }
-
 
         public Donatario Donatario { get; set; }
     }
